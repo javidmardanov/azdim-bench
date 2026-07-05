@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "description": "Ledger of official DIM (dim.gov.az) exam-material PDFs for AzDIM-Bench.",
+    "doc_type_values": {
+      "izah": "explanation PDF containing full question text, choices, topic, grade level, explanation, correct answer, variant mapping",
+      "etalon": "answer-key-only PDF for closed and codable-open items"
+    },
+    "exam_type_values": [
+      "university_entrance_stage2",
+      "school_leaving_11yr",
+      "school_leaving_9yr",
+      "mixed_supplemental"
+    ],
+    "provenance": "URLs from docs/research/paper_archive_research.md ledger (verified crawl) plus the 2026-06-07 DIM news page fetched 2026-07-05",
+    "in_scope_rule": "v0 = exam years 2025 and 2026"
+  },
+  "sources": [
+    {"source_id": "ue2_2026-06-07_g1_izah", "url": "https://dim.gov.az/CkImage/1_ci_qrup_1780824827.pdf", "exam_date": "2026-06-07", "exam_type": "university_entrance_stage2", "group": "I", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2026-06-07_g4_izah", "url": "https://dim.gov.az/CkImage/4_cu_qrup_1780824862.pdf", "exam_date": "2026-06-07", "exam_type": "university_entrance_stage2", "group": "IV", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2026-06-07_g3geo_izah", "url": "https://dim.gov.az/CkImage/Co%C4%9Frafiya_internet_1780824894.pdf", "exam_date": "2026-06-07", "exam_type": "university_entrance_stage2", "group": "III_geo", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2026-06-07_etalon", "url": "https://dim.gov.az/CkImage/1_4_cogr_x_1780824939.pdf", "exam_date": "2026-06-07", "exam_type": "university_entrance_stage2", "group": "I+IV+III_geo", "doc_type": "etalon", "in_scope": true},
+    {"source_id": "ue2_2026-05-24_g2_izah", "url": "https://dim.gov.az/CkImage/2_qrup-az_1779613190.pdf", "exam_date": "2026-05-24", "exam_type": "university_entrance_stage2", "group": "II", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2026-05-24_g3_izah", "url": "https://dim.gov.az/CkImage/3_qrup_az_1779613253.pdf", "exam_date": "2026-05-24", "exam_type": "university_entrance_stage2", "group": "III", "doc_type": "izah", "in_scope": true, "notes": "contains Russian-sector pages"},
+    {"source_id": "ue2_2026-05-24_etalon", "url": "https://dim.gov.az/CkImage/ETA_II_III_qrup_26_I_1779613446.pdf", "exam_date": "2026-05-24", "exam_type": "university_entrance_stage2", "group": "II+III", "doc_type": "etalon", "in_scope": true},
+    {"source_id": "mixed_2026-04-19_izah", "url": "https://dim.gov.az/CkImage/%C4%B0zahlar%20kompleks_19-04_26%20%281%29_1776666856.pdf", "exam_date": "2026-04-19", "exam_type": "mixed_supplemental", "group": null, "doc_type": "izah", "in_scope": true, "notes": "mixed package: supplemental entrance/exit sessions; EN/AZ/RU content"},
+    {"source_id": "mixed_2026-04-19_etalon", "url": "https://dim.gov.az/CkImage/19_aprel_buraxilish_X_1776592952.pdf", "exam_date": "2026-04-19", "exam_type": "mixed_supplemental", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "sl11_2026-03-09_izah", "url": "https://dim.gov.az/CkImage/Attestat_all_09.03.2026_1773051095.pdf", "exam_date": "2026-03-09", "exam_type": "school_leaving_11yr", "group": null, "doc_type": "izah", "in_scope": true},
+    {"source_id": "sl11_2026-03-09_etalon", "url": "https://dim.gov.az/CkImage/2026_11_1__1773051441.pdf", "exam_date": "2026-03-09", "exam_type": "school_leaving_11yr", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "sl11_2026-03-15_izah", "url": "https://dim.gov.az/CkImage/Attestat_all_15.03.2026_1773569675.pdf", "exam_date": "2026-03-15", "exam_type": "school_leaving_11yr", "group": null, "doc_type": "izah", "in_scope": true},
+    {"source_id": "sl11_2026-03-15_etalon", "url": "https://dim.gov.az/CkImage/15%20mart_buraxilis_etalon_1773569752.pdf", "exam_date": "2026-03-15", "exam_type": "school_leaving_11yr", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "sl9_2026-04-05_etalon", "url": "https://dim.gov.az/CkImage/9_illik_05.04.26__1775461900.pdf", "exam_date": "2026-04-05", "exam_type": "school_leaving_9yr", "group": null, "doc_type": "etalon", "in_scope": true, "notes": "AZ+RU sectors; EN/RU/DE foreign-language panels"},
+    {"source_id": "sl9_2026-04-12_etalon", "url": "https://dim.gov.az/CkImage/9%20illik%2012.04.26__1776068705.pdf", "exam_date": "2026-04-12", "exam_type": "school_leaving_9yr", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "sl9_2026-04-26_etalon", "url": "https://dim.gov.az/CkImage/9__eta_3%20-_1777286416.pdf", "exam_date": "2026-04-26", "exam_type": "school_leaving_9yr", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "ue2_2025-07-13_g1_izah", "url": "https://dim.gov.az/CkImage/1_ci_qrup_1752476895.pdf", "exam_date": "2025-07-13", "exam_type": "university_entrance_stage2", "group": "I", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2025-07-13_g4_izah", "url": "https://dim.gov.az/CkImage/4_cu_qrup_1752476942.pdf", "exam_date": "2025-07-13", "exam_type": "university_entrance_stage2", "group": "IV", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2025-07-13_g3geo_izah", "url": "https://dim.gov.az/CkImage/Untitled%20attachment%2000020_1752476961.pdf", "exam_date": "2025-07-13", "exam_type": "university_entrance_stage2", "group": "III_geo", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2025-07-13_etalon", "url": "https://dim.gov.az/CkImage/Eta_2025_14_2_x_1752398449_1752477059.pdf", "exam_date": "2025-07-13", "exam_type": "university_entrance_stage2", "group": "I+IV+III_geo", "doc_type": "etalon", "in_scope": true},
+    {"source_id": "ue2_2025-07-06_g2_izah", "url": "https://dim.gov.az/CkImage/2_qrup-az_1751887338.pdf", "exam_date": "2025-07-06", "exam_type": "university_entrance_stage2", "group": "II", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2025-07-06_g3_izah", "url": "https://dim.gov.az/CkImage/3_qrup_az_1751887363.pdf", "exam_date": "2025-07-06", "exam_type": "university_entrance_stage2", "group": "III", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2025-07-06_etalon", "url": "https://dim.gov.az/CkImage/2_3%20qrup_2025_2_X_1751793180_1751887430.pdf", "exam_date": "2025-07-06", "exam_type": "university_entrance_stage2", "group": "II+III", "doc_type": "etalon", "in_scope": true, "notes": "Russian-sector pages present for Group III"},
+    {"source_id": "ue2_2025-06-01_g1_izah", "url": "https://dim.gov.az/CkImage/1_ci_qrup_1_iyun_2025_izah_1748848147.pdf", "exam_date": "2025-06-01", "exam_type": "university_entrance_stage2", "group": "I", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2025-06-01_g4_izah", "url": "https://dim.gov.az/CkImage/4_cu_qrup_1748848173.pdf", "exam_date": "2025-06-01", "exam_type": "university_entrance_stage2", "group": "IV", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2025-06-01_g3geo_izah", "url": "https://dim.gov.az/CkImage/cografiya_izah_1748848194.pdf", "exam_date": "2025-06-01", "exam_type": "university_entrance_stage2", "group": "III_geo", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2025-06-01_etalon", "url": "https://dim.gov.az/CkImage/1_4_coq_eta_1%20iyun__1748769750.pdf", "exam_date": "2025-06-01", "exam_type": "university_entrance_stage2", "group": "I+IV+III_geo", "doc_type": "etalon", "in_scope": true},
+    {"source_id": "ue2_2025-05-25_g2_izah", "url": "https://dim.gov.az/CkImage/2-ci_qrup_s_1748871668.pdf", "exam_date": "2025-05-25", "exam_type": "university_entrance_stage2", "group": "II", "doc_type": "izah", "in_scope": true},
+    {"source_id": "ue2_2025-05-25_g3_izah", "url": "https://dim.gov.az/CkImage/3-cu_qrup_1748239606.pdf", "exam_date": "2025-05-25", "exam_type": "university_entrance_stage2", "group": "III", "doc_type": "izah", "in_scope": true, "notes": "Russian-sector content present"},
+    {"source_id": "ue2_2025-05-25_etalon", "url": "https://dim.gov.az/CkImage/3_2_1_x_1748239634.pdf", "exam_date": "2025-05-25", "exam_type": "university_entrance_stage2", "group": "II+III", "doc_type": "etalon", "in_scope": true},
+    {"source_id": "sl11_2025-03-02_izah", "url": "https://dim.gov.az/CkImage/buraxilish_2_03_25_1740979917.pdf", "exam_date": "2025-03-02", "exam_type": "school_leaving_11yr", "group": null, "doc_type": "izah", "in_scope": true},
+    {"source_id": "sl11_2025-03-02_etalon", "url": "https://dim.gov.az/CkImage/eta_11_1__1740979950.pdf", "exam_date": "2025-03-02", "exam_type": "school_leaving_11yr", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "sl11_2025-03-09_izah", "url": "https://dim.gov.az/CkImage/izah_1741582198.pdf", "exam_date": "2025-03-09", "exam_type": "school_leaving_11yr", "group": null, "doc_type": "izah", "in_scope": true, "notes": "Russian-language section confirmed inside"},
+    {"source_id": "sl11_2025-03-09_etalon", "url": "https://dim.gov.az/CkImage/etalon-9_mart_1741582229.pdf", "exam_date": "2025-03-09", "exam_type": "school_leaving_11yr", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "sl9_2025-04-13_etalon", "url": "https://dim.gov.az/CkImage/9_illik_1_eta__1744619536.pdf", "exam_date": "2025-04-13", "exam_type": "school_leaving_9yr", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "sl9_2025-04-20_etalon", "url": "https://dim.gov.az/CkImage/etalon_20_1745221880.pdf", "exam_date": "2025-04-20", "exam_type": "school_leaving_9yr", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "sl9_2025-04-27_etalon", "url": "https://dim.gov.az/CkImage/9_4_etalon_1745820785.pdf", "exam_date": "2025-04-27", "exam_type": "school_leaving_9yr", "group": null, "doc_type": "etalon", "in_scope": true},
+    {"source_id": "ue2_2024-07-07_etalon", "url": "https://dim.gov.az/CkImage/eta_umumi_1720344950.pdf", "exam_date": "2024-07-07", "exam_type": "university_entrance_stage2", "group": "II+III", "doc_type": "etalon", "in_scope": false, "notes": "2024, out of v0 scope; no matching izah found"},
+    {"source_id": "ue2_2024-07-14_etalon", "url": "https://dim.gov.az/CkImage/2024_14_COGR_2_int_1720948664.pdf", "exam_date": "2024-07-14", "exam_type": "university_entrance_stage2", "group": "I+IV+III_geo", "doc_type": "etalon", "in_scope": false, "notes": "2024, out of v0 scope; no matching izah found"},
+    {"source_id": "sl9_2024-04-07_etalon", "url": "https://dim.gov.az/upload/iblock/ba4/ba451f225d1ad9f45390c18684ebf6bf.pdf", "exam_date": "2024-04-07", "exam_type": "school_leaving_9yr", "group": null, "doc_type": "etalon", "in_scope": false, "notes": "known broken (404) per archive research"},
+    {"source_id": "sl9_2024-04-21_etalon", "url": "https://dim.gov.az/upload/iblock/85d/85d5a146cb5d077d598fec7f06df4094.pdf", "exam_date": "2024-04-21", "exam_type": "school_leaving_9yr", "group": null, "doc_type": "etalon", "in_scope": false, "notes": "known broken (404) per archive research"}
+  ]
+}

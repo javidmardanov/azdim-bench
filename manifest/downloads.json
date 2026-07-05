@@ -1,0 +1,368 @@
+{
+  "downloaded_at_utc": "2026-07-05T04:57:59.472667+00:00",
+  "results": [
+    {
+      "source_id": "ue2_2026-06-07_g1_izah",
+      "url": "https://dim.gov.az/CkImage/1_ci_qrup_1780824827.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "1d398d1e41ca7bde00da837b220fcaa6f7739544b54d7c62232caea6b9503ef8",
+      "bytes": 1852186,
+      "page_count": 30
+    },
+    {
+      "source_id": "ue2_2026-06-07_g4_izah",
+      "url": "https://dim.gov.az/CkImage/4_cu_qrup_1780824862.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "04744c9fac4301807fb318cd041903544777200d8d6329b68fce45091c408923",
+      "bytes": 2327841,
+      "page_count": 24
+    },
+    {
+      "source_id": "ue2_2026-06-07_g3geo_izah",
+      "url": "https://dim.gov.az/CkImage/Co%C4%9Frafiya_internet_1780824894.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f53962df432a29894fa2de4e70e0affeafd1ad53d4d45dbf26cbdcf36f5f41bf",
+      "bytes": 813442,
+      "page_count": 9
+    },
+    {
+      "source_id": "ue2_2026-06-07_etalon",
+      "url": "https://dim.gov.az/CkImage/1_4_cogr_x_1780824939.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "20bcda23d68368e3f182cde23978e9e00956e9b89c6fa0f582098d14a1f87eb1",
+      "bytes": 1037739,
+      "page_count": 28
+    },
+    {
+      "source_id": "ue2_2026-05-24_g2_izah",
+      "url": "https://dim.gov.az/CkImage/2_qrup-az_1779613190.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "54d193b6b0619f9b44dd71dfeb3cfa0c739141423a1def97e1222f8335446dcb",
+      "bytes": 1733039,
+      "page_count": 24
+    },
+    {
+      "source_id": "ue2_2026-05-24_g3_izah",
+      "url": "https://dim.gov.az/CkImage/3_qrup_az_1779613253.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "4003098a06553e5ef11568491e2b521766835c847287e1bd54ad44f7b6156ef9",
+      "bytes": 2150799,
+      "page_count": 45
+    },
+    {
+      "source_id": "ue2_2026-05-24_etalon",
+      "url": "https://dim.gov.az/CkImage/ETA_II_III_qrup_26_I_1779613446.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "b9ffb7ee8975f80811ed65b115759694c32d57cac45bff9e456b7c0e9352374f",
+      "bytes": 872763,
+      "page_count": 24
+    },
+    {
+      "source_id": "mixed_2026-04-19_izah",
+      "url": "https://dim.gov.az/CkImage/%C4%B0zahlar%20kompleks_19-04_26%20%281%29_1776666856.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f1fddc34a21bf925f9d009c95210bf6e5a34e352ad8eb315bae5a7bd01bc1a78",
+      "bytes": 2840563,
+      "page_count": 52
+    },
+    {
+      "source_id": "mixed_2026-04-19_etalon",
+      "url": "https://dim.gov.az/CkImage/19_aprel_buraxilish_X_1776592952.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "d6a0e22db3987a827b4e9b5a97e880ad7d9c73bfb156274205252e71260762a9",
+      "bytes": 646961,
+      "page_count": 19
+    },
+    {
+      "source_id": "sl11_2026-03-09_izah",
+      "url": "https://dim.gov.az/CkImage/Attestat_all_09.03.2026_1773051095.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "6811c59de0c3acf61377c5bf81c667e2862e7f04d12e976862138d99c1d7637a",
+      "bytes": 2049910,
+      "page_count": 47
+    },
+    {
+      "source_id": "sl11_2026-03-09_etalon",
+      "url": "https://dim.gov.az/CkImage/2026_11_1__1773051441.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "73ac53e1a056e0fa100b2f0a8451ab1d24c537ebc68705360d756c30d219cad4",
+      "bytes": 590744,
+      "page_count": 16
+    },
+    {
+      "source_id": "sl11_2026-03-15_izah",
+      "url": "https://dim.gov.az/CkImage/Attestat_all_15.03.2026_1773569675.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f718b0c17b910a5ccbbca0f3898839c12c58e95c17e784f091a8ed562ace3235",
+      "bytes": 1633780,
+      "page_count": 44
+    },
+    {
+      "source_id": "sl11_2026-03-15_etalon",
+      "url": "https://dim.gov.az/CkImage/15%20mart_buraxilis_etalon_1773569752.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "27888693a2d93ff26983fb67c1270ca617b79c548a3bcfdb10c095d6af436b10",
+      "bytes": 689293,
+      "page_count": 16
+    },
+    {
+      "source_id": "sl9_2026-04-05_etalon",
+      "url": "https://dim.gov.az/CkImage/9_illik_05.04.26__1775461900.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "d6bda5b979ba845fdd983ad90106833a8cb83912c01e3ae01a0cf9fd79145310",
+      "bytes": 1159213,
+      "page_count": 12
+    },
+    {
+      "source_id": "sl9_2026-04-12_etalon",
+      "url": "https://dim.gov.az/CkImage/9%20illik%2012.04.26__1776068705.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "fb25c79b8fb9c57b423f8e3f9b05b91ee5aefa561ecb53129dff5c614fc3b815",
+      "bytes": 745378,
+      "page_count": 12
+    },
+    {
+      "source_id": "sl9_2026-04-26_etalon",
+      "url": "https://dim.gov.az/CkImage/9__eta_3%20-_1777286416.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "ce97d46a0340b9422b9e662d824ed12f39311fa46c9026124544ae4f544178d2",
+      "bytes": 798631,
+      "page_count": 14
+    },
+    {
+      "source_id": "ue2_2025-07-13_g1_izah",
+      "url": "https://dim.gov.az/CkImage/1_ci_qrup_1752476895.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "5842310b1cb7a51737ed1027bdb1e9b5152307a62b232de4616aae6d735b9526",
+      "bytes": 1729234,
+      "page_count": 28
+    },
+    {
+      "source_id": "ue2_2025-07-13_g4_izah",
+      "url": "https://dim.gov.az/CkImage/4_cu_qrup_1752476942.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "85a6ce64c62360145075010aa12118d1fe430b0711f3f1cf96b02f9a6e4ca1cc",
+      "bytes": 1530948,
+      "page_count": 22
+    },
+    {
+      "source_id": "ue2_2025-07-13_g3geo_izah",
+      "url": "https://dim.gov.az/CkImage/Untitled%20attachment%2000020_1752476961.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "bc33b160881900a8fe2f81e5ad4674cdb53c51ac2328ea7aeae3efaed61e5a93",
+      "bytes": 1190426,
+      "page_count": 8
+    },
+    {
+      "source_id": "ue2_2025-07-13_etalon",
+      "url": "https://dim.gov.az/CkImage/Eta_2025_14_2_x_1752398449_1752477059.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "76c67a27d6d07eeeca0b8070e476595da5109967dfd8f50dfe5a66bc7a91310a",
+      "bytes": 978629,
+      "page_count": 28
+    },
+    {
+      "source_id": "ue2_2025-07-06_g2_izah",
+      "url": "https://dim.gov.az/CkImage/2_qrup-az_1751887338.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "4d43eb41375a11f526021fce70de57f7fd8089d2e58b8c3a3efba71d2e21dd24",
+      "bytes": 1424763,
+      "page_count": 23
+    },
+    {
+      "source_id": "ue2_2025-07-06_g3_izah",
+      "url": "https://dim.gov.az/CkImage/3_qrup_az_1751887363.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "9b60a0cf84c2db9930795b7f550886ca0861c1bd75a8d1f278f4d58e8db06da7",
+      "bytes": 1838740,
+      "page_count": 37
+    },
+    {
+      "source_id": "ue2_2025-07-06_etalon",
+      "url": "https://dim.gov.az/CkImage/2_3%20qrup_2025_2_X_1751793180_1751887430.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "3d8fe642744d5f3161e9481b868617f9186deb1df145a5e44942800836bd0ee8",
+      "bytes": 896412,
+      "page_count": 22
+    },
+    {
+      "source_id": "ue2_2025-06-01_g1_izah",
+      "url": "https://dim.gov.az/CkImage/1_ci_qrup_1_iyun_2025_izah_1748848147.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "2011c02e4141a56dee9fd8b9b5d53f4f777478a04dfb34adad6323d8103da146",
+      "bytes": 1931098,
+      "page_count": 30
+    },
+    {
+      "source_id": "ue2_2025-06-01_g4_izah",
+      "url": "https://dim.gov.az/CkImage/4_cu_qrup_1748848173.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "366a18675d5c16ffa86b6d34475f1b6b9358fa69f4320da822d2a4eb76ac1e89",
+      "bytes": 1154690,
+      "page_count": 23
+    },
+    {
+      "source_id": "ue2_2025-06-01_g3geo_izah",
+      "url": "https://dim.gov.az/CkImage/cografiya_izah_1748848194.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "67b39c43a5401dac0afbbfeda8be51ec6a734692288ce827749dee5ee23fc552",
+      "bytes": 1028533,
+      "page_count": 9
+    },
+    {
+      "source_id": "ue2_2025-06-01_etalon",
+      "url": "https://dim.gov.az/CkImage/1_4_coq_eta_1%20iyun__1748769750.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "66af3265dd187294b7a40a500ea2818f499d4c3f2124efe9b5791e2826aa80bf",
+      "bytes": 2404201,
+      "page_count": 28
+    },
+    {
+      "source_id": "ue2_2025-05-25_g2_izah",
+      "url": "https://dim.gov.az/CkImage/2-ci_qrup_s_1748871668.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "d8677d8542a2da5c198065bd2cf91dbe2e156ad08f08bc9ca6945cc0c71ef07a",
+      "bytes": 1734903,
+      "page_count": 24
+    },
+    {
+      "source_id": "ue2_2025-05-25_g3_izah",
+      "url": "https://dim.gov.az/CkImage/3-cu_qrup_1748239606.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "af99c94c5b54834e430d2d350b6555e0fde2802afd2ae4ce1483bea386f17298",
+      "bytes": 2067257,
+      "page_count": 46
+    },
+    {
+      "source_id": "ue2_2025-05-25_etalon",
+      "url": "https://dim.gov.az/CkImage/3_2_1_x_1748239634.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "1cbb7c1267623bc50ae9cdbd9f1498e8afc565caed86ab02d047e1c9e378485c",
+      "bytes": 1834243,
+      "page_count": 22
+    },
+    {
+      "source_id": "sl11_2025-03-02_izah",
+      "url": "https://dim.gov.az/CkImage/buraxilish_2_03_25_1740979917.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "71e7deef446d281d39fbab130754579ed9613acd0ffd1eb72077a25210de7e1d",
+      "bytes": 1393089,
+      "page_count": 47
+    },
+    {
+      "source_id": "sl11_2025-03-02_etalon",
+      "url": "https://dim.gov.az/CkImage/eta_11_1__1740979950.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "a9e8b3db474677f8c8c5c9a69b1ac21901515e1473d0d66cb9301c64e4d85296",
+      "bytes": 1297114,
+      "page_count": 18
+    },
+    {
+      "source_id": "sl11_2025-03-09_izah",
+      "url": "https://dim.gov.az/CkImage/izah_1741582198.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "89fed6ce6e61919d2f3b0b42119475725d6daa1bb730d71efbd13085b649d978",
+      "bytes": 1670955,
+      "page_count": 46
+    },
+    {
+      "source_id": "sl11_2025-03-09_etalon",
+      "url": "https://dim.gov.az/CkImage/etalon-9_mart_1741582229.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "312da35a5bab30477e5c26c58d3f1354c7eb8a17dd3f763cf5404cf91a558356",
+      "bytes": 876277,
+      "page_count": 18
+    },
+    {
+      "source_id": "sl9_2025-04-13_etalon",
+      "url": "https://dim.gov.az/CkImage/9_illik_1_eta__1744619536.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "2191a018655ac2bfec66f7f08906d919060b9b9f9d3e4281854bbcbc960c8fa4",
+      "bytes": 767050,
+      "page_count": 17
+    },
+    {
+      "source_id": "sl9_2025-04-20_etalon",
+      "url": "https://dim.gov.az/CkImage/etalon_20_1745221880.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "400ee020f46442ae87d6d13041c0b97c6385341943423ee51136b0e1ff4c1e06",
+      "bytes": 1222255,
+      "page_count": 16
+    },
+    {
+      "source_id": "sl9_2025-04-27_etalon",
+      "url": "https://dim.gov.az/CkImage/9_4_etalon_1745820785.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f269b6e8ecb08b8464a28c4674ecfc807c299d5d264de53c06223c8b682c18f4",
+      "bytes": 1288284,
+      "page_count": 18
+    },
+    {
+      "source_id": "ue2_2024-07-07_etalon",
+      "url": "https://dim.gov.az/CkImage/eta_umumi_1720344950.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "f30f152c3d3a979ec6ef305afe354ea60fcdd16db79b541d76a2fde5d39cc83b",
+      "bytes": 2197504,
+      "page_count": 28
+    },
+    {
+      "source_id": "ue2_2024-07-14_etalon",
+      "url": "https://dim.gov.az/CkImage/2024_14_COGR_2_int_1720948664.pdf",
+      "http_status": 200,
+      "status": "downloaded",
+      "sha256": "dcd2448a8a56f5238e16212c2cf1302afc35cdc8e7a637dba4466cc79e2dc6bc",
+      "bytes": 1038525,
+      "page_count": 28
+    },
+    {
+      "source_id": "sl9_2024-04-07_etalon",
+      "url": "https://dim.gov.az/upload/iblock/ba4/ba451f225d1ad9f45390c18684ebf6bf.pdf",
+      "http_status": 404,
+      "status": "failed"
+    },
+    {
+      "source_id": "sl9_2024-04-21_etalon",
+      "url": "https://dim.gov.az/upload/iblock/85d/85d5a146cb5d077d598fec7f06df4094.pdf",
+      "http_status": 404,
+      "status": "failed"
+    }
+  ]
+}
