@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+
+# rendered page images are reproducible from raw PDFs
+data/pages/
+
+# raw model outputs can be large; final metrics are committed
+results/raw/
