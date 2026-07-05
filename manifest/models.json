@@ -1,16 +1,123 @@
 {
-  "gpt-5.5": {"provider": "openai", "model": "gpt-5.5", "max_tokens": 4096, "reasoning_effort": "none", "tier": "frontier_closed"},
-  "gpt-5.4-mini": {"provider": "openai", "model": "gpt-5.4-mini", "max_tokens": 4096, "reasoning_effort": "none", "tier": "mid_closed"},
-  "claude-opus-4-8": {"provider": "anthropic", "model": "claude-opus-4-8", "max_tokens": 2048, "tier": "frontier_closed"},
-  "claude-sonnet-5": {"provider": "anthropic", "model": "claude-sonnet-5", "max_tokens": 2048, "tier": "mid_closed", "notes": "same family as dataset extractor; flag in contamination discussion"},
-  "claude-haiku-4-5": {"provider": "anthropic", "model": "claude-haiku-4-5", "max_tokens": 2048, "tier": "small_closed"},
-  "gemini-3.1-pro": {"provider": "google", "model": "gemini-3.1-pro-preview", "max_tokens": 4096, "thinking_level": "low", "tier": "frontier_closed"},
-  "gemini-3.5-flash": {"provider": "google", "model": "gemini-3.5-flash", "max_tokens": 4096, "thinking_level": "low", "tier": "small_closed"},
-  "deepseek-v4-pro": {"provider": "openrouter", "model": "deepseek/deepseek-v4-pro", "max_tokens": 2048, "tier": "open_frontier"},
-  "qwen3-max": {"provider": "openrouter", "model": "qwen/qwen3-max", "max_tokens": 2048, "tier": "open_frontier"},
-  "qwen3-235b": {"provider": "openrouter", "model": "qwen/qwen3-235b-a22b-2507", "max_tokens": 2048, "tier": "open_large"},
-  "llama-4-maverick": {"provider": "openrouter", "model": "meta-llama/llama-4-maverick", "max_tokens": 2048, "tier": "open_large"},
-  "mistral-large-2512": {"provider": "openrouter", "model": "mistralai/mistral-large-2512", "max_tokens": 2048, "tier": "open_large"},
-  "gemma-4-31b": {"provider": "openrouter", "model": "google/gemma-4-31b-it", "max_tokens": 2048, "tier": "open_small"},
-  "llama-3.1-8b": {"provider": "openrouter", "model": "meta-llama/llama-3.1-8b-instruct", "max_tokens": 2048, "tier": "open_tiny"}
+ "gpt-5.5": {
+  "provider": "openai",
+  "model": "gpt-5.5",
+  "max_tokens": 4096,
+  "reasoning_effort": "none",
+  "tier": "frontier_closed",
+  "price_in": 2.0,
+  "price_out": 16.0,
+  "price_estimated": true
+ },
+ "gpt-5.4-mini": {
+  "provider": "openai",
+  "model": "gpt-5.4-mini",
+  "max_tokens": 4096,
+  "reasoning_effort": "none",
+  "tier": "mid_closed",
+  "price_in": 0.4,
+  "price_out": 3.2,
+  "price_estimated": true
+ },
+ "claude-opus-4-8": {
+  "provider": "anthropic",
+  "model": "claude-opus-4-8",
+  "max_tokens": 2048,
+  "tier": "frontier_closed",
+  "price_in": 5.0,
+  "price_out": 25.0
+ },
+ "claude-sonnet-5": {
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "max_tokens": 2048,
+  "tier": "mid_closed",
+  "notes": "same family as dataset extractor; flag in contamination discussion",
+  "price_in": 2.0,
+  "price_out": 10.0
+ },
+ "claude-haiku-4-5": {
+  "provider": "anthropic",
+  "model": "claude-haiku-4-5",
+  "max_tokens": 2048,
+  "tier": "small_closed",
+  "price_in": 1.0,
+  "price_out": 5.0
+ },
+ "gemini-3.1-pro": {
+  "provider": "google",
+  "model": "gemini-3.1-pro-preview",
+  "max_tokens": 4096,
+  "thinking_level": "low",
+  "tier": "frontier_closed",
+  "price_in": 2.5,
+  "price_out": 15.0,
+  "price_estimated": true
+ },
+ "gemini-3.5-flash": {
+  "provider": "google",
+  "model": "gemini-3.5-flash",
+  "max_tokens": 4096,
+  "thinking_level": "low",
+  "tier": "small_closed",
+  "price_in": 0.3,
+  "price_out": 2.5,
+  "price_estimated": true
+ },
+ "deepseek-v4-pro": {
+  "provider": "openrouter",
+  "model": "deepseek/deepseek-v4-pro",
+  "max_tokens": 2048,
+  "tier": "open_frontier",
+  "price_in": 0.43,
+  "price_out": 0.87
+ },
+ "qwen3-max": {
+  "provider": "openrouter",
+  "model": "qwen/qwen3-max",
+  "max_tokens": 2048,
+  "tier": "open_frontier",
+  "price_in": 0.78,
+  "price_out": 3.9
+ },
+ "qwen3-235b": {
+  "provider": "openrouter",
+  "model": "qwen/qwen3-235b-a22b-2507",
+  "max_tokens": 2048,
+  "tier": "open_large",
+  "price_in": 0.09,
+  "price_out": 0.1
+ },
+ "llama-4-maverick": {
+  "provider": "openrouter",
+  "model": "meta-llama/llama-4-maverick",
+  "max_tokens": 2048,
+  "tier": "open_large",
+  "price_in": 0.15,
+  "price_out": 0.6
+ },
+ "mistral-large-2512": {
+  "provider": "openrouter",
+  "model": "mistralai/mistral-large-2512",
+  "max_tokens": 2048,
+  "tier": "open_large",
+  "price_in": 0.5,
+  "price_out": 1.5
+ },
+ "gemma-4-31b": {
+  "provider": "openrouter",
+  "model": "google/gemma-4-31b-it",
+  "max_tokens": 2048,
+  "tier": "open_small",
+  "price_in": 0.12,
+  "price_out": 0.35
+ },
+ "llama-3.1-8b": {
+  "provider": "openrouter",
+  "model": "meta-llama/llama-3.1-8b-instruct",
+  "max_tokens": 2048,
+  "tier": "open_tiny",
+  "price_in": 0.02,
+  "price_out": 0.03
+ }
 }

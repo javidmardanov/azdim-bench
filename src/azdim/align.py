@@ -40,7 +40,14 @@ SUBJECT_MAP = {
     "ereb dili": "arabic", "ərəb dili": "arabic",
     "fars dili": "persian",
     "xarici dil": "foreign_language",
+    # verbatim headers used inside foreign-language exam sections
+    "english": "english", "deutsch": "german",
+    "le français": "french", "français": "french",
 }
+
+# items with no recognizable section header: infer from question language
+LANG_SUBJECT = {"en": "english", "de": "german", "fr": "french",
+                "ar": "arabic", "fa": "persian"}
 
 
 def norm(s: str) -> str:
@@ -51,13 +58,15 @@ def norm(s: str) -> str:
 
 
 def subject_of(header: str | None) -> str | None:
-    if not header:
+    """Slug for a section heading, or None if it isn't a subject heading
+    (topic lines, reading-passage instructions, fragments...)."""
+    if not header or len(header) > 60:
         return None
     h = norm(header)
     for key, slug in SUBJECT_MAP.items():
         if key in h:
             return slug
-    return f"other:{h}"
+    return None
 
 
 def question_key(item: dict) -> str:
@@ -77,14 +86,19 @@ def canonicalize() -> None:
         items.sort(key=lambda it: it["source_page"])
 
         current_section = None
+        current_subject = None
         seen_variant: dict[tuple, dict] = {}
         seen_question: dict[str, dict] = {}
         seq_by_page: Counter = Counter()
         for it in items:
-            if it.get("section_header"):
+            header_subject = subject_of(it.get("section_header"))
+            if header_subject:  # only real subject headings advance the fill
                 current_section = it["section_header"]
+                current_subject = header_subject
             it["subject_section"] = current_section
-            it["subject"] = subject_of(current_section)
+            it["subject"] = (current_subject
+                             or LANG_SUBJECT.get(it.get("language") or "")
+                             or "unknown")
             meta = sources.get(sid, {})
             it["exam_date"] = meta.get("exam_date")
             it["exam_type"] = meta.get("exam_type")

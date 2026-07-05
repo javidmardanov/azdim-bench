@@ -32,13 +32,17 @@ WORKERS = 8
 
 
 def eval_items(track: str) -> list[dict]:
+    """Clean pool: eligible MCQs that are high-confidence and unflagged.
+    Flagged items wait for human verification before entering the pool."""
     items = [json.loads(line) for line in ITEMS_FILE.read_text().splitlines()]
     lang = {"A": "az", "B": "ru"}[track]
     return [it for it in items
             if it["question_type"] == "mcq"
             and it.get("gold_answer_label") in tuple("ABCDE")
             and not it.get("requires_image")
-            and it.get("language") == lang]
+            and it.get("language") == lang
+            and it.get("extraction_confidence") == "high"
+            and not it.get("notes")]
 
 
 # --- provider adapters ------------------------------------------------------
@@ -117,11 +121,42 @@ def complete(spec: dict, prompt: str) -> tuple:
 
 # --- run --------------------------------------------------------------------
 
-def run_model(model_key: str, track: str, limit: int | None = None) -> None:
+CORE_FILE = ROOT / "manifest" / "core_set.json"
+CORE_SIZES = {"A": 250, "B": 100}
+
+
+def core_ids(track: str) -> set[str]:
+    """Stratified (by subject) fixed random core subset, built once."""
+    import random
+    if CORE_FILE.exists():
+        return set(json.loads(CORE_FILE.read_text())[track])
+    rng = random.Random(42)
+    core: dict[str, list[str]] = {}
+    for tr, size in CORE_SIZES.items():
+        pool = eval_items(tr)
+        by_subject: dict[str, list[dict]] = {}
+        for it in pool:
+            by_subject.setdefault(it["subject"], []).append(it)
+        picked: list[str] = []
+        quota = {s: max(1, round(size * len(v) / len(pool)))
+                 for s, v in by_subject.items()}
+        for s, group in sorted(by_subject.items()):
+            picked += [it["item_id"] for it in
+                       rng.sample(group, min(quota[s], len(group)))]
+        core[tr] = sorted(picked[:size + 10])
+    CORE_FILE.write_text(json.dumps(core, indent=1))
+    return set(core[track])
+
+
+def run_model(model_key: str, track: str, limit: int | None = None,
+              core: bool = False) -> None:
     load_env()
     specs = json.loads(MODELS_FILE.read_text())
     spec = specs[model_key]
     items = eval_items(track)
+    if core:
+        ids = core_ids(track)
+        items = [it for it in items if it["item_id"] in ids]
     if limit:
         items = items[:limit]
     RAW_DIR.mkdir(parents=True, exist_ok=True)
@@ -152,7 +187,7 @@ def run_model(model_key: str, track: str, limit: int | None = None) -> None:
                 "correct": parsed == it["gold_answer_label"],
                 "usage": usage, "latency_s": round(time.time() - t0, 2)}
 
-    n_ok = n_err = 0
+    n_ok = n_err = tok_in = tok_out = 0
     with open(out_path, "a") as out, ThreadPoolExecutor(WORKERS) as pool:
         for rec in pool.map(one, todo):
             rec["model_key"] = model_key
@@ -162,7 +197,22 @@ def run_model(model_key: str, track: str, limit: int | None = None) -> None:
             out.flush()
             n_err += "error" in rec
             n_ok += "error" not in rec
-    print(f"done: {n_ok} ok, {n_err} errors -> {out_path}")
+            usage = rec.get("usage") or {}
+            tok_in += usage.get("in") or 0
+            tok_out += usage.get("out") or 0
+    cost = (tok_in * spec.get("price_in", 0)
+            + tok_out * spec.get("price_out", 0)) / 1e6
+    if n_ok:
+        from azdim.extract import USAGE_LOG
+        with open(USAGE_LOG, "a") as f:
+            f.write(json.dumps({
+                "model": spec["model"],
+                "context": f"eval:{model_key}:{track}",
+                "input_tokens": tok_in, "output_tokens": tok_out,
+                "cost_usd": round(cost, 6),
+                "estimated": spec.get("price_estimated", False),
+            }) + "\n")
+    print(f"done: {n_ok} ok, {n_err} errors, ~${cost:.2f} -> {out_path}")
 
 
 def discover() -> None:
@@ -195,6 +245,9 @@ if __name__ == "__main__":
     elif args[:1] == ["run"]:
         specs = json.loads(MODELS_FILE.read_text())
         limit = None
+        core = "--core" in args
+        if core:
+            args.remove("--core")
         if "--limit" in args:
             i = args.index("--limit")
             limit = int(args[i + 1])
@@ -202,6 +255,6 @@ if __name__ == "__main__":
         keys = list(specs) if "--all" in args else args[1:]
         for key in keys:
             for track in ("A", "B"):
-                run_model(key, track, limit)
+                run_model(key, track, limit, core)
     else:
         sys.exit("usage: runner discover | runner run <model_key>|--all")

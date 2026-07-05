@@ -4,15 +4,8 @@
     "n_pages": 30,
     "submitted_at": "2026-07-05T06:12:10.981833+00:00",
     "status": "collected",
-    "n_items": 81,
-    "failed_pages": [
-      "ue2_2026-06-07_g1_izah--016",
-      "ue2_2026-06-07_g1_izah--009",
-      "ue2_2026-06-07_g1_izah--017",
-      "ue2_2026-06-07_g1_izah--003",
-      "ue2_2026-06-07_g1_izah--028",
-      "ue2_2026-06-07_g1_izah--006"
-    ],
+    "n_items": 102,
+    "failed_pages": [],
     "cost_usd": 0.6001
   },
   "ue2_2026-06-07_g4_izah": {
@@ -20,17 +13,8 @@
     "n_pages": 24,
     "submitted_at": "2026-07-05T06:12:15.187912+00:00",
     "status": "collected",
-    "n_items": 59,
-    "failed_pages": [
-      "ue2_2026-06-07_g4_izah--011",
-      "ue2_2026-06-07_g4_izah--002",
-      "ue2_2026-06-07_g4_izah--014",
-      "ue2_2026-06-07_g4_izah--006",
-      "ue2_2026-06-07_g4_izah--003",
-      "ue2_2026-06-07_g4_izah--013",
-      "ue2_2026-06-07_g4_izah--021",
-      "ue2_2026-06-07_g4_izah--001"
-    ],
+    "n_items": 89,
+    "failed_pages": [],
     "cost_usd": 0.5411
   },
   "ue2_2026-06-07_g3geo_izah": {
@@ -47,14 +31,8 @@
     "n_pages": 24,
     "submitted_at": "2026-07-05T06:12:22.447404+00:00",
     "status": "collected",
-    "n_items": 61,
-    "failed_pages": [
-      "ue2_2026-05-24_g2_izah--005",
-      "ue2_2026-05-24_g2_izah--001",
-      "ue2_2026-05-24_g2_izah--006",
-      "ue2_2026-05-24_g2_izah--013",
-      "ue2_2026-05-24_g2_izah--019"
-    ],
+    "n_items": 80,
+    "failed_pages": [],
     "cost_usd": 0.5171
   },
   "ue2_2026-05-24_g3_izah": {
@@ -62,14 +40,8 @@
     "n_pages": 45,
     "submitted_at": "2026-07-05T06:12:32.849157+00:00",
     "status": "collected",
-    "n_items": 136,
-    "failed_pages": [
-      "ue2_2026-05-24_g3_izah--030",
-      "ue2_2026-05-24_g3_izah--018",
-      "ue2_2026-05-24_g3_izah--027",
-      "ue2_2026-05-24_g3_izah--009",
-      "ue2_2026-05-24_g3_izah--024"
-    ],
+    "n_items": 150,
+    "failed_pages": [],
     "cost_usd": 0.9759
   },
   "mixed_2026-04-19_izah": {
@@ -77,26 +49,8 @@
     "n_pages": 52,
     "submitted_at": "2026-07-05T06:12:46.192811+00:00",
     "status": "collected",
-    "n_items": 136,
-    "failed_pages": [
-      "mixed_2026-04-19_izah--005",
-      "mixed_2026-04-19_izah--041",
-      "mixed_2026-04-19_izah--048",
-      "mixed_2026-04-19_izah--001",
-      "mixed_2026-04-19_izah--043",
-      "mixed_2026-04-19_izah--017",
-      "mixed_2026-04-19_izah--011",
-      "mixed_2026-04-19_izah--039",
-      "mixed_2026-04-19_izah--052",
-      "mixed_2026-04-19_izah--013",
-      "mixed_2026-04-19_izah--037",
-      "mixed_2026-04-19_izah--018",
-      "mixed_2026-04-19_izah--019",
-      "mixed_2026-04-19_izah--010",
-      "mixed_2026-04-19_izah--032",
-      "mixed_2026-04-19_izah--027",
-      "mixed_2026-04-19_izah--028"
-    ],
+    "n_items": 198,
+    "failed_pages": [],
     "cost_usd": 1.1269
   },
   "sl11_2026-03-09_izah": {
@@ -104,17 +58,8 @@
     "n_pages": 47,
     "submitted_at": "2026-07-05T06:12:57.528020+00:00",
     "status": "collected",
-    "n_items": 155,
-    "failed_pages": [
-      "sl11_2026-03-09_izah--023",
-      "sl11_2026-03-09_izah--022",
-      "sl11_2026-03-09_izah--018",
-      "sl11_2026-03-09_izah--024",
-      "sl11_2026-03-09_izah--037",
-      "sl11_2026-03-09_izah--017",
-      "sl11_2026-03-09_izah--009",
-      "sl11_2026-03-09_izah--011"
-    ],
+    "n_items": 181,
+    "failed_pages": [],
     "cost_usd": 1.0404
   },
   "sl11_2026-03-15_izah": {
@@ -122,17 +67,8 @@
     "n_pages": 44,
     "submitted_at": "2026-07-05T06:13:07.703865+00:00",
     "status": "collected",
-    "n_items": 170,
-    "failed_pages": [
-      "sl11_2026-03-15_izah--013",
-      "sl11_2026-03-15_izah--009",
-      "sl11_2026-03-15_izah--039",
-      "sl11_2026-03-15_izah--038",
-      "sl11_2026-03-15_izah--021",
-      "sl11_2026-03-15_izah--010",
-      "sl11_2026-03-15_izah--005",
-      "sl11_2026-03-15_izah--016"
-    ],
+    "n_items": 196,
+    "failed_pages": [],
     "cost_usd": 1.0467
   },
   "ue2_2025-07-13_g1_izah": {
@@ -140,11 +76,8 @@
     "n_pages": 28,
     "submitted_at": "2026-07-05T06:13:12.083768+00:00",
     "status": "collected",
-    "n_items": 104,
-    "failed_pages": [
-      "ue2_2025-07-13_g1_izah--006",
-      "ue2_2025-07-13_g1_izah--021"
-    ],
+    "n_items": 110,
+    "failed_pages": [],
     "cost_usd": 0.5946
   },
   "ue2_2025-07-13_g4_izah": {
@@ -161,11 +94,8 @@
     "n_pages": 8,
     "submitted_at": "2026-07-05T06:13:17.817236+00:00",
     "status": "collected",
-    "n_items": 24,
-    "failed_pages": [
-      "ue2_2025-07-13_g3geo_izah--008",
-      "ue2_2025-07-13_g3geo_izah--007"
-    ],
+    "n_items": 27,
+    "failed_pages": [],
     "cost_usd": 0.1787
   },
   "ue2_2025-07-06_g2_izah": {
@@ -173,15 +103,8 @@
     "n_pages": 23,
     "submitted_at": "2026-07-05T06:13:22.639287+00:00",
     "status": "collected",
-    "n_items": 62,
-    "failed_pages": [
-      "ue2_2025-07-06_g2_izah--021",
-      "ue2_2025-07-06_g2_izah--023",
-      "ue2_2025-07-06_g2_izah--022",
-      "ue2_2025-07-06_g2_izah--016",
-      "ue2_2025-07-06_g2_izah--004",
-      "ue2_2025-07-06_g2_izah--019"
-    ],
+    "n_items": 83,
+    "failed_pages": [],
     "cost_usd": 0.5375
   },
   "ue2_2025-07-06_g3_izah": {
@@ -189,11 +112,8 @@
     "n_pages": 37,
     "submitted_at": "2026-07-05T06:13:31.560956+00:00",
     "status": "collected",
-    "n_items": 128,
-    "failed_pages": [
-      "ue2_2025-07-06_g3_izah--017",
-      "ue2_2025-07-06_g3_izah--034"
-    ],
+    "n_items": 137,
+    "failed_pages": [],
     "cost_usd": 0.8413
   },
   "ue2_2025-06-01_g1_izah": {
@@ -201,10 +121,8 @@
     "n_pages": 30,
     "submitted_at": "2026-07-05T06:13:36.847036+00:00",
     "status": "collected",
-    "n_items": 109,
-    "failed_pages": [
-      "ue2_2025-06-01_g1_izah--004"
-    ],
+    "n_items": 112,
+    "failed_pages": [],
     "cost_usd": 0.6585
   },
   "ue2_2025-06-01_g4_izah": {
@@ -212,14 +130,8 @@
     "n_pages": 23,
     "submitted_at": "2026-07-05T06:13:41.350974+00:00",
     "status": "collected",
-    "n_items": 74,
-    "failed_pages": [
-      "ue2_2025-06-01_g4_izah--007",
-      "ue2_2025-06-01_g4_izah--017",
-      "ue2_2025-06-01_g4_izah--014",
-      "ue2_2025-06-01_g4_izah--013",
-      "ue2_2025-06-01_g4_izah--011"
-    ],
+    "n_items": 91,
+    "failed_pages": [],
     "cost_usd": 0.5145
   },
   "ue2_2025-06-01_g3geo_izah": {
@@ -227,11 +139,8 @@
     "n_pages": 9,
     "submitted_at": "2026-07-05T06:13:43.273545+00:00",
     "status": "collected",
-    "n_items": 21,
-    "failed_pages": [
-      "ue2_2025-06-01_g3geo_izah--006",
-      "ue2_2025-06-01_g3geo_izah--005"
-    ],
+    "n_items": 26,
+    "failed_pages": [],
     "cost_usd": 0.1756
   },
   "ue2_2025-05-25_g2_izah": {
@@ -239,13 +148,8 @@
     "n_pages": 24,
     "submitted_at": "2026-07-05T06:13:49.170994+00:00",
     "status": "collected",
-    "n_items": 75,
-    "failed_pages": [
-      "ue2_2025-05-25_g2_izah--014",
-      "ue2_2025-05-25_g2_izah--013",
-      "ue2_2025-05-25_g2_izah--001",
-      "ue2_2025-05-25_g2_izah--019"
-    ],
+    "n_items": 89,
+    "failed_pages": [],
     "cost_usd": 0.5595
   },
   "ue2_2025-05-25_g3_izah": {
@@ -253,11 +157,8 @@
     "n_pages": 46,
     "submitted_at": "2026-07-05T06:14:01.174479+00:00",
     "status": "collected",
-    "n_items": 158,
-    "failed_pages": [
-      "ue2_2025-05-25_g3_izah--016",
-      "ue2_2025-05-25_g3_izah--015"
-    ],
+    "n_items": 163,
+    "failed_pages": [],
     "cost_usd": 1.0702
   },
   "sl11_2025-03-02_izah": {
@@ -265,21 +166,8 @@
     "n_pages": 47,
     "submitted_at": "2026-07-05T06:14:11.567550+00:00",
     "status": "collected",
-    "n_items": 152,
-    "failed_pages": [
-      "sl11_2025-03-02_izah--026",
-      "sl11_2025-03-02_izah--010",
-      "sl11_2025-03-02_izah--045",
-      "sl11_2025-03-02_izah--005",
-      "sl11_2025-03-02_izah--039",
-      "sl11_2025-03-02_izah--012",
-      "sl11_2025-03-02_izah--036",
-      "sl11_2025-03-02_izah--016",
-      "sl11_2025-03-02_izah--028",
-      "sl11_2025-03-02_izah--014",
-      "sl11_2025-03-02_izah--009",
-      "sl11_2025-03-02_izah--011"
-    ],
+    "n_items": 203,
+    "failed_pages": [],
     "cost_usd": 1.085
   },
   "sl11_2025-03-09_izah": {
@@ -287,17 +175,8 @@
     "n_pages": 46,
     "submitted_at": "2026-07-05T06:14:23.542698+00:00",
     "status": "collected",
-    "n_items": 172,
-    "failed_pages": [
-      "sl11_2025-03-09_izah--028",
-      "sl11_2025-03-09_izah--016",
-      "sl11_2025-03-09_izah--012",
-      "sl11_2025-03-09_izah--024",
-      "sl11_2025-03-09_izah--014",
-      "sl11_2025-03-09_izah--027",
-      "sl11_2025-03-09_izah--003",
-      "sl11_2025-03-09_izah--026"
-    ],
+    "n_items": 199,
+    "failed_pages": [],
     "cost_usd": 1.0835
   }
 }
