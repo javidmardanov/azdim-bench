@@ -1,0 +1,122 @@
+{
+  "ue2_2026-06-07_g1_izah": {
+    "batch_id": "msgbatch_015zsjqKPcQu4NMPPZ2ELWsr",
+    "n_pages": 30,
+    "submitted_at": "2026-07-05T06:12:10.981833+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2026-06-07_g4_izah": {
+    "batch_id": "msgbatch_01KeaPmEaWzoUnJiLPzfMe3L",
+    "n_pages": 24,
+    "submitted_at": "2026-07-05T06:12:15.187912+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2026-06-07_g3geo_izah": {
+    "batch_id": "msgbatch_01PWXLCBXn9EwXwA8CrSZnDq",
+    "n_pages": 9,
+    "submitted_at": "2026-07-05T06:12:17.328888+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2026-05-24_g2_izah": {
+    "batch_id": "msgbatch_01JArAdMoHJUtA26P8PkBekr",
+    "n_pages": 24,
+    "submitted_at": "2026-07-05T06:12:22.447404+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2026-05-24_g3_izah": {
+    "batch_id": "msgbatch_01MwAdUzXZAcnjuccYWKfQQn",
+    "n_pages": 45,
+    "submitted_at": "2026-07-05T06:12:32.849157+00:00",
+    "status": "in_progress"
+  },
+  "mixed_2026-04-19_izah": {
+    "batch_id": "msgbatch_019Z5DsJnay3qSetBWguq8L8",
+    "n_pages": 52,
+    "submitted_at": "2026-07-05T06:12:46.192811+00:00",
+    "status": "in_progress"
+  },
+  "sl11_2026-03-09_izah": {
+    "batch_id": "msgbatch_01GwybUcTx2mxUtQdJyon3sG",
+    "n_pages": 47,
+    "submitted_at": "2026-07-05T06:12:57.528020+00:00",
+    "status": "in_progress"
+  },
+  "sl11_2026-03-15_izah": {
+    "batch_id": "msgbatch_018LmV6x64R91HeYNRg43F2T",
+    "n_pages": 44,
+    "submitted_at": "2026-07-05T06:13:07.703865+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-07-13_g1_izah": {
+    "batch_id": "msgbatch_013LSNUyAjGeAGHQTsnPJpyJ",
+    "n_pages": 28,
+    "submitted_at": "2026-07-05T06:13:12.083768+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-07-13_g4_izah": {
+    "batch_id": "msgbatch_01HwX5n2RYjgNsifMk6q4j7f",
+    "n_pages": 22,
+    "submitted_at": "2026-07-05T06:13:16.010605+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-07-13_g3geo_izah": {
+    "batch_id": "msgbatch_01Efufh17YPTx4mtdN9ZgdyD",
+    "n_pages": 8,
+    "submitted_at": "2026-07-05T06:13:17.817236+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-07-06_g2_izah": {
+    "batch_id": "msgbatch_011xfrFKQsAg7daFanxLFzpn",
+    "n_pages": 23,
+    "submitted_at": "2026-07-05T06:13:22.639287+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-07-06_g3_izah": {
+    "batch_id": "msgbatch_01HUmg9n8Hh7Gid2AgcT68qg",
+    "n_pages": 37,
+    "submitted_at": "2026-07-05T06:13:31.560956+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-06-01_g1_izah": {
+    "batch_id": "msgbatch_018njZryrH36GY5Vyoq8S4RN",
+    "n_pages": 30,
+    "submitted_at": "2026-07-05T06:13:36.847036+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-06-01_g4_izah": {
+    "batch_id": "msgbatch_01JzXGyVtCFGbxe1qrAtbKEt",
+    "n_pages": 23,
+    "submitted_at": "2026-07-05T06:13:41.350974+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-06-01_g3geo_izah": {
+    "batch_id": "msgbatch_017c4dZ4dPyr2UqLWtQAeEuw",
+    "n_pages": 9,
+    "submitted_at": "2026-07-05T06:13:43.273545+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-05-25_g2_izah": {
+    "batch_id": "msgbatch_0139DZdkrmmiqLsG6GB7Prr1",
+    "n_pages": 24,
+    "submitted_at": "2026-07-05T06:13:49.170994+00:00",
+    "status": "in_progress"
+  },
+  "ue2_2025-05-25_g3_izah": {
+    "batch_id": "msgbatch_01EufzsUKVa5k8RihAVRkiJW",
+    "n_pages": 46,
+    "submitted_at": "2026-07-05T06:14:01.174479+00:00",
+    "status": "in_progress"
+  },
+  "sl11_2025-03-02_izah": {
+    "batch_id": "msgbatch_01YUpUyJLDfZnX8DSg3PLzty",
+    "n_pages": 47,
+    "submitted_at": "2026-07-05T06:14:11.567550+00:00",
+    "status": "in_progress"
+  },
+  "sl11_2025-03-09_izah": {
+    "batch_id": "msgbatch_01PsUN49gLUhbiSumsdPmNyh",
+    "n_pages": 46,
+    "submitted_at": "2026-07-05T06:14:23.542698+00:00",
+    "status": "in_progress"
+  }
+}
