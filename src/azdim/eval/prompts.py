@@ -1,19 +1,29 @@
-"""Fixed evaluation prompts. Frozen for v0 — do not edit between runs."""
+"""Fixed evaluation prompts. Frozen for v0 — do not edit between runs.
 
-# Track A: native Azerbaijani, answer letter only
-INSTR_AZ = ("Sualı cavablandır. Yalnız doğru cavab variantının hərfini yaz: "
-            "A, B, C, D və ya E.")
+Main condition (v0): the model may reason visibly, but must end with a
+single final-answer line. This follows MMLU-Pro/AGIEval practice and avoids
+conflating instruction compliance with ability (bare-letter prompts make
+compliant models answer math blind while non-compliant ones reason anyway).
+"""
 
-# Track B: native Russian, answer letter only
-INSTR_RU = ("Ответь на вопрос. Напиши только букву правильного варианта: "
-            "A, B, C, D или E.")
+# Track A: native Azerbaijani
+INSTR_AZ = ("Sualı həll et. İstəsən qısa izah verə bilərsən, amma cavabının "
+            "SON sətri mütləq bu formatda olmalıdır:\n"
+            "Cavab: <hərf>\n"
+            "burada <hərf> A, B, C, D və ya E-dir.")
+
+# Track B: native Russian
+INSTR_RU = ("Реши задачу. Можешь кратко объяснить решение, но ПОСЛЕДНЯЯ "
+            "строка твоего ответа должна иметь строго такой формат:\n"
+            "Ответ: <буква>\n"
+            "где <буква> — A, B, C, D или E.")
 
 INSTR_BY_LANG = {"az": INSTR_AZ, "ru": INSTR_RU}
 
 
 def format_mcq(item: dict) -> str:
     """Render one MCQ item as the user prompt for its native language."""
-    instr = INSTR_BY_LANG.get(item["question_language"], INSTR_AZ)
+    instr = INSTR_BY_LANG.get(item["language"], INSTR_AZ)
     lines = [instr, "", item["question_text"].strip(), ""]
     for letter in "ABCDE":
         choice = (item.get("choices") or {}).get(letter)

@@ -1,0 +1,70 @@
+[
+  {
+    "model_key": "claude-haiku-4-5",
+    "track": "A",
+    "n": 8,
+    "accuracy": 1.0,
+    "ci95": [
+      1.0,
+      1.0
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "mathematics": 1.0
+    },
+    "acc_by_year": {
+      "2025": 1.0
+    }
+  },
+  {
+    "model_key": "gemini-3.5-flash",
+    "track": "A",
+    "n": 8,
+    "accuracy": 1.0,
+    "ci95": [
+      1.0,
+      1.0
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "mathematics": 1.0
+    },
+    "acc_by_year": {
+      "2025": 1.0
+    }
+  },
+  {
+    "model_key": "gpt-5.4-mini",
+    "track": "A",
+    "n": 8,
+    "accuracy": 1.0,
+    "ci95": [
+      1.0,
+      1.0
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "mathematics": 1.0
+    },
+    "acc_by_year": {
+      "2025": 1.0
+    }
+  },
+  {
+    "model_key": "llama-3.1-8b",
+    "track": "A",
+    "n": 8,
+    "accuracy": 0.125,
+    "ci95": [
+      0.0,
+      0.375
+    ],
+    "invalid_rate": 0.25,
+    "acc_by_subject": {
+      "mathematics": 0.125
+    },
+    "acc_by_year": {
+      "2025": 0.125
+    }
+  }
+]

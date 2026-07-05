@@ -12,6 +12,8 @@ import random
 from collections import defaultdict
 from pathlib import Path
 
+from azdim.eval.parse import parse_answer
+
 ROOT = Path(__file__).resolve().parents[2].parent
 ITEMS_FILE = ROOT / "data" / "items" / "items_v0.jsonl"
 RAW_DIR = ROOT / "results" / "raw"
@@ -39,6 +41,9 @@ def main() -> None:
         recs = [r for r in recs if "error" not in r and r["item_id"] in items]
         if not recs:
             continue
+        for r in recs:  # re-parse so parser fixes apply retroactively
+            r["parsed"] = parse_answer(r.get("raw", ""))
+            r["correct"] = r["parsed"] == r["gold"]
         model_key = recs[0]["model_key"]
         track = recs[0]["track"]
         flags = [bool(r["correct"]) for r in recs]

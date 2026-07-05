@@ -38,7 +38,7 @@ def eval_items(track: str) -> list[dict]:
             if it["question_type"] == "mcq"
             and it.get("gold_answer_label") in tuple("ABCDE")
             and not it.get("requires_image")
-            and it.get("question_language") == lang]
+            and it.get("language") == lang]
 
 
 # --- provider adapters ------------------------------------------------------
@@ -117,11 +117,13 @@ def complete(spec: dict, prompt: str) -> tuple:
 
 # --- run --------------------------------------------------------------------
 
-def run_model(model_key: str, track: str) -> None:
+def run_model(model_key: str, track: str, limit: int | None = None) -> None:
     load_env()
     specs = json.loads(MODELS_FILE.read_text())
     spec = specs[model_key]
     items = eval_items(track)
+    if limit:
+        items = items[:limit]
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     out_path = RAW_DIR / f"{model_key}__{track}.jsonl"
     done = set()
@@ -192,9 +194,14 @@ if __name__ == "__main__":
         discover()
     elif args[:1] == ["run"]:
         specs = json.loads(MODELS_FILE.read_text())
+        limit = None
+        if "--limit" in args:
+            i = args.index("--limit")
+            limit = int(args[i + 1])
+            args = args[:i] + args[i + 2:]
         keys = list(specs) if "--all" in args else args[1:]
         for key in keys:
             for track in ("A", "B"):
-                run_model(key, track)
+                run_model(key, track, limit)
     else:
         sys.exit("usage: runner discover | runner run <model_key>|--all")

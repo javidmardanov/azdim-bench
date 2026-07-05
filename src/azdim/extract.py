@@ -101,6 +101,54 @@ gold_answer_text (string|null), requires_image (bool), image_description \
 """
 
 
+# Structured-output schema. Deliberately union-free (the API caps the number
+# of union-typed parameters): absent values are "" / omitted keys, and
+# parse_items normalizes them back to None.
+ITEM_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "start_on_first_page": {"type": "boolean"},
+        "continues_to_next_page": {"type": "boolean"},
+        "section_header": {"type": "string"},
+        "variant_map": {"type": "object",
+                        "properties": {k: {"type": "integer"}
+                                       for k in "ABCD"},
+                        "required": [],
+                        "additionalProperties": False},
+        "question_text": {"type": "string"},
+        "choices": {"type": "object",
+                    "properties": {k: {"type": "string"} for k in "ABCDE"},
+                    "required": [],
+                    "additionalProperties": False},
+        "question_type": {"enum": ["mcq", "codable_open", "written_open"]},
+        "topic": {"type": "string"},
+        "grade_level_tag": {"type": "string"},
+        "explanation_text": {"type": "string"},
+        "gold_answer_label": {"enum": ["A", "B", "C", "D", "E", ""]},
+        "gold_answer_text": {"type": "string"},
+        "requires_image": {"type": "boolean"},
+        "image_description": {"type": "string"},
+        "language": {"type": "string"},
+        "extraction_confidence": {"enum": ["high", "medium", "low"]},
+        "notes": {"type": "string"},
+    },
+    "required": ["start_on_first_page", "continues_to_next_page",
+                 "section_header", "variant_map", "question_text", "choices",
+                 "question_type", "topic", "grade_level_tag",
+                 "explanation_text", "gold_answer_label", "gold_answer_text",
+                 "requires_image", "image_description", "language",
+                 "extraction_confidence", "notes"],
+    "additionalProperties": False,
+}
+
+EXTRACT_SCHEMA = {
+    "type": "object",
+    "properties": {"items": {"type": "array", "items": ITEM_SCHEMA}},
+    "required": ["items"],
+    "additionalProperties": False,
+}
+
+
 def load_env() -> None:
     env_file = ROOT / ".env"
     if env_file.exists():
@@ -127,7 +175,18 @@ def parse_items(raw: str) -> list[dict]:
     if text.startswith("```"):
         text = text.split("```")[1]
         text = text.removeprefix("json").strip()
-    return json.loads(text)["items"]
+    items = json.loads(text)["items"]
+    # normalize schema's empty-value conventions back to None
+    for it in items:
+        for key in ("section_header", "topic", "grade_level_tag",
+                    "explanation_text", "gold_answer_label",
+                    "gold_answer_text", "image_description", "notes"):
+            if it.get(key) == "":
+                it[key] = None
+        for key in ("variant_map", "choices"):
+            if it.get(key) == {}:
+                it[key] = None
+    return items
 
 
 def log_usage(usage, context: str) -> float:
@@ -173,6 +232,9 @@ def build_request(source_meta: dict, by_number: dict[int, Path],
         # transcription needs fidelity, not reasoning; disabling thinking
         # keeps output tokens (and cost) down
         "thinking": {"type": "disabled"},
+        # schema-constrained decoding: LaTeX backslashes can't break JSON
+        "output_config": {"format": {"type": "json_schema",
+                                     "schema": EXTRACT_SCHEMA}},
         "system": SYSTEM_PROMPT,
         "messages": [{"role": "user", "content": content}],
     }

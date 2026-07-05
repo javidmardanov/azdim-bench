@@ -148,6 +148,63 @@ def collect() -> None:
     print(f"\nbatch extraction cost so far: ${total:.2f}")
 
 
+def retry_failed() -> None:
+    """Re-run failed pages via the direct API with schema-constrained output."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    from azdim.extract import extract_page
+    load_env()
+    client = anthropic.Anthropic()
+    sources = {s["source_id"]: s
+               for s in json.loads(MANIFEST.read_text())["sources"]}
+    state = load_state()
+    jobs = []
+    for sid, rec in state.items():
+        for cid in rec.get("failed_pages", []):
+            jobs.append((sid, int(cid.rsplit("--", 1)[1])))
+    print(f"{len(jobs)} failed pages to retry")
+
+    def one(job: tuple) -> tuple:
+        sid, n = job
+        pages = sorted((PAGES_DIR / sid).glob("page-*.png"), key=page_number)
+        by_number = {page_number(p): p for p in pages}
+        try:
+            return sid, n, extract_page(client, sources[sid], by_number, n)
+        except Exception as e:  # noqa: BLE001 — report, don't abort the rest
+            print(f"  RETRY FAILED {sid} p{n}: {str(e)[:200]}")
+            return sid, n, None
+
+    results: dict[str, list] = {}
+    with ThreadPoolExecutor(4) as pool:
+        for sid, n, items in pool.map(one, jobs):
+            if items is None:
+                continue
+            for item in items:
+                item["source_id"] = sid
+                item["source_page"] = n
+                item["extractor_model"] = MODEL
+            results.setdefault(sid, []).extend(items)
+            print(f"  {sid} p{n}: {len(items)} items")
+
+    for sid, new_items in results.items():
+        path = EXTRACTED_DIR / f"{sid}.jsonl"
+        existing = [json.loads(line)
+                    for line in path.read_text().splitlines()]
+        merged = sorted(existing + new_items,
+                        key=lambda it: it["source_page"])
+        with open(path, "w") as f:
+            for item in merged:
+                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+        state[sid]["failed_pages"] = [
+            cid for cid in state[sid]["failed_pages"]
+            if int(cid.rsplit("--", 1)[1])
+            not in {it["source_page"] for it in new_items}]
+        state[sid]["n_items"] = len(merged)
+    save_state(state)
+    left = sum(len(r.get("failed_pages", [])) for r in state.values())
+    print(f"retry done; {left} pages still failed")
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "status"
     if cmd == "submit":
@@ -157,5 +214,7 @@ if __name__ == "__main__":
         status()
     elif cmd == "collect":
         collect()
+    elif cmd == "retry":
+        retry_failed()
     else:
-        sys.exit("usage: batch_extract submit|status|collect")
+        sys.exit("usage: batch_extract submit|status|collect|retry")
