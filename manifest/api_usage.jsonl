@@ -152,3 +152,37 @@
 {"model": "claude-sonnet-5", "context": "extract:sl11_2025-03-09_izah:page-14", "input_tokens": 10876, "output_tokens": 2929, "cost_usd": 0.051042}
 {"model": "claude-sonnet-5", "context": "extract:sl11_2026-03-09_izah:page-23", "input_tokens": 10876, "output_tokens": 16000, "cost_usd": 0.181752}
 {"model": "claude-sonnet-5", "context": "extract:sl11_2026-03-09_izah:page-23", "input_tokens": 10876, "output_tokens": 188, "cost_usd": 0.023632}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-01.png", "input_tokens": 3629, "output_tokens": 919, "cost_usd": 0.016448}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-02.png", "input_tokens": 3629, "output_tokens": 1043, "cost_usd": 0.017688}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-03.png", "input_tokens": 3629, "output_tokens": 919, "cost_usd": 0.016448}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-04.png", "input_tokens": 3629, "output_tokens": 919, "cost_usd": 0.016448}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-05.png", "input_tokens": 3629, "output_tokens": 920, "cost_usd": 0.016458}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-06.png", "input_tokens": 3629, "output_tokens": 920, "cost_usd": 0.016458}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-07.png", "input_tokens": 3629, "output_tokens": 920, "cost_usd": 0.016458}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-08.png", "input_tokens": 3629, "output_tokens": 920, "cost_usd": 0.016458}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-09.png", "input_tokens": 3629, "output_tokens": 473, "cost_usd": 0.011988}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-10.png", "input_tokens": 3629, "output_tokens": 473, "cost_usd": 0.011988}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-11.png", "input_tokens": 3629, "output_tokens": 474, "cost_usd": 0.011998}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-12.png", "input_tokens": 3629, "output_tokens": 474, "cost_usd": 0.011998}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-13.png", "input_tokens": 3629, "output_tokens": 473, "cost_usd": 0.011988}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-14.png", "input_tokens": 3629, "output_tokens": 536, "cost_usd": 0.012618}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-15.png", "input_tokens": 3629, "output_tokens": 474, "cost_usd": 0.011998}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-16.png", "input_tokens": 3629, "output_tokens": 474, "cost_usd": 0.011998}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-17.png", "input_tokens": 3629, "output_tokens": 1373, "cost_usd": 0.020988}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-18.png", "input_tokens": 3629, "output_tokens": 1558, "cost_usd": 0.022838}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-19.png", "input_tokens": 3629, "output_tokens": 1373, "cost_usd": 0.020988}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-20.png", "input_tokens": 3629, "output_tokens": 1373, "cost_usd": 0.020988}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-21.png", "input_tokens": 3629, "output_tokens": 1374, "cost_usd": 0.020998}
+{"model": "claude-haiku-4-5", "context": "eval:claude-haiku-4-5:A", "input_tokens": 149862, "output_tokens": 223504, "cost_usd": 1.267382, "estimated": false}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-22.png", "input_tokens": 3629, "output_tokens": 1374, "cost_usd": 0.020998}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-23.png", "input_tokens": 3629, "output_tokens": 1559, "cost_usd": 0.022848}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-24.png", "input_tokens": 3629, "output_tokens": 1374, "cost_usd": 0.020998}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-25.png", "input_tokens": 3629, "output_tokens": 486, "cost_usd": 0.012118}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-26.png", "input_tokens": 3629, "output_tokens": 486, "cost_usd": 0.012118}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-27.png", "input_tokens": 3629, "output_tokens": 487, "cost_usd": 0.012128}
+{"model": "claude-sonnet-5", "context": "etalon:ue2_2025-07-13_etalon:page-28.png", "input_tokens": 3629, "output_tokens": 550, "cost_usd": 0.012758}
+{"model": "claude-haiku-4-5", "context": "eval:claude-haiku-4-5:B", "input_tokens": 47813, "output_tokens": 68629, "cost_usd": 0.390958, "estimated": false}
+{"model": "gemini-3.5-flash", "context": "eval:gemini-3.5-flash:A", "input_tokens": 126866, "output_tokens": 141171, "cost_usd": 0.390987, "estimated": true}
+{"model": "gemini-3.5-flash", "context": "eval:gemini-3.5-flash:B", "input_tokens": 35423, "output_tokens": 31559, "cost_usd": 0.089524, "estimated": true}
+{"model": "gpt-5.4-mini", "context": "eval:gpt-5.4-mini:A", "input_tokens": 118036, "output_tokens": 80196, "cost_usd": 0.303842, "estimated": true}
+{"model": "gpt-5.4-mini", "context": "eval:gpt-5.4-mini:B", "input_tokens": 36411, "output_tokens": 18760, "cost_usd": 0.074596, "estimated": true}

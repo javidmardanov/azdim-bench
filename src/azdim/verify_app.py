@@ -38,9 +38,19 @@ def load_decisions() -> dict[str, dict]:
     return decisions
 
 
+QC_FLAGS_FILE = ROOT / "data" / "items" / "qc_flags.json"
+
+
+def qc_flags() -> dict[str, str]:
+    if QC_FLAGS_FILE.exists():
+        return json.loads(QC_FLAGS_FILE.read_text())
+    return {}
+
+
 def is_flagged(it: dict) -> bool:
     return (it.get("extraction_confidence") != "high"
             or bool(it.get("notes"))
+            or it["item_id"] in qc_flags()
             or (it["question_type"] == "mcq"
                 and not it.get("gold_answer_label")))
 
