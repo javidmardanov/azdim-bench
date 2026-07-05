@@ -17,7 +17,9 @@ MANIFEST = ROOT / "manifest" / "sources.json"
 RAW_DIR = ROOT / "data" / "raw_pdfs"
 PAGES_DIR = ROOT / "data" / "pages"
 
-DPI = 200
+# 150 dpi keeps print text and math legible while staying ~2900 image tokens
+# per page on models with high-res vision (200 dpi would bill ~5000)
+DPI = 150
 
 
 def render(source_id: str) -> list[Path]:

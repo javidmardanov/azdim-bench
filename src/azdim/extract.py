@@ -23,8 +23,16 @@ ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = ROOT / "manifest" / "sources.json"
 PAGES_DIR = ROOT / "data" / "pages"
 EXTRACTED_DIR = ROOT / "data" / "extracted"
+USAGE_LOG = ROOT / "manifest" / "api_usage.jsonl"
 
 MODEL = os.environ.get("AZDIM_EXTRACT_MODEL", "claude-sonnet-5")
+
+# USD per million tokens (input, output). Sonnet 5 intro pricing through 2026-08-31.
+PRICES = {
+    "claude-sonnet-5": (2.00, 10.00),
+    "claude-haiku-4-5": (1.00, 5.00),
+    "claude-opus-4-8": (5.00, 25.00),
+}
 
 SYSTEM_PROMPT = """\
 You are a meticulous transcriber of official Azerbaijani state exam (DİM) \
@@ -115,6 +123,27 @@ def parse_items(raw: str) -> list[dict]:
     return json.loads(text)["items"]
 
 
+def log_usage(usage, context: str) -> float:
+    """Append token usage to the ledger; return this call's cost in USD."""
+    inp, out = usage.input_tokens, usage.output_tokens
+    price_in, price_out = PRICES.get(MODEL, (5.00, 25.00))
+    cost = inp * price_in / 1e6 + out * price_out / 1e6
+    with open(USAGE_LOG, "a") as f:
+        f.write(json.dumps({
+            "model": MODEL, "context": context,
+            "input_tokens": inp, "output_tokens": out,
+            "cost_usd": round(cost, 6),
+        }) + "\n")
+    return cost
+
+
+def total_spend() -> float:
+    if not USAGE_LOG.exists():
+        return 0.0
+    return sum(json.loads(line)["cost_usd"]
+               for line in USAGE_LOG.read_text().splitlines() if line)
+
+
 def extract_page(client: anthropic.Anthropic, source_meta: dict,
                  page: Path, next_page: Path | None) -> list[dict]:
     content: list[dict] = [image_block(page)]
@@ -135,12 +164,17 @@ def extract_page(client: anthropic.Anthropic, source_meta: dict,
         resp = client.messages.create(
             model=MODEL,
             max_tokens=16000,
+            # transcription needs fidelity, not reasoning; disabling thinking
+            # keeps output tokens (and cost) down
+            thinking={"type": "disabled"},
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": content}],
         )
+        log_usage(resp.usage, f"extract:{page.parent.name}:{page.name}")
+        text = next((b.text for b in resp.content if b.type == "text"), "")
         try:
-            return parse_items(resp.content[0].text)
-        except (json.JSONDecodeError, KeyError, IndexError) as e:
+            return parse_items(text)
+        except (json.JSONDecodeError, KeyError) as e:
             if attempt == 2:
                 raise RuntimeError(
                     f"unparseable model output for {page}: {e}") from e
@@ -182,8 +216,10 @@ def extract_source(source_id: str, page_range: tuple[int, int] | None) -> Path:
                 item["extractor_model"] = MODEL
                 out.write(json.dumps(item, ensure_ascii=False) + "\n")
             n_items += len(items)
-            print(f"page {n:>3}: {len(items)} items")
+            print(f"page {n:>3}: {len(items)} items"
+                  f"  (cumulative spend ${total_spend():.2f})")
     print(f"\n{n_items} items -> {out_path}")
+    print(f"total API spend so far: ${total_spend():.2f}")
     return out_path
 
 
