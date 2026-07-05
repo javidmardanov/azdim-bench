@@ -80,7 +80,13 @@ def _complete_openai_compat(provider: str, model: str, prompt: str,
         if "temperature" not in str(e):
             raise
         resp = client.chat.completions.create(**kwargs)
-    text = resp.choices[0].message.content or ""
+    msg = resp.choices[0].message
+    text = msg.content or ""
+    if not text:  # reasoning models may leave content empty
+        extra = getattr(msg, "model_extra", None) or {}
+        text = (getattr(msg, "reasoning", None)
+                or extra.get("reasoning")
+                or extra.get("reasoning_content") or "")
     usage = resp.usage
     return text, {"in": getattr(usage, "prompt_tokens", None),
                   "out": getattr(usage, "completion_tokens", None)}
