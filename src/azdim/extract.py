@@ -40,10 +40,16 @@ You are a meticulous transcriber of official Azerbaijani state exam (DİM) \
 choices, topic, grade level, an explanation, and the correct answer, plus a \
 mapping of the item to its position in the A/B/C/D exam variants.
 
-You will receive images of two consecutive pages. Transcribe EVERY exam item \
-that STARTS on the FIRST page. Use the second page only to complete an item \
-that continues across the page break. If no item starts on the first page \
-(e.g., it is a title page or only continuation text), return an empty list.
+You will receive images of up to three consecutive pages, and the text \
+prompt tells you which of them is the TARGET page. Transcribe EVERY exam item \
+whose QUESTION TEXT begins on the target page. The page before is context \
+only: variant-mapping lines or a section heading for a target-page item may \
+sit at its bottom. The page after is for completing an item that continues \
+across the page break. If no item's question begins on the target page \
+(title page, or continuation text only), return an empty list. NEVER emit an \
+item whose question stem is not on the target page — an explanation or answer \
+appearing alone at the top of the target page belongs to the previous page's \
+item and must be skipped.
 
 Typical item layout (labels appear in Azerbaijani, or Russian on \
 Russian-sector pages):
@@ -71,8 +77,9 @@ free-form written work (essay, proof, extended response).
 the choices; keep the printed answer value in "gold_answer_text". If you \
 cannot match unambiguously, leave the label null and lower confidence.
 6. "section_header": if a subject/section heading (e.g. "Riyaziyyat", \
-"Fizika", "Kimya", "Azərbaycan dili", "Русский язык", "Listening") appears on \
-the first page at or above this item, copy it verbatim; otherwise null.
+"Fizika", "Kimya", "Azərbaycan dili", "Русский язык", "Listening") appears at \
+or above this item on the target page (or at the bottom of the context page \
+directly before it), copy it verbatim; otherwise null.
 7. "language": the language the question itself is written in ("az", "ru", \
 "en", "de", "fr", ...).
 8. "extraction_confidence": "high" if everything was clearly legible and \
@@ -144,40 +151,46 @@ def total_spend() -> float:
                for line in USAGE_LOG.read_text().splitlines() if line)
 
 
-def extract_page(client: anthropic.Anthropic, source_meta: dict,
-                 page: Path, next_page: Path | None) -> list[dict]:
-    content: list[dict] = [image_block(page)]
-    if next_page is not None:
-        content.append(image_block(next_page))
+def build_request(source_meta: dict, by_number: dict[int, Path],
+                  n: int) -> dict:
+    """Message params for extracting items that start on page n."""
+    window = [m for m in (n - 1, n, n + 1) if m in by_number]
+    content: list[dict] = [image_block(by_number[m]) for m in window]
+    position = ["first", "second", "third"][window.index(n)]
     content.append({
         "type": "text",
         "text": (
             f"Document: DİM {source_meta['exam_type']} exam, "
             f"date {source_meta['exam_date']}, group {source_meta.get('group')}. "
-            f"First image is page {page_number(page)}"
-            + (f", second is page {page_number(next_page)}." if next_page else
-               "; there is no following page.")
-            + " Extract all items that start on the first page."
+            f"The images are pages {', '.join(str(m) for m in window)}. "
+            f"The TARGET page is page {n} (the {position} image). "
+            "Extract all items whose question begins on the target page."
         ),
     })
+    return {
+        "model": MODEL,
+        "max_tokens": 16000,
+        # transcription needs fidelity, not reasoning; disabling thinking
+        # keeps output tokens (and cost) down
+        "thinking": {"type": "disabled"},
+        "system": SYSTEM_PROMPT,
+        "messages": [{"role": "user", "content": content}],
+    }
+
+
+def extract_page(client: anthropic.Anthropic, source_meta: dict,
+                 by_number: dict[int, Path], n: int) -> list[dict]:
+    params = build_request(source_meta, by_number, n)
     for attempt in (1, 2):
-        resp = client.messages.create(
-            model=MODEL,
-            max_tokens=16000,
-            # transcription needs fidelity, not reasoning; disabling thinking
-            # keeps output tokens (and cost) down
-            thinking={"type": "disabled"},
-            system=SYSTEM_PROMPT,
-            messages=[{"role": "user", "content": content}],
-        )
-        log_usage(resp.usage, f"extract:{page.parent.name}:{page.name}")
+        resp = client.messages.create(**params)
+        log_usage(resp.usage, f"extract:{source_meta['source_id']}:page-{n}")
         text = next((b.text for b in resp.content if b.type == "text"), "")
         try:
             return parse_items(text)
         except (json.JSONDecodeError, KeyError) as e:
             if attempt == 2:
                 raise RuntimeError(
-                    f"unparseable model output for {page}: {e}") from e
+                    f"unparseable model output for page {n}: {e}") from e
     return []
 
 
@@ -209,7 +222,7 @@ def extract_source(source_id: str, page_range: tuple[int, int] | None) -> Path:
     with open(out_path, "a") as out:
         for page in pages_todo:
             n = page_number(page)
-            items = extract_page(client, meta, page, by_number.get(n + 1))
+            items = extract_page(client, meta, by_number, n)
             for item in items:
                 item["source_id"] = source_id
                 item["source_page"] = n

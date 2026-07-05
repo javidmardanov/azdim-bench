@@ -23,3 +23,7 @@
 {"model": "claude-sonnet-5", "context": "extract:ue2_2025-07-13_g1_izah:page-22.png", "input_tokens": 6875, "output_tokens": 2010, "cost_usd": 0.03385}
 {"model": "claude-sonnet-5", "context": "extract:ue2_2025-07-13_g1_izah:page-23.png", "input_tokens": 6875, "output_tokens": 3264, "cost_usd": 0.04639}
 {"model": "claude-sonnet-5", "context": "extract:ue2_2025-07-13_g1_izah:page-24.png", "input_tokens": 6875, "output_tokens": 4217, "cost_usd": 0.05592}
+{"model": "claude-sonnet-5", "context": "extract:ue2_2025-07-13_g1_izah:page-25.png", "input_tokens": 6875, "output_tokens": 2479, "cost_usd": 0.03854}
+{"model": "claude-sonnet-5", "context": "extract:ue2_2025-07-13_g1_izah:page-26.png", "input_tokens": 6875, "output_tokens": 3447, "cost_usd": 0.04822}
+{"model": "claude-sonnet-5", "context": "extract:ue2_2025-07-13_g1_izah:page-27.png", "input_tokens": 6875, "output_tokens": 3124, "cost_usd": 0.04499}
+{"model": "claude-sonnet-5", "context": "extract:ue2_2025-07-13_g1_izah:page-28.png", "input_tokens": 4037, "output_tokens": 2843, "cost_usd": 0.036504}
