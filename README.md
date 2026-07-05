@@ -22,7 +22,16 @@ All question content © DİM, reproduced for research with source attribution.
 ## Pipeline
 
 ```
-uv run python -m azdim.download        # fetch PDFs, verify hashes
-uv run python -m azdim.render          # PDF pages -> PNG
-uv run python -m azdim.extract <id>    # vision-LLM extraction -> data/extracted/
+uv run python -m azdim.download               # fetch official PDFs + hashes
+uv run python -m azdim.render --all-izah      # PDF pages -> PNG (150 dpi)
+uv run python -m azdim.batch_extract submit   # vision-LLM extraction (Batch API)
+uv run python -m azdim.batch_extract collect  # -> data/extracted/*.jsonl
+uv run python -m azdim.batch_extract retry    # re-run failed pages directly
+uv run python -m azdim.align                  # -> data/items/items_v0.jsonl
+uv run python -m azdim.verify_app             # human review UI (localhost:5050)
+uv run python -m azdim.eval.runner run --all  # model panel -> results/raw/
+uv run python -m azdim.eval.metrics           # -> results/metrics_v0.json
+uv run python -m azdim.export                 # -> release/ (HF dataset layout)
 ```
+
+Design decisions and their rationale: [docs/eval_design.md](docs/eval_design.md).
