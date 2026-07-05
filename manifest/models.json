@@ -1,0 +1,16 @@
+{
+  "gpt-5.5": {"provider": "openai", "model": "gpt-5.5", "max_tokens": 4096, "reasoning_effort": "minimal", "tier": "frontier_closed"},
+  "gpt-5.4-mini": {"provider": "openai", "model": "gpt-5.4-mini", "max_tokens": 4096, "reasoning_effort": "minimal", "tier": "mid_closed"},
+  "claude-opus-4-8": {"provider": "anthropic", "model": "claude-opus-4-8", "max_tokens": 512, "tier": "frontier_closed"},
+  "claude-sonnet-5": {"provider": "anthropic", "model": "claude-sonnet-5", "max_tokens": 512, "tier": "mid_closed", "notes": "same family as dataset extractor; flag in contamination discussion"},
+  "claude-haiku-4-5": {"provider": "anthropic", "model": "claude-haiku-4-5", "max_tokens": 512, "tier": "small_closed"},
+  "gemini-3.1-pro": {"provider": "google", "model": "gemini-3.1-pro-preview", "max_tokens": 4096, "thinking_level": "low", "tier": "frontier_closed"},
+  "gemini-3.5-flash": {"provider": "google", "model": "gemini-3.5-flash", "max_tokens": 4096, "thinking_level": "low", "tier": "small_closed"},
+  "deepseek-v4-pro": {"provider": "openrouter", "model": "deepseek/deepseek-v4-pro", "max_tokens": 512, "tier": "open_frontier"},
+  "qwen3-max": {"provider": "openrouter", "model": "qwen/qwen3-max", "max_tokens": 512, "tier": "open_frontier"},
+  "qwen3-235b": {"provider": "openrouter", "model": "qwen/qwen3-235b-a22b-2507", "max_tokens": 512, "tier": "open_large"},
+  "llama-4-maverick": {"provider": "openrouter", "model": "meta-llama/llama-4-maverick", "max_tokens": 512, "tier": "open_large"},
+  "mistral-large-2512": {"provider": "openrouter", "model": "mistralai/mistral-large-2512", "max_tokens": 512, "tier": "open_large"},
+  "gemma-4-31b": {"provider": "openrouter", "model": "google/gemma-4-31b-it", "max_tokens": 512, "tier": "open_small"},
+  "llama-3.1-8b": {"provider": "openrouter", "model": "meta-llama/llama-3.1-8b-instruct", "max_tokens": 512, "tier": "open_tiny"}
+}
