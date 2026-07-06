@@ -67,10 +67,11 @@
  "deepseek-v4-pro": {
   "provider": "openrouter",
   "model": "deepseek/deepseek-v4-pro",
-  "max_tokens": 2048,
+  "max_tokens": 6144,
   "tier": "open_frontier",
   "price_in": 0.43,
-  "price_out": 0.87
+  "price_out": 0.87,
+  "reasoning_effort": "low"
  },
  "qwen3-max": {
   "provider": "openrouter",

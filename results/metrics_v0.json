@@ -46,24 +46,6 @@
     }
   },
   {
-    "model_key": "deepseek-v4-pro",
-    "track": "A",
-    "n": 9,
-    "accuracy": 0.2222,
-    "ci95": [
-      0.0,
-      0.5556
-    ],
-    "invalid_rate": 0.7778,
-    "acc_by_subject": {
-      "azerbaijani_language": 0.3333,
-      "mathematics": 0.0
-    },
-    "acc_by_year": {
-      "2026": 0.2222
-    }
-  },
-  {
     "model_key": "gemini-3.5-flash",
     "track": "A",
     "n": 540,

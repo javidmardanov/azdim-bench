@@ -73,7 +73,11 @@ def _complete_openai_compat(provider: str, model: str, prompt: str,
     kwargs = {"model": model, "max_completion_tokens": max_tokens,
               "messages": [{"role": "user", "content": prompt}]}
     if spec.get("reasoning_effort"):
-        kwargs["reasoning_effort"] = spec["reasoning_effort"]
+        if provider == "openrouter":  # unified reasoning control
+            kwargs["extra_body"] = {
+                "reasoning": {"effort": spec["reasoning_effort"]}}
+        else:
+            kwargs["reasoning_effort"] = spec["reasoning_effort"]
     try:
         resp = client.chat.completions.create(temperature=0, **kwargs)
     except openai.BadRequestError as e:

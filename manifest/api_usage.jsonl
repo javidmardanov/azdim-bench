@@ -186,3 +186,10 @@
 {"model": "gemini-3.5-flash", "context": "eval:gemini-3.5-flash:B", "input_tokens": 35423, "output_tokens": 31559, "cost_usd": 0.089524, "estimated": true}
 {"model": "gpt-5.4-mini", "context": "eval:gpt-5.4-mini:A", "input_tokens": 118036, "output_tokens": 80196, "cost_usd": 0.303842, "estimated": true}
 {"model": "gpt-5.4-mini", "context": "eval:gpt-5.4-mini:B", "input_tokens": 36411, "output_tokens": 18760, "cost_usd": 0.074596, "estimated": true}
+{"model": "deepseek/deepseek-v4-pro", "context": "eval:deepseek-v4-pro:A", "input_tokens": 20023, "output_tokens": 134569, "cost_usd": 0.125685, "estimated": false}
+{"model": "gpt-5.5", "context": "eval:gpt-5.5:A", "input_tokens": 54257, "output_tokens": 26663, "cost_usd": 0.535122, "estimated": true}
+{"model": "gpt-5.5", "context": "eval:gpt-5.5:B", "input_tokens": 16665, "output_tokens": 6489, "cost_usd": 0.137154, "estimated": true}
+{"model": "claude-opus-4-8", "context": "eval:claude-opus-4-8:A", "input_tokens": 77034, "output_tokens": 66873, "cost_usd": 2.056995, "estimated": false}
+{"model": "claude-opus-4-8", "context": "eval:claude-opus-4-8:B", "input_tokens": 22939, "output_tokens": 11753, "cost_usd": 0.40852, "estimated": false}
+{"model": "deepseek/deepseek-v4-pro", "context": "eval:deepseek-v4-pro:A", "input_tokens": 1996, "output_tokens": 20065, "cost_usd": 0.018315, "estimated": false}
+{"model": "deepseek/deepseek-v4-pro", "context": "eval:deepseek-v4-pro:B", "input_tokens": 914, "output_tokens": 5150, "cost_usd": 0.004874, "estimated": false}
