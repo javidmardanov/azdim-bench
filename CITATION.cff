@@ -5,7 +5,7 @@ authors:
   - family-names: Mardanov
     given-names: Javid
 year: 2026
-repository-code: "https://github.com/TODO/azdim-bench"
+repository-code: "https://github.com/javidmardanov/azdim-bench"
 license: MIT
 keywords:
   - LLM evaluation
