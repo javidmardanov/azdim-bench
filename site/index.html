@@ -465,6 +465,15 @@ footer .sig{margin-top:34px;font-family:var(--mono);font-size:11px;letter-spacin
       <svg id="svg-gap"></svg>
     </div>
 
+    <div class="chart rv" id="dimscores" style="display:none">
+      <h3>What would they score?</h3>
+      <div class="sub">SIMULATED DİM ADMISSION SCORE OUT OF 700 · OFFICIAL FORMULA INCL. NEGATIVE MARKING · CENTRAL ESTIMATE</div>
+      <table class="lb" id="dimtable"></table>
+      <p class="lbfoot">central estimate: open tasks answered at the model's measured closed-task rate ·
+        floor (open tasks scored 0) in the released JSON · written tasks are marker-scored in reality —
+        this is a simulation, not an official result</p>
+    </div>
+
     <div class="chart rv" id="chart-year">
       <h3>Fresh vs. potentially seen</h3>
       <div class="sub">ACCURACY · 2025 SITTINGS (LIKELY IN TRAINING DATA) VS 2026 SITTINGS (POST-CUTOFF FOR MOST MODELS) · AZ TRACK</div>
@@ -479,6 +488,17 @@ footer .sig{margin-top:34px;font-family:var(--mono);font-size:11px;letter-spacin
   <div class="wrap">
     <div class="sechead rv"><span class="bub">E</span><h2>Findings</h2><span class="no">§ 05 · So far</span></div>
     <div class="findings rv" id="findings"></div>
+  </div>
+</section>
+
+<section class="block" id="run" style="padding-top:60px">
+  <div class="wrap">
+    <div class="sechead rv"><span class="bub fill">✓</span><h2>Sit the exam yourself</h2><span class="no">Any model · one command</span></div>
+    <p class="lede rv">Works with any OpenAI-compatible endpoint — Ollama, LM Studio, vLLM, OpenRouter.
+      Same protocol, same parsing, same scoring as this leaderboard.</p>
+    <pre class="rv" style="font-family:var(--mono);font-size:13px;line-height:1.8;background:var(--ink);color:var(--paper);padding:22px 26px;border-radius:8px;overflow-x:auto;margin-top:18px">pip install openai
+python run_azdim.py --model llama3.2 --base-url http://localhost:11434/v1</pre>
+    <p class="lbfoot rv">script + dataset in the repository · resumable · prints accuracy by track and subject</p>
   </div>
 </section>
 
@@ -706,6 +726,40 @@ function renderYear(){
   document.getElementById('svg-year').setAttribute('viewBox',`0 0 ${W} ${H}`);
   document.getElementById('svg-year').innerHTML = s;
 }
+
+/* DİM 700-point simulation table */
+function renderDim(){
+  const rows = (D.dim_scores||[]).filter(r=>{
+    const g = r.groups||{};
+    return Object.values(g).some(x=>x && x.total700_central!=null);
+  });
+  if(!rows.length) return;
+  const GN = ["I (RK)","II","III (DT)","IV"];
+  rows.sort((a,b)=>{
+    const t = k => Math.max(...GN.map(g=>(k.groups[g]||{}).total700_central||0));
+    return t(b)-t(a);
+  });
+  let html = `<thead><tr><th style="cursor:default">#</th>
+    <th style="cursor:default">Model</th>
+    <th style="cursor:default;text-align:right">S1 /300</th>`
+    + GN.map(g=>`<th style="cursor:default;text-align:right">${g} /700</th>`).join('')
+    + `</tr></thead><tbody>`;
+  rows.forEach((r,i)=>{
+    const s1 = r.s1 && r.s1.central!=null ? r.s1.central.toFixed(0) : '—';
+    html += `<tr${i===0?' class="leader"':''}>
+      <td class="rank">${String(i+1).padStart(2,'0')}</td>
+      <td class="model">${r.name}<small>${r.org}</small></td>
+      <td class="inv" style="font-size:14px">${s1}</td>`
+      + GN.map(g=>{
+          const gg = r.groups[g];
+          const v = gg && gg.total700_central!=null ? Math.round(gg.total700_central) : null;
+          return `<td class="inv" style="font-size:15px;font-weight:600;color:${v&&v>=600?'var(--carmine)':'var(--ink)'}">${v??'—'}</td>`;
+        }).join('') + `</tr>`;
+  });
+  document.getElementById('dimtable').innerHTML = html + '</tbody>';
+  document.getElementById('dimscores').style.display = '';
+}
+renderDim();
 
 /* findings */
 (function(){

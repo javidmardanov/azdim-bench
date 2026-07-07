@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 METRICS = ROOT / "results" / "metrics_v0.json"
+DIM_SCORES = ROOT / "results" / "dim_scores_v0.json"
 ITEMS = ROOT / "data" / "items" / "items_v0.jsonl"
 MODELS = ROOT / "manifest" / "models.json"
 USAGE = ROOT / "manifest" / "api_usage.jsonl"
@@ -80,7 +81,16 @@ def main() -> None:
         "models": sorted(models.values(),
                          key=lambda m: -m["tracks"].get("A", {})
                          .get("acc", 0)),
+        "dim_scores": [],
     }
+    if DIM_SCORES.exists():
+        for row in json.loads(DIM_SCORES.read_text()):
+            name, org = DISPLAY.get(row["model_key"],
+                                    (row["model_key"], "?"))
+            data["dim_scores"].append({
+                "key": row["model_key"], "name": name, "org": org,
+                "s1": row["stage1_300"], "groups": row["groups"],
+            })
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text("window.AZDIM = "
                    + json.dumps(data, ensure_ascii=False, indent=1) + ";\n")
