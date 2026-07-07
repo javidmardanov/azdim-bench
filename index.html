@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AzDIM-Bench — Frontier models sit Azerbaijan's national exams</title>
+<meta name="description" content="A contamination-aware LLM benchmark built from Azerbaijan's official state examinations. 2,249 items, 14 subjects, 6 languages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f5f0;
+  --paper-deep:#efece4;
+  --ink:#191713;
+  --ink-soft:#57534a;
+  --hairline:#d8d3c8;
+  --carmine:#b31b34;
+  --carmine-deep:#8c1027;
+  --ok:#2e6e4e;
+  --serif:"Newsreader",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:18px;line-height:1.65;
+  font-optical-sizing:auto;
+  background-image:radial-gradient(rgba(25,23,19,.028) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+::selection{background:var(--carmine);color:var(--paper)}
+
+/* ---------- primitives ---------- */
+.mono{font-family:var(--mono)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--carmine);font-weight:600;
+}
+.rule{border:none;border-top:1px solid var(--hairline)}
+a{color:inherit;text-decoration-color:var(--hairline);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--carmine)}
+
+/* answer bubble */
+.bub{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border:1.5px solid var(--ink);border-radius:50%;
+  font-family:var(--mono);font-size:13px;font-weight:600;flex:none;
+  transition:all .35s cubic-bezier(.2,.7,.3,1);
+}
+.bub.fill{background:var(--carmine);border-color:var(--carmine);color:var(--paper)}
+
+/* ---------- top bar ---------- */
+header.top{
+  position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline);
+}
+header.top .wrap{display:flex;align-items:baseline;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.wordmark{font-family:var(--serif);font-style:italic;font-weight:600;font-size:20px;letter-spacing:-.01em;white-space:nowrap}
+.wordmark .tld{color:var(--carmine)}
+nav.toplinks{display:flex;gap:26px;flex-wrap:nowrap}
+nav.toplinks a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);white-space:nowrap}
+nav.toplinks a:hover{color:var(--carmine)}
+@media(max-width:700px){
+  nav.toplinks{gap:16px}
+  nav.toplinks a:nth-child(2),nav.toplinks a:nth-child(3){display:none}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:110px 0 84px}
+.hero .eyebrow{display:block;margin-bottom:28px}
+.hero h1{
+  font-size:clamp(44px,7vw,84px);line-height:1.02;font-weight:500;
+  letter-spacing:-.025em;max-width:14ch;
+}
+.hero h1 em{font-style:italic;color:var(--carmine)}
+.hero .stand{
+  margin-top:34px;max-width:56ch;font-size:20px;line-height:1.6;color:var(--ink-soft);
+}
+.hero .stand strong{color:var(--ink);font-weight:600}
+.bubsheet{
+  position:absolute;right:-40px;top:90px;opacity:.9;pointer-events:none;
+  display:grid;grid-template-columns:repeat(5,44px);gap:14px;
+  transform:rotate(6deg);
+}
+.bubsheet span{
+  width:34px;height:34px;border:1.5px solid var(--hairline);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:12px;color:var(--hairline);
+}
+.bubsheet span.f{background:var(--carmine);border-color:var(--carmine);color:var(--paper)}
+@media(max-width:900px){.bubsheet{display:none}}
+
+.statstrip{margin-top:64px;border-top:1px solid var(--ink);display:grid;grid-template-columns:repeat(5,1fr)}
+.stat{padding:20px 18px 4px 0;border-right:1px solid var(--hairline)}
+.stat:last-child{border-right:none}
+.stat b{display:block;font-family:var(--mono);font-weight:600;font-size:clamp(22px,3vw,34px);letter-spacing:-.02em}
+.stat i{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+@media(max-width:760px){.statstrip{grid-template-columns:repeat(2,1fr)}.stat{border:none}}
+
+/* ---------- section chrome ---------- */
+section.block{padding:88px 0 20px}
+.sechead{display:flex;align-items:center;gap:18px;margin-bottom:14px}
+.sechead .bub{width:38px;height:38px;font-size:16px}
+.sechead h2{font-size:clamp(30px,4vw,44px);font-weight:500;letter-spacing:-.02em}
+.sechead .no{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--ink-soft);margin-left:auto;text-transform:uppercase}
+.block>.wrap>p.lede{font-size:21px;max-width:62ch;color:var(--ink-soft);margin:18px 0 8px}
+.block>.wrap>p.lede strong{color:var(--ink)}
+.prose{max-width:68ch;margin-top:22px}
+.prose p{margin-bottom:18px}
+.prose .hl{background:linear-gradient(transparent 62%,rgba(179,27,52,.18) 62%)}
+
+/* side TOC bubbles */
+.toc{position:fixed;left:22px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:12px}
+.toc a{text-decoration:none}
+.toc .bub{width:26px;height:26px;font-size:11px;border-color:var(--hairline);color:var(--ink-soft);background:var(--paper)}
+.toc a.on .bub{border-color:var(--carmine);background:var(--carmine);color:var(--paper)}
+@media(max-width:1260px){.toc{display:none}}
+
+/* ---------- pullquote / bigmoment ---------- */
+.bigmoment{
+  margin:70px 0 30px;padding:58px 0;background:var(--ink);color:var(--paper);
+  background-image:radial-gradient(rgba(247,245,240,.05) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+.bigmoment .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.bigmoment .figures{font-family:var(--mono);font-weight:600;font-size:clamp(40px,6vw,72px);letter-spacing:-.03em;line-height:1.1}
+.bigmoment .figures .arrow{color:var(--carmine);margin:0 .2em}
+.bigmoment .figures small{display:block;font-size:12px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;opacity:.65;margin-top:14px;line-height:1.6}
+.bigmoment p{font-size:19px;line-height:1.6;opacity:.92}
+.bigmoment p em{color:#e8a0ad}
+@media(max-width:820px){.bigmoment .wrap{grid-template-columns:1fr}}
+
+/* ---------- dataset cards ---------- */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:34px}
+@media(max-width:820px){.grid2{grid-template-columns:1fr}}
+.ledger{border-top:1px solid var(--ink)}
+.ledger .row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:10px 2px;border-bottom:1px solid var(--hairline);
+  font-family:var(--mono);font-size:13px;
+}
+.ledger .row .k{color:var(--ink-soft)}
+.ledger .row .bar{flex:1;height:5px;background:var(--paper-deep);border-radius:2px;overflow:hidden;align-self:center}
+.ledger .row .bar i{display:block;height:100%;background:var(--carmine);border-radius:2px;width:0;transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.ledger .row .v{font-weight:600;min-width:44px;text-align:right}
+.notecard{border-left:3px solid var(--carmine);padding:6px 0 6px 20px;margin-top:26px;color:var(--ink-soft);font-size:16px}
+.notecard b{color:var(--ink)}
+
+/* ---------- pipeline ---------- */
+.pipe{border-top:1px solid var(--ink);margin-top:30px}
+.pipe .step{display:grid;grid-template-columns:64px 260px 1fr;gap:18px;padding:16px 2px;border-bottom:1px solid var(--hairline);align-items:baseline}
+.pipe .n{font-family:var(--mono);font-size:12px;color:var(--carmine);font-weight:600}
+.pipe .t{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.02em}
+.pipe .d{font-size:15.5px;color:var(--ink-soft)}
+@media(max-width:760px){.pipe .step{grid-template-columns:44px 1fr}.pipe .d{grid-column:2}}
+
+/* ---------- leaderboard ---------- */
+.controls{display:flex;align-items:center;gap:14px;margin:30px 0 12px;flex-wrap:wrap}
+.toggle{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden}
+.toggle button{
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;padding:8px 18px;
+  background:transparent;border:none;cursor:pointer;color:var(--ink);text-transform:uppercase;
+}
+.toggle button.on{background:var(--ink);color:var(--paper)}
+.controls .hint{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.05em}
+table.lb{width:100%;border-collapse:collapse;border-top:1.5px solid var(--ink)}
+table.lb th{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  text-align:left;color:var(--ink-soft);padding:12px 10px 8px 2px;border-bottom:1px solid var(--hairline);
+  cursor:pointer;user-select:none;white-space:nowrap;
+}
+table.lb th.sorted{color:var(--carmine)}
+table.lb td{padding:13px 10px 13px 2px;border-bottom:1px solid var(--hairline);vertical-align:middle}
+table.lb td.rank{font-family:var(--mono);font-size:12px;color:var(--ink-soft);width:34px}
+table.lb td.model{font-size:17px;font-weight:500;white-space:nowrap}
+table.lb td.model small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--ink-soft);text-transform:uppercase;margin-top:2px}
+table.lb tr.leader td.model{color:var(--carmine-deep)}
+.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;border:1px solid var(--hairline);border-radius:3px;padding:2px 6px;color:var(--ink-soft);text-transform:uppercase;white-space:nowrap}
+.tag.open{border-color:var(--ok);color:var(--ok)}
+td.acccell{width:42%}
+.ciwrap{display:flex;align-items:center;gap:12px}
+.ciwrap .num{font-family:var(--mono);font-size:15px;font-weight:600;min-width:52px}
+.ci{position:relative;flex:1;height:18px;min-width:120px}
+.ci .axis{position:absolute;top:8.5px;left:0;right:0;height:1px;background:var(--hairline)}
+.ci .band{position:absolute;top:6px;height:6px;background:rgba(179,27,52,.25);border-radius:3px}
+.ci .dot{position:absolute;top:3.5px;width:11px;height:11px;border-radius:50%;background:var(--carmine);transform:translateX(-50%)}
+td.inv{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);text-align:right;width:70px}
+tr.pending td{opacity:.45}
+@media(max-width:720px){
+  .ci{display:none}
+  table.lb td.model{font-size:15px;white-space:normal}
+  td.acccell{width:auto}
+  table.lb th:nth-child(3),table.lb td:nth-child(3){display:none}
+}
+.lbfoot{font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:10px;letter-spacing:.04em}
+
+/* ---------- charts ---------- */
+.chart{margin-top:54px}
+.chart h3{font-size:23px;font-weight:500;letter-spacing:-.01em;margin-bottom:4px}
+.chart .sub{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:18px}
+.chart svg{width:100%;height:auto;display:block}
+.chart .axis-label{font-family:var(--mono);font-size:10px;fill:var(--ink-soft)}
+.chart .row-label{font-family:var(--mono);font-size:11.5px;fill:var(--ink)}
+.chart .val-label{font-family:var(--mono);font-size:10px;font-weight:600}
+.legend{display:flex;gap:22px;margin:8px 0 12px;font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.05em}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:baseline}
+
+/* ---------- findings ---------- */
+.findings{counter-reset:f;margin-top:26px;border-top:1px solid var(--ink)}
+.finding{display:grid;grid-template-columns:88px 1fr;gap:22px;padding:30px 0;border-bottom:1px solid var(--hairline)}
+.finding::before{
+  counter-increment:f;content:"F·0" counter(f);
+  font-family:var(--mono);font-size:12px;color:var(--carmine);font-weight:600;letter-spacing:.1em;padding-top:6px;
+}
+.finding h3{font-size:24px;font-weight:500;letter-spacing:-.015em;margin-bottom:8px}
+.finding p{color:var(--ink-soft);max-width:62ch}
+.finding p b{color:var(--ink)}
+@media(max-width:640px){.finding{grid-template-columns:1fr}.finding::before{padding:0}}
+
+/* ---------- footer ---------- */
+footer{margin-top:96px;background:var(--ink);color:var(--paper);padding:64px 0 48px;
+  background-image:radial-gradient(rgba(247,245,240,.05) 1px,transparent 1px);background-size:22px 22px}
+footer .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}
+footer .wrap>div,.grid2>div,.bigmoment .wrap>*{min-width:0}
+footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#e8a0ad;margin-bottom:16px}
+footer pre{
+  font-family:var(--mono);font-size:11.5px;line-height:1.7;background:rgba(247,245,240,.06);
+  padding:18px;border-radius:6px;overflow-x:auto;border:1px solid rgba(247,245,240,.12);
+}
+footer p{font-size:14.5px;opacity:.75;line-height:1.7}
+footer .sig{margin-top:34px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;opacity:.5;text-transform:uppercase}
+@media(max-width:820px){footer .wrap{grid-template-columns:1fr}}
+
+/* reveal animation */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav class="toc" id="toc" aria-label="Sections">
+  <a href="#sec-a"><span class="bub">A</span></a>
+  <a href="#sec-b"><span class="bub">B</span></a>
+  <a href="#sec-c"><span class="bub">C</span></a>
+  <a href="#sec-d"><span class="bub">D</span></a>
+  <a href="#sec-e"><span class="bub">E</span></a>
+</nav>
+
+<header class="top">
+  <div class="wrap">
+    <div class="wordmark">AzDIM<span class="tld">-Bench</span></div>
+    <nav class="toplinks">
+      <a href="#sec-d">Leaderboard</a>
+      <a href="#sec-c">Method</a>
+      <a href="#sec-b">Dataset</a>
+      <a href="#cite">Cite</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bubsheet" id="bubsheet" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow">Technical report · v0 · <span id="gen-date"></span></span>
+    <h1>Frontier models sit Azerbaijan's <em>national exams.</em></h1>
+    <p class="stand">
+      Every year the State Examination Center (DİM) writes thousands of expert-authored,
+      high-stakes questions in a language most benchmarks ignore. We turned the official
+      2025–2026 exam archive into a <strong>contamination-aware benchmark</strong> —
+      and graded fourteen language models with the same red pen.
+    </p>
+    <div class="statstrip" id="statstrip"></div>
+  </div>
+</section>
+
+<section class="block" id="sec-a">
+  <div class="wrap">
+    <div class="sechead rv"><span class="bub">A</span><h2>Why Azerbaijani exams</h2><span class="no">§ 01 · Motivation</span></div>
+    <div class="prose rv">
+      <p>
+        Azerbaijani is spoken by some thirty million people and is nearly invisible in LLM
+        evaluation. Yet Azerbaijan runs one of the most centralized examination systems in the
+        world: a single state body writes, administers, and — crucially — <span class="hl">publishes
+        the full text, explanations, and answer keys</span> of its school-leaving and university
+        entrance exams.
+      </p>
+      <p>
+        That gives us something rare: thousands of expert-written, curriculum-grounded,
+        difficulty-calibrated questions with official gold answers, in parallel Azerbaijani and
+        Russian sectors, refreshed on a public schedule — so items published <b>after</b> a model's
+        training cutoff form a natural held-out set. High-stakes exams as a measurement instrument,
+        not a scrape.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sec-b">
+  <div class="wrap">
+    <div class="sechead rv"><span class="bub">B</span><h2>The dataset</h2><span class="no">§ 02 · Construction</span></div>
+    <p class="lede rv">Built from <strong>official DİM "izah" PDFs</strong> — the post-exam publications
+      that reproduce each question with its choices, topic, grade level, worked explanation, and answer.</p>
+    <div class="grid2">
+      <div class="rv">
+        <div class="ledger" id="subject-ledger"></div>
+      </div>
+      <div class="rv">
+        <div class="ledger" id="meta-ledger"></div>
+        <div class="notecard">
+          <b>Extraction is the product.</b> The PDFs' text layer silently corrupts mathematics
+          (minus signs vanish; fractions collapse), so items were transcribed by a vision model
+          under a strict JSON schema, then cross-checked against DİM's separate answer-key
+          grids — parsed <b>deterministically, with no LLM</b> — and routed through human review.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bigmoment rv">
+  <div class="wrap">
+    <div class="figures">12.5% <span class="arrow">→</span> 100%
+      <small>GPT-5.4 mini on identical math items:<br>forced one-letter answers vs. allowed to reason first</small>
+    </div>
+    <p>
+      Benchmarks that demand a bare answer letter measure <em>obedience, not ability.</em>
+      Models that complied answered math blind and scored at chance; models that ignored the
+      instruction reasoned out loud and aced the same questions. So our main condition follows the
+      exam-hall rule instead: think as much as you like on scratch paper —
+      <em>the last line must be your answer.</em>
+    </p>
+  </div>
+</div>
+
+<section class="block" id="sec-c">
+  <div class="wrap">
+    <div class="sechead rv"><span class="bub">C</span><h2>Method</h2><span class="no">§ 03 · Protocol</span></div>
+    <p class="lede rv">Native-language prompts, visible reasoning, hidden reasoning minimized
+      everywhere, answers parsed from a fixed final-line format. Same items, same rules, every model.</p>
+    <div class="pipe rv" id="pipeline"></div>
+  </div>
+</section>
+
+<section class="block" id="sec-d">
+  <div class="wrap">
+    <div class="sechead rv"><span class="bub">D</span><h2>Results</h2><span class="no">§ 04 · Leaderboard</span></div>
+    <p class="lede rv">Accuracy on eval-eligible multiple-choice items — high-confidence,
+      text-only, official gold labels. Whiskers are bootstrap 95% CIs.</p>
+
+    <div class="controls rv">
+      <div class="toggle" id="track-toggle">
+        <button data-track="A" class="on">AZ · Azerbaijani</button>
+        <button data-track="B">RU · Russian</button>
+      </div>
+      <span class="hint" id="track-hint"></span>
+    </div>
+    <table class="lb rv" id="lb"></table>
+    <p class="lbfoot">Sorted by accuracy · click headers to re-sort · faded rows = runs in progress ·
+      random-guess baseline ≈ 20%</p>
+
+    <div class="chart rv" id="chart-gap">
+      <h3>The language gap</h3>
+      <div class="sub">ACCURACY · AZERBAIJANI VS RUSSIAN TRACK · SAME MODEL</div>
+      <div class="legend"><span><i style="background:var(--carmine)"></i>AZERBAIJANI</span>
+        <span><i style="background:none;border:1.5px solid var(--ink);width:8px;height:8px"></i>RUSSIAN</span></div>
+      <svg id="svg-gap"></svg>
+    </div>
+
+    <div class="chart rv" id="chart-year">
+      <h3>Fresh vs. potentially seen</h3>
+      <div class="sub">ACCURACY · 2025 SITTINGS (LIKELY IN TRAINING DATA) VS 2026 SITTINGS (POST-CUTOFF FOR MOST MODELS) · AZ TRACK</div>
+      <div class="legend"><span><i style="background:var(--ink)"></i>2025 ITEMS</span>
+        <span><i style="background:var(--carmine)"></i>2026 ITEMS</span></div>
+      <svg id="svg-year"></svg>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sec-e">
+  <div class="wrap">
+    <div class="sechead rv"><span class="bub">E</span><h2>Findings</h2><span class="no">§ 05 · So far</span></div>
+    <div class="findings rv" id="findings"></div>
+  </div>
+</section>
+
+<footer id="cite">
+  <div class="wrap">
+    <div>
+      <h4>Cite this work</h4>
+      <pre id="bibtex">@misc{azdimbench2026,
+  title   = {AzDIM-Bench: A National-Exam Benchmark for
+             Evaluating LLMs in Azerbaijani},
+  author  = {Mardanov, Javid},
+  year    = {2026},
+  note    = {Dataset and evaluation code, v0}
+}</pre>
+      <p class="sig">AzDIM-Bench · built on official DİM publications · total API budget &lt; $50</p>
+    </div>
+    <div>
+      <h4>Provenance &amp; license</h4>
+      <p>
+        Question content © State Examination Center of the Republic of Azerbaijan
+        (<a href="https://dim.gov.az" style="color:inherit">dim.gov.az</a>), reproduced from official
+        public post-exam publications for research, with per-item source citations.
+        Annotations, metadata, and code are released openly. Gold answers are DİM's own.
+      </p>
+      <p style="margin-top:14px">
+        Numbers on this page regenerate from the evaluation pipeline; verification of flagged
+        items is ongoing and the dataset version is stamped on every release.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+const D = window.AZDIM;
+const fmt = x => (100*x).toFixed(1);
+const SUBJ_LABEL = {mathematics:"Mathematics", physics:"Physics", chemistry:"Chemistry",
+  biology:"Biology", informatics:"Informatics", history:"History", geography:"Geography",
+  literature:"Literature", azerbaijani_language:"Azerbaijani lang.", russian_language:"Russian lang.",
+  english:"English", german:"German", french:"French", arabic:"Arabic"};
+
+/* hero bubble sheet: decorative answer grid */
+(function(){
+  const el = document.getElementById('bubsheet');
+  const rows = 6, fills = new Set([2,8,14,16,23,27]);
+  let h = '';
+  for(let i=0;i<rows*5;i++){
+    const L = 'ABCDE'[i%5];
+    h += `<span class="${fills.has(i)?'f':''}">${L}</span>`;
+  }
+  el.innerHTML = h;
+})();
+
+/* hero stats with count-up */
+(function(){
+  const ds = D.dataset;
+  const stats = [
+    [ds.n_items, 'exam items'],
+    [Object.keys(ds.by_subject).length, 'subjects'],
+    [Object.keys(ds.by_language).length, 'languages'],
+    [D.models.length, 'models graded'],
+    [D.spend_usd, 'USD total cost', true],
+  ];
+  const strip = document.getElementById('statstrip');
+  strip.innerHTML = stats.map(([v,l,money])=>
+    `<div class="stat"><b data-target="${v}" data-money="${money?1:0}">0</b><i>${l}</i></div>`).join('');
+  const io = new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    strip.querySelectorAll('b').forEach(b=>{
+      const t = parseFloat(b.dataset.target), money = b.dataset.money==='1';
+      const t0 = performance.now();
+      (function tick(now){
+        const p = Math.min(1,(now-t0)/1100), ease = 1-Math.pow(1-p,3);
+        b.textContent = (money?'$':'') + (money ? (t*ease).toFixed(0) : Math.round(t*ease).toLocaleString());
+        if(p<1) requestAnimationFrame(tick);
+      })(t0);
+    });
+    io.disconnect();
+  },{threshold:.4}));
+  io.observe(strip);
+  document.getElementById('gen-date').textContent = D.generated;
+})();
+
+/* dataset ledgers */
+(function(){
+  const ds = D.dataset;
+  const maxN = Math.max(...Object.values(ds.by_subject));
+  document.getElementById('subject-ledger').innerHTML =
+    Object.entries(ds.by_subject).map(([s,n])=>
+      `<div class="row"><span class="k">${SUBJ_LABEL[s]||s}</span>
+       <span class="bar"><i data-w="${(100*n/maxN).toFixed(1)}"></i></span>
+       <span class="v">${n}</span></div>`).join('');
+  const rows = [
+    ['Items, total', ds.n_items], ['— multiple choice', ds.by_type.mcq||0],
+    ['— coded open answer', ds.by_type.codable_open||0],
+    ['— written response', ds.by_type.written_open||0],
+    ['Needs a figure (multimodal track)', ds.requires_image],
+    ['Source exam PDFs', ds.n_sources],
+    ['2025 sittings', ds.by_year['2025']||0], ['2026 sittings', ds.by_year['2026']||0],
+  ];
+  document.getElementById('meta-ledger').innerHTML =
+    rows.map(([k,v])=>`<div class="row"><span class="k">${k}</span><span class="v">${v.toLocaleString()}</span></div>`).join('');
+  const io = new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    e.target.querySelectorAll('i[data-w]').forEach(i=>i.style.width = i.dataset.w+'%');
+    io.unobserve(e.target);
+  }),{threshold:.3});
+  io.observe(document.getElementById('subject-ledger'));
+})();
+
+/* pipeline */
+(function(){
+  const steps = [
+    ['01','SOURCE MANIFEST','41 official DİM publications, URL + SHA-256 pinned; 39 live.'],
+    ['02','VISION EXTRACTION','618 pages transcribed to schema-constrained JSON — math as LaTeX, variant maps, official explanations.'],
+    ['03','CANONICALIZATION','Fragment removal, variant dedup, subject assignment → 2,249 items with stable IDs.'],
+    ['04','INDEPENDENT QC','Answer-key grids parsed geometrically from the PDF text layer (no LLM); disagreements auto-flagged for human review.'],
+    ['05','EVALUATION','Native AZ/RU prompts; visible reasoning allowed; hidden reasoning minimized; fixed answer-line format; temperature-free.'],
+    ['06','SCORING','Exact-match on parsed labels; bootstrap CIs; invalid responses counted, not scored.'],
+  ];
+  document.getElementById('pipeline').innerHTML = steps.map(([n,t,d])=>
+    `<div class="step"><span class="n">${n}</span><span class="t">${t}</span><span class="d">${d}</span></div>`).join('');
+})();
+
+/* leaderboard */
+let TRACK='A', SORT={key:'acc',dir:-1};
+function renderLB(){
+  const rows = D.models.map(m=>{
+    const t = m.tracks[TRACK];
+    return t ? {m, ...t} : {m, acc:null};
+  }).filter(r=>r.acc!==null || Object.keys(r.m.tracks).length);
+  rows.sort((a,b)=>{
+    const va = a[SORT.key]??-1, vb = b[SORT.key]??-1;
+    if(SORT.key==='name') return SORT.dir*String(a.m.name).localeCompare(b.m.name);
+    return SORT.dir*(va-vb);
+  });
+  const th = (label,key,extra='')=>`<th data-key="${key}" class="${SORT.key===key?'sorted':''}" ${extra}>${label}${SORT.key===key?(SORT.dir<0?' ↓':' ↑'):''}</th>`;
+  let html = `<thead><tr>
+    <th style="cursor:default">#</th>${th('Model','name')}<th style="cursor:default">Weights</th>
+    ${th('Accuracy (95% CI)','acc')}${th('Invalid','invalid','style="text-align:right"')}</tr></thead><tbody>`;
+  rows.forEach((r,i)=>{
+    const pending = r.acc===null || (r.n||0) < 100;
+    const lo=r.acc!==null?r.ci[0]:0, hi=r.acc!==null?r.ci[1]:0;
+    const X = v=>((v-0.15)/(1.0-0.15)*100).toFixed(2); // axis 15%..100%
+    html += `<tr class="${i===0&&!pending?'leader':''} ${pending?'pending':''}">
+      <td class="rank">${String(i+1).padStart(2,'0')}</td>
+      <td class="model">${r.m.name}<small>${r.m.org}${r.acc===null?'':' · n='+r.n}${pending?' · running':''}</small></td>
+      <td><span class="tag ${r.m.open_weights?'open':''}">${r.m.open_weights?'open':'api'}</span></td>
+      <td class="acccell">${r.acc===null?'<span class="mono" style="font-size:12px;color:var(--ink-soft)">—</span>':`
+        <div class="ciwrap"><span class="num">${fmt(r.acc)}</span>
+        <div class="ci"><div class="axis"></div>
+          <div class="band" style="left:${X(lo)}%;width:${(X(hi)-X(lo)).toFixed(2)}%"></div>
+          <div class="dot" style="left:${X(r.acc)}%"></div>
+        </div></div>`}</td>
+      <td class="inv">${r.acc===null?'—':fmt(r.invalid)+'%'}</td></tr>`;
+  });
+  document.getElementById('lb').innerHTML = html + '</tbody>';
+  const t = rows.find(r=>r.acc!==null);
+  document.getElementById('track-hint').textContent =
+    t ? `n = ${t.n} items · native ${TRACK==='A'?'Azerbaijani':'Russian'} · exact match` : '';
+  document.querySelectorAll('#lb th[data-key]').forEach(el=>{
+    el.onclick = ()=>{
+      const k = el.dataset.key;
+      SORT = {key:k, dir: SORT.key===k ? -SORT.dir : (k==='name'?1:-1)};
+      renderLB();
+    };
+  });
+}
+document.querySelectorAll('#track-toggle button').forEach(b=>{
+  b.onclick = ()=>{
+    document.querySelectorAll('#track-toggle button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); TRACK=b.dataset.track; renderLB(); renderGap(); renderYear();
+  };
+});
+
+/* dumbbell chart: AZ vs RU */
+function renderGap(){
+  const ms = D.models.filter(m=>m.tracks.A && m.tracks.B && m.tracks.A.n>100 && m.tracks.B.n>50)
+    .sort((a,b)=>b.tracks.A.acc-a.tracks.A.acc);
+  const W=1000, rowH=44, padL=190, padR=70, padT=26;
+  const H = padT + ms.length*rowH + 30;
+  const x = v => padL + (v-0.3)/(1.0-0.3) * (W-padL-padR);
+  let s = '';
+  for(let g=0.3; g<=1.001; g+=0.1){
+    s += `<line x1="${x(g)}" y1="${padT-8}" x2="${x(g)}" y2="${H-26}" stroke="var(--hairline)" stroke-width="1"/>
+          <text class="axis-label" x="${x(g)}" y="${H-10}" text-anchor="middle">${Math.round(g*100)}</text>`;
+  }
+  ms.forEach((m,i)=>{
+    const y = padT + i*rowH + rowH/2;
+    const a = m.tracks.A.acc, b = m.tracks.B.acc;
+    s += `<text class="row-label" x="${padL-14}" y="${y+4}" text-anchor="end">${m.name}</text>
+      <line x1="${x(Math.min(a,b))}" x2="${x(Math.max(a,b))}" y1="${y}" y2="${y}"
+            stroke="${b>a?'var(--ink)':'var(--carmine)'}" stroke-width="2" opacity=".45"/>
+      <circle cx="${x(b)}" cy="${y}" r="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.8"/>
+      <circle cx="${x(a)}" cy="${y}" r="6.5" fill="var(--carmine)"/>
+      <text class="val-label" x="${x(Math.max(a,b))+14}" y="${y+3.5}" fill="${b>a?'var(--ink)':'var(--carmine)'}">
+        ${b>a?'+':''}${(100*(b-a)).toFixed(1)} ru</text>`;
+  });
+  document.getElementById('svg-gap').setAttribute('viewBox',`0 0 ${W} ${H}`);
+  document.getElementById('svg-gap').innerHTML = s;
+}
+
+/* year split chart */
+function renderYear(){
+  const ms = D.models.filter(m=>m.tracks.A && m.tracks.A.by_year && m.tracks.A.by_year['2025'] && m.tracks.A.by_year['2026'])
+    .sort((a,b)=>b.tracks.A.acc-a.tracks.A.acc);
+  const W=1000, rowH=44, padL=190, padR=70, padT=26;
+  const H = padT + ms.length*rowH + 30;
+  const x = v => padL + (v-0.3)/(1.0-0.3) * (W-padL-padR);
+  let s = '';
+  for(let g=0.3; g<=1.001; g+=0.1){
+    s += `<line x1="${x(g)}" y1="${padT-8}" x2="${x(g)}" y2="${H-26}" stroke="var(--hairline)" stroke-width="1"/>
+          <text class="axis-label" x="${x(g)}" y="${H-10}" text-anchor="middle">${Math.round(g*100)}</text>`;
+  }
+  ms.forEach((m,i)=>{
+    const y = padT + i*rowH + rowH/2;
+    const a = m.tracks.A.by_year['2025'], b = m.tracks.A.by_year['2026'];
+    s += `<text class="row-label" x="${padL-14}" y="${y+4}" text-anchor="end">${m.name}</text>
+      <line x1="${x(Math.min(a,b))}" x2="${x(Math.max(a,b))}" y1="${y}" y2="${y}" stroke="var(--ink)" stroke-width="2" opacity=".35"/>
+      <circle cx="${x(a)}" cy="${y}" r="6" fill="var(--ink)"/>
+      <circle cx="${x(b)}" cy="${y}" r="6" fill="var(--carmine)"/>
+      <text class="val-label" x="${x(Math.max(a,b))+14}" y="${y+3.5}" fill="var(--ink-soft)">
+        ${(100*(b-a)>=0?'+':'')}${(100*(b-a)).toFixed(1)} fresh</text>`;
+  });
+  document.getElementById('svg-year').setAttribute('viewBox',`0 0 ${W} ${H}`);
+  document.getElementById('svg-year').innerHTML = s;
+}
+
+/* findings */
+(function(){
+  const withBoth = D.models.filter(m=>m.tracks.A&&m.tracks.B&&m.tracks.A.n>100&&m.tracks.B.n>50);
+  const gaps = withBoth.map(m=>m.tracks.B.acc-m.tracks.A.acc);
+  const ruHigher = gaps.filter(g=>g>0).length;
+  const leader = D.models.find(m=>m.tracks.A&&m.tracks.A.n>100);
+  const fs = [
+    ['Azerbaijani is the harder language — for machines.',
+     `On matched exam formats, <b>${ruHigher} of ${withBoth.length} models score higher in Russian than in Azerbaijani</b>, consistent with training-data availability rather than question difficulty. The gap concentrates in language-and-literature subjects and shrinks for frontier models.`],
+    ['Format compliance is not ability.',
+     `Forcing bare answer letters collapsed a capable model to chance on mathematics (<b>12.5%</b>); allowing visible reasoning on identical items restored <b>100%</b>. Benchmark designs that score obedience will misrank models.`],
+    ['The field is wide open below the frontier.',
+     leader ? `${leader.name} leads the Azerbaijani track at <b>${fmt(leader.tracks.A.acc)}%</b>, but mid-tier and open-weight models spread across a ~25-point range — national-curriculum knowledge in a low-resource language is far from saturated.` : ''],
+    ['Official archives make honest benchmarks possible.',
+     `Because DİM publishes answer keys separately from explanations, gold labels were verified by an <b>LLM-free, deterministic cross-check</b> — and because exams recur on a public calendar, every future sitting extends the post-cutoff split.`],
+  ];
+  document.getElementById('findings').innerHTML = fs.map(([h,p])=>
+    `<div class="finding"><div><h3>${h}</h3><p>${p}</p></div></div>`).join('');
+})();
+
+renderLB(); renderGap(); renderYear();
+
+/* scroll reveal + TOC state */
+(function(){
+  const io = new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  }),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  const secs = ['sec-a','sec-b','sec-c','sec-d','sec-e'].map(id=>document.getElementById(id));
+  const tocLinks = document.querySelectorAll('#toc a');
+  const io2 = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const i = secs.indexOf(e.target);
+      tocLinks.forEach((a,j)=>a.classList.toggle('on', j===i));
+    });
+  },{rootMargin:'-40% 0px -50% 0px'});
+  secs.forEach(s=>io2.observe(s));
+})();
+</script>
+</body>
+</html>
