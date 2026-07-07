@@ -224,3 +224,4 @@
 {"model": "meta-llama/llama-4-maverick", "context": "eval:llama-4-maverick:F", "input_tokens": 23808, "output_tokens": 59096, "cost_usd": 0.039029, "estimated": false}
 {"model": "mistralai/mistral-large-2512", "context": "eval:mistral-large-2512:F", "input_tokens": 23113, "output_tokens": 18192, "cost_usd": 0.038844, "estimated": false}
 {"model": "google/gemma-4-31b-it", "context": "eval:gemma-4-31b:F", "input_tokens": 40671, "output_tokens": 31286, "cost_usd": 0.015831, "estimated": false}
+{"model": "meta-llama/llama-3.1-8b-instruct", "context": "eval:llama-3.1-8b:F", "input_tokens": 25710, "output_tokens": 20570, "cost_usd": 0.001131, "estimated": false}

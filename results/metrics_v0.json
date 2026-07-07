@@ -46,6 +46,26 @@
     }
   },
   {
+    "model_key": "claude-haiku-4-5",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.8466,
+    "ci95": [
+      0.7898,
+      0.8977
+    ],
+    "invalid_rate": 0.0909,
+    "acc_by_subject": {
+      "english": 0.8679,
+      "french": 0.8451,
+      "german": 0.8269
+    },
+    "acc_by_year": {
+      "2025": 0.8636,
+      "2026": 0.8364
+    }
+  },
+  {
     "model_key": "claude-opus-4-8",
     "track": "A",
     "n": 250,
@@ -89,6 +109,92 @@
     "acc_by_year": {
       "2025": 0.9057,
       "2026": 0.9787
+    }
+  },
+  {
+    "model_key": "claude-opus-4-8",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.9318,
+    "ci95": [
+      0.892,
+      0.9659
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "english": 0.9245,
+      "french": 0.9437,
+      "german": 0.9231
+    },
+    "acc_by_year": {
+      "2025": 0.9394,
+      "2026": 0.9273
+    }
+  },
+  {
+    "model_key": "claude-sonnet-5",
+    "track": "A",
+    "n": 250,
+    "accuracy": 0.796,
+    "ci95": [
+      0.744,
+      0.848
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.5946,
+      "biology": 0.8333,
+      "chemistry": 0.9429,
+      "english": 1.0,
+      "geography": 0.7778,
+      "history": 0.6667,
+      "informatics": 0.8889,
+      "literature": 0.4667,
+      "mathematics": 0.9107,
+      "physics": 1.0
+    },
+    "acc_by_year": {
+      "2025": 0.7808,
+      "2026": 0.8173
+    }
+  },
+  {
+    "model_key": "claude-sonnet-5",
+    "track": "B",
+    "n": 100,
+    "accuracy": 0.85,
+    "ci95": [
+      0.78,
+      0.92
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "literature": 0.75,
+      "russian_language": 0.8636
+    },
+    "acc_by_year": {
+      "2025": 0.7925,
+      "2026": 0.9149
+    }
+  },
+  {
+    "model_key": "claude-sonnet-5",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.9091,
+    "ci95": [
+      0.8636,
+      0.9489
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "english": 0.8868,
+      "french": 0.9014,
+      "german": 0.9423
+    },
+    "acc_by_year": {
+      "2025": 0.9394,
+      "2026": 0.8909
     }
   },
   {
@@ -138,30 +244,89 @@
     }
   },
   {
+    "model_key": "deepseek-v4-pro",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.892,
+    "ci95": [
+      0.8466,
+      0.9375
+    ],
+    "invalid_rate": 0.017,
+    "acc_by_subject": {
+      "english": 0.9245,
+      "french": 0.9014,
+      "german": 0.8462
+    },
+    "acc_by_year": {
+      "2025": 0.8788,
+      "2026": 0.9
+    }
+  },
+  {
     "model_key": "gemini-3.1-pro",
     "track": "A",
-    "n": 139,
-    "accuracy": 0.9424,
+    "n": 250,
+    "accuracy": 0.956,
     "ci95": [
-      0.8993,
-      0.9784
+      0.928,
+      0.98
     ],
     "invalid_rate": 0.0,
     "acc_by_subject": {
-      "azerbaijani_language": 1.0,
+      "azerbaijani_language": 0.973,
       "biology": 1.0,
-      "chemistry": 0.9,
+      "chemistry": 0.9429,
       "english": 1.0,
       "geography": 1.0,
-      "history": 0.9583,
+      "history": 0.9667,
       "informatics": 1.0,
-      "literature": 0.7778,
-      "mathematics": 0.9,
+      "literature": 0.8,
+      "mathematics": 0.9286,
       "physics": 1.0
     },
     "acc_by_year": {
-      "2025": 0.9483,
-      "2026": 0.913
+      "2025": 0.9589,
+      "2026": 0.9519
+    }
+  },
+  {
+    "model_key": "gemini-3.1-pro",
+    "track": "B",
+    "n": 100,
+    "accuracy": 0.95,
+    "ci95": [
+      0.9,
+      0.99
+    ],
+    "invalid_rate": 0.01,
+    "acc_by_subject": {
+      "literature": 0.9167,
+      "russian_language": 0.9545
+    },
+    "acc_by_year": {
+      "2025": 0.9245,
+      "2026": 0.9787
+    }
+  },
+  {
+    "model_key": "gemini-3.1-pro",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.9375,
+    "ci95": [
+      0.9034,
+      0.9716
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "english": 0.9434,
+      "french": 0.9577,
+      "german": 0.9038
+    },
+    "acc_by_year": {
+      "2025": 0.9242,
+      "2026": 0.9455
     }
   },
   {
@@ -211,6 +376,92 @@
     }
   },
   {
+    "model_key": "gemini-3.5-flash",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.9034,
+    "ci95": [
+      0.858,
+      0.9432
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "english": 0.9245,
+      "french": 0.9155,
+      "german": 0.8654
+    },
+    "acc_by_year": {
+      "2025": 0.8939,
+      "2026": 0.9091
+    }
+  },
+  {
+    "model_key": "gemma-4-31b",
+    "track": "A",
+    "n": 540,
+    "accuracy": 0.7796,
+    "ci95": [
+      0.7463,
+      0.8148
+    ],
+    "invalid_rate": 0.0056,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.5375,
+      "biology": 0.7308,
+      "chemistry": 0.88,
+      "english": 0.75,
+      "geography": 0.8182,
+      "history": 0.6615,
+      "informatics": 0.9,
+      "literature": 0.5758,
+      "mathematics": 0.9174,
+      "physics": 0.9231
+    },
+    "acc_by_year": {
+      "2025": 0.7718,
+      "2026": 0.7923
+    }
+  },
+  {
+    "model_key": "gemma-4-31b",
+    "track": "B",
+    "n": 223,
+    "accuracy": 0.8386,
+    "ci95": [
+      0.7892,
+      0.8879
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "literature": 0.8077,
+      "russian_language": 0.8426
+    },
+    "acc_by_year": {
+      "2025": 0.8595,
+      "2026": 0.8137
+    }
+  },
+  {
+    "model_key": "gemma-4-31b",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.8977,
+    "ci95": [
+      0.8523,
+      0.9375
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "english": 0.8868,
+      "french": 0.8873,
+      "german": 0.9231
+    },
+    "acc_by_year": {
+      "2025": 0.8939,
+      "2026": 0.9
+    }
+  },
+  {
     "model_key": "gpt-5.4-mini",
     "track": "A",
     "n": 540,
@@ -254,6 +505,26 @@
     "acc_by_year": {
       "2025": 0.7273,
       "2026": 0.7745
+    }
+  },
+  {
+    "model_key": "gpt-5.4-mini",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.858,
+    "ci95": [
+      0.8068,
+      0.9091
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "english": 0.8868,
+      "french": 0.8873,
+      "german": 0.7885
+    },
+    "acc_by_year": {
+      "2025": 0.8485,
+      "2026": 0.8636
     }
   },
   {
@@ -303,26 +574,221 @@
     }
   },
   {
-    "model_key": "llama-4-maverick",
-    "track": "A",
-    "n": 179,
-    "accuracy": 0.7207,
+    "model_key": "gpt-5.5",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.9091,
     "ci95": [
-      0.6592,
-      0.7877
+      0.8636,
+      0.9489
     ],
     "invalid_rate": 0.0,
     "acc_by_subject": {
-      "azerbaijani_language": 0.5455,
-      "english": 0.75,
-      "geography": 0.8333,
-      "history": 0.68,
-      "literature": 0.6,
-      "mathematics": 0.863
+      "english": 0.9057,
+      "french": 0.9296,
+      "german": 0.8846
     },
     "acc_by_year": {
-      "2025": 0.7009,
-      "2026": 0.7581
+      "2025": 0.9394,
+      "2026": 0.8909
+    }
+  },
+  {
+    "model_key": "llama-3.1-8b",
+    "track": "A",
+    "n": 540,
+    "accuracy": 0.2481,
+    "ci95": [
+      0.213,
+      0.2852
+    ],
+    "invalid_rate": 0.0556,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.2,
+      "biology": 0.1923,
+      "chemistry": 0.3067,
+      "english": 0.75,
+      "geography": 0.2338,
+      "history": 0.3077,
+      "informatics": 0.2,
+      "literature": 0.1212,
+      "mathematics": 0.2645,
+      "physics": 0.2308
+    },
+    "acc_by_year": {
+      "2025": 0.2342,
+      "2026": 0.2705
+    }
+  },
+  {
+    "model_key": "llama-3.1-8b",
+    "track": "B",
+    "n": 223,
+    "accuracy": 0.4081,
+    "ci95": [
+      0.3408,
+      0.4709
+    ],
+    "invalid_rate": 0.0359,
+    "acc_by_subject": {
+      "literature": 0.3462,
+      "russian_language": 0.4162
+    },
+    "acc_by_year": {
+      "2025": 0.4132,
+      "2026": 0.402
+    }
+  },
+  {
+    "model_key": "llama-3.1-8b",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.5852,
+    "ci95": [
+      0.5114,
+      0.6591
+    ],
+    "invalid_rate": 0.0114,
+    "acc_by_subject": {
+      "english": 0.566,
+      "french": 0.6197,
+      "german": 0.5577
+    },
+    "acc_by_year": {
+      "2025": 0.5606,
+      "2026": 0.6
+    }
+  },
+  {
+    "model_key": "llama-4-maverick",
+    "track": "A",
+    "n": 540,
+    "accuracy": 0.7333,
+    "ci95": [
+      0.6963,
+      0.7704
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.5,
+      "biology": 0.6538,
+      "chemistry": 0.8133,
+      "english": 0.75,
+      "geography": 0.8182,
+      "history": 0.6154,
+      "informatics": 0.7,
+      "literature": 0.5455,
+      "mathematics": 0.8678,
+      "physics": 0.8974
+    },
+    "acc_by_year": {
+      "2025": 0.7447,
+      "2026": 0.715
+    }
+  },
+  {
+    "model_key": "llama-4-maverick",
+    "track": "B",
+    "n": 223,
+    "accuracy": 0.8206,
+    "ci95": [
+      0.7713,
+      0.87
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "literature": 0.8846,
+      "russian_language": 0.8122
+    },
+    "acc_by_year": {
+      "2025": 0.8182,
+      "2026": 0.8235
+    }
+  },
+  {
+    "model_key": "llama-4-maverick",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.875,
+    "ci95": [
+      0.8239,
+      0.9205
+    ],
+    "invalid_rate": 0.0057,
+    "acc_by_subject": {
+      "english": 0.9057,
+      "french": 0.8873,
+      "german": 0.8269
+    },
+    "acc_by_year": {
+      "2025": 0.8939,
+      "2026": 0.8636
+    }
+  },
+  {
+    "model_key": "mistral-large-2512",
+    "track": "A",
+    "n": 540,
+    "accuracy": 0.7259,
+    "ci95": [
+      0.687,
+      0.763
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.4375,
+      "biology": 0.5385,
+      "chemistry": 0.8533,
+      "english": 0.75,
+      "geography": 0.7792,
+      "history": 0.6308,
+      "informatics": 0.85,
+      "literature": 0.4242,
+      "mathematics": 0.9091,
+      "physics": 0.8718
+    },
+    "acc_by_year": {
+      "2025": 0.7177,
+      "2026": 0.7391
+    }
+  },
+  {
+    "model_key": "mistral-large-2512",
+    "track": "B",
+    "n": 223,
+    "accuracy": 0.8386,
+    "ci95": [
+      0.7892,
+      0.8879
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "literature": 0.8846,
+      "russian_language": 0.8325
+    },
+    "acc_by_year": {
+      "2025": 0.8099,
+      "2026": 0.8725
+    }
+  },
+  {
+    "model_key": "mistral-large-2512",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.875,
+    "ci95": [
+      0.8239,
+      0.9205
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "english": 0.8679,
+      "french": 0.8592,
+      "german": 0.9038
+    },
+    "acc_by_year": {
+      "2025": 0.8939,
+      "2026": 0.8636
     }
   },
   {
@@ -372,6 +838,26 @@
     }
   },
   {
+    "model_key": "qwen3-235b",
+    "track": "F",
+    "n": 176,
+    "accuracy": 0.8807,
+    "ci95": [
+      0.8295,
+      0.9261
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "english": 0.8868,
+      "french": 0.9014,
+      "german": 0.8462
+    },
+    "acc_by_year": {
+      "2025": 0.8485,
+      "2026": 0.9
+    }
+  },
+  {
     "model_key": "qwen3-max",
     "track": "A",
     "n": 540,
@@ -415,6 +901,26 @@
     "acc_by_year": {
       "2025": 0.8,
       "2026": 0.8387
+    }
+  },
+  {
+    "model_key": "qwen3-max",
+    "track": "F",
+    "n": 159,
+    "accuracy": 0.9057,
+    "ci95": [
+      0.8616,
+      0.9497
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "english": 0.9038,
+      "french": 0.9,
+      "german": 0.9149
+    },
+    "acc_by_year": {
+      "2025": 0.8852,
+      "2026": 0.9184
     }
   }
 ]

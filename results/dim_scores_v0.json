@@ -2,536 +2,592 @@
  {
   "model_key": "claude-haiku-4-5",
   "stage1_300": {
-   "central": null,
-   "floor": null
+   "central": 194.0,
+   "floor": 99.7
   },
   "groups": {
    "I (RK)": {
     "central": 356.6,
     "min_n": 39,
     "floor": 235.7,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 550.6,
+    "total700_floor": 335.4
    },
    "I (R\u0130)": {
     "central": 347.7,
     "min_n": 20,
     "floor": 229.3,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 541.7,
+    "total700_floor": 329.0
    },
    "II": {
     "central": 278.6,
     "min_n": 65,
     "floor": 180.0,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 472.6,
+    "total700_floor": 279.7
    },
    "III (DT)": {
     "central": 169.9,
     "min_n": 33,
     "floor": 102.3,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 363.9,
+    "total700_floor": 202.0
    },
    "IV": {
     "central": 270.2,
     "min_n": 26,
     "floor": 174.0,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 464.2,
+    "total700_floor": 273.7
    }
   }
  },
  {
   "model_key": "claude-opus-4-8",
   "stage1_300": {
-   "central": null,
-   "floor": null
+   "central": 249.7,
+   "floor": 128.4
   },
   "groups": {
    "I (RK)": {
     "central": 391.4,
     "min_n": 18,
     "floor": 260.5,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 641.1,
+    "total700_floor": 388.9
    },
    "I (R\u0130)": null,
    "II": {
     "central": 354.8,
     "min_n": 30,
     "floor": 234.4,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 604.5,
+    "total700_floor": 362.8
    },
    "III (DT)": {
     "central": 283.3,
     "min_n": 15,
     "floor": 183.3,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 533.0,
+    "total700_floor": 311.7
    },
    "IV": {
     "central": 395.0,
     "min_n": 12,
     "floor": 263.1,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 644.7,
+    "total700_floor": 391.5
+   }
+  }
+ },
+ {
+  "model_key": "claude-sonnet-5",
+  "stage1_300": {
+   "central": 223.0,
+   "floor": 114.3
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 382.7,
+    "min_n": 18,
+    "floor": 254.3,
+    "total700_central": 605.7,
+    "total700_floor": 368.6
+   },
+   "I (R\u0130)": null,
+   "II": {
+    "central": 311.6,
+    "min_n": 30,
+    "floor": 203.5,
+    "total700_central": 534.6,
+    "total700_floor": 317.8
+   },
+   "III (DT)": {
+    "central": 221.1,
+    "min_n": 15,
+    "floor": 138.9,
+    "total700_central": 444.1,
+    "total700_floor": 253.2
+   },
+   "IV": {
+    "central": 360.8,
+    "min_n": 12,
+    "floor": 238.7,
+    "total700_central": 583.8,
+    "total700_floor": 353.0
    }
   }
  },
  {
   "model_key": "deepseek-v4-pro",
   "stage1_300": {
-   "central": null,
-   "floor": null
+   "central": 213.2,
+   "floor": 110.0
   },
   "groups": {
    "I (RK)": {
     "central": 387.3,
     "min_n": 39,
     "floor": 257.9,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 600.5,
+    "total700_floor": 367.9
    },
    "I (R\u0130)": {
     "central": 390.3,
     "min_n": 20,
     "floor": 259.9,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 603.5,
+    "total700_floor": 369.9
    },
    "II": {
     "central": 350.8,
     "min_n": 65,
     "floor": 232.5,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 564.0,
+    "total700_floor": 342.5
    },
    "III (DT)": {
     "central": 245.1,
     "min_n": 33,
     "floor": 159.4,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 458.3,
+    "total700_floor": 269.4
    },
    "IV": {
     "central": 363.9,
     "min_n": 26,
     "floor": 241.2,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 577.1,
+    "total700_floor": 351.2
    }
   }
  },
  {
   "model_key": "gemini-3.1-pro",
   "stage1_300": {
-   "central": null,
-   "floor": null
-  },
-  "groups": {
-   "I (RK)": null,
-   "I (R\u0130)": null,
-   "II": {
-    "central": 395.1,
-    "min_n": 17,
-    "floor": 263.2,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "III (DT)": null,
-   "IV": null
-  }
- },
- {
-  "model_key": "gemini-3.5-flash",
-  "stage1_300": {
-   "central": null,
-   "floor": null
-  },
-  "groups": {
-   "I (RK)": {
-    "central": 395.3,
-    "min_n": 39,
-    "floor": 263.3,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "I (R\u0130)": {
-    "central": 394.2,
-    "min_n": 20,
-    "floor": 262.5,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "II": {
-    "central": 393.2,
-    "min_n": 65,
-    "floor": 261.8,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "III (DT)": {
-    "central": 356.3,
-    "min_n": 33,
-    "floor": 235.5,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "IV": {
-    "central": 386.3,
-    "min_n": 26,
-    "floor": 256.9,
-    "total700_central": null,
-    "total700_floor": null
-   }
-  }
- },
- {
-  "model_key": "gemma-4-31b",
-  "stage1_300": {
-   "central": null,
-   "floor": null
-  },
-  "groups": {
-   "I (RK)": {
-    "central": 372.5,
-    "min_n": 39,
-    "floor": 247.1,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "I (R\u0130)": {
-    "central": 374.9,
-    "min_n": 20,
-    "floor": 248.7,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "II": {
-    "central": 329.2,
-    "min_n": 65,
-    "floor": 216.2,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "III (DT)": {
-    "central": 221.2,
-    "min_n": 33,
-    "floor": 139.2,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "IV": {
-    "central": 322.9,
-    "min_n": 26,
-    "floor": 211.6,
-    "total700_central": null,
-    "total700_floor": null
-   }
-  }
- },
- {
-  "model_key": "gpt-5.4-mini",
-  "stage1_300": {
-   "central": null,
-   "floor": null
-  },
-  "groups": {
-   "I (RK)": {
-    "central": 367.1,
-    "min_n": 39,
-    "floor": 243.2,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "I (R\u0130)": {
-    "central": 362.5,
-    "min_n": 20,
-    "floor": 239.9,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "II": {
-    "central": 305.4,
-    "min_n": 65,
-    "floor": 199.1,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "III (DT)": {
-    "central": 156.0,
-    "min_n": 33,
-    "floor": 92.4,
-    "total700_central": null,
-    "total700_floor": null
-   },
-   "IV": {
-    "central": 312.2,
-    "min_n": 26,
-    "floor": 203.9,
-    "total700_central": null,
-    "total700_floor": null
-   }
-  }
- },
- {
-  "model_key": "gpt-5.5",
-  "stage1_300": {
-   "central": null,
-   "floor": null
+   "central": 268.5,
+   "floor": 137.7
   },
   "groups": {
    "I (RK)": {
     "central": 393.3,
     "min_n": 18,
     "floor": 261.9,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 661.8,
+    "total700_floor": 399.6
+   },
+   "I (R\u0130)": null,
+   "II": {
+    "central": 396.1,
+    "min_n": 30,
+    "floor": 263.9,
+    "total700_central": 664.6,
+    "total700_floor": 401.6
+   },
+   "III (DT)": {
+    "central": 370.8,
+    "min_n": 15,
+    "floor": 245.8,
+    "total700_central": 639.3,
+    "total700_floor": 383.5
+   },
+   "IV": {
+    "central": 390.0,
+    "min_n": 12,
+    "floor": 259.5,
+    "total700_central": 658.5,
+    "total700_floor": 397.2
+   }
+  }
+ },
+ {
+  "model_key": "gemini-3.5-flash",
+  "stage1_300": {
+   "central": 267.8,
+   "floor": 136.5
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 395.3,
+    "min_n": 39,
+    "floor": 263.3,
+    "total700_central": 663.1,
+    "total700_floor": 399.8
+   },
+   "I (R\u0130)": {
+    "central": 394.2,
+    "min_n": 20,
+    "floor": 262.5,
+    "total700_central": 662.0,
+    "total700_floor": 399.0
+   },
+   "II": {
+    "central": 393.2,
+    "min_n": 65,
+    "floor": 261.8,
+    "total700_central": 661.0,
+    "total700_floor": 398.3
+   },
+   "III (DT)": {
+    "central": 356.3,
+    "min_n": 33,
+    "floor": 235.5,
+    "total700_central": 624.1,
+    "total700_floor": 372.0
+   },
+   "IV": {
+    "central": 386.3,
+    "min_n": 26,
+    "floor": 256.9,
+    "total700_central": 654.1,
+    "total700_floor": 393.4
+   }
+  }
+ },
+ {
+  "model_key": "gemma-4-31b",
+  "stage1_300": {
+   "central": 215.4,
+   "floor": 110.7
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 372.5,
+    "min_n": 39,
+    "floor": 247.1,
+    "total700_central": 587.9,
+    "total700_floor": 357.8
+   },
+   "I (R\u0130)": {
+    "central": 374.9,
+    "min_n": 20,
+    "floor": 248.7,
+    "total700_central": 590.3,
+    "total700_floor": 359.4
+   },
+   "II": {
+    "central": 329.2,
+    "min_n": 65,
+    "floor": 216.2,
+    "total700_central": 544.6,
+    "total700_floor": 326.9
+   },
+   "III (DT)": {
+    "central": 221.2,
+    "min_n": 33,
+    "floor": 139.2,
+    "total700_central": 436.6,
+    "total700_floor": 249.9
+   },
+   "IV": {
+    "central": 322.9,
+    "min_n": 26,
+    "floor": 211.6,
+    "total700_central": 538.3,
+    "total700_floor": 322.3
+   }
+  }
+ },
+ {
+  "model_key": "gpt-5.4-mini",
+  "stage1_300": {
+   "central": 206.4,
+   "floor": 105.8
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 367.1,
+    "min_n": 39,
+    "floor": 243.2,
+    "total700_central": 573.5,
+    "total700_floor": 349.0
+   },
+   "I (R\u0130)": {
+    "central": 362.5,
+    "min_n": 20,
+    "floor": 239.9,
+    "total700_central": 568.9,
+    "total700_floor": 345.7
+   },
+   "II": {
+    "central": 305.4,
+    "min_n": 65,
+    "floor": 199.1,
+    "total700_central": 511.8,
+    "total700_floor": 304.9
+   },
+   "III (DT)": {
+    "central": 156.0,
+    "min_n": 33,
+    "floor": 92.4,
+    "total700_central": 362.4,
+    "total700_floor": 198.2
+   },
+   "IV": {
+    "central": 312.2,
+    "min_n": 26,
+    "floor": 203.9,
+    "total700_central": 518.6,
+    "total700_floor": 309.7
+   }
+  }
+ },
+ {
+  "model_key": "gpt-5.5",
+  "stage1_300": {
+   "central": 235.5,
+   "floor": 120.5
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 393.3,
+    "min_n": 18,
+    "floor": 261.9,
+    "total700_central": 628.8,
+    "total700_floor": 382.4
    },
    "I (R\u0130)": null,
    "II": {
     "central": 382.5,
     "min_n": 30,
     "floor": 254.2,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 618.0,
+    "total700_floor": 374.7
    },
    "III (DT)": {
     "central": 295.0,
     "min_n": 15,
     "floor": 191.7,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 530.5,
+    "total700_floor": 312.2
    },
    "IV": {
     "central": 360.8,
     "min_n": 12,
     "floor": 238.7,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 596.3,
+    "total700_floor": 359.2
    }
   }
  },
  {
   "model_key": "llama-3.1-8b",
   "stage1_300": {
-   "central": null,
-   "floor": null
+   "central": 124.1,
+   "floor": 66.0
   },
   "groups": {
    "I (RK)": {
     "central": 57.5,
     "min_n": 39,
     "floor": 24.5,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 181.6,
+    "total700_floor": 90.5
    },
    "I (R\u0130)": {
     "central": 45.9,
     "min_n": 20,
     "floor": 16.5,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 170.0,
+    "total700_floor": 82.5
    },
    "II": {
     "central": 54.9,
     "min_n": 65,
     "floor": 21.8,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 179.0,
+    "total700_floor": 87.8
    },
    "III (DT)": {
     "central": 40.0,
     "min_n": 33,
     "floor": 13.5,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 164.1,
+    "total700_floor": 79.5
    },
    "IV": {
     "central": 50.7,
     "min_n": 26,
     "floor": 18.0,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 174.8,
+    "total700_floor": 84.0
    }
   }
  },
  {
   "model_key": "llama-4-maverick",
   "stage1_300": {
-   "central": null,
-   "floor": null
+   "central": 217.8,
+   "floor": 111.6
   },
   "groups": {
    "I (RK)": {
     "central": 342.0,
     "min_n": 39,
     "floor": 225.2,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 559.8,
+    "total700_floor": 336.8
    },
    "I (R\u0130)": {
     "central": 328.8,
     "min_n": 20,
     "floor": 215.8,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 546.6,
+    "total700_floor": 327.4
    },
    "II": {
     "central": 305.0,
     "min_n": 65,
     "floor": 198.8,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 522.8,
+    "total700_floor": 310.4
    },
    "III (DT)": {
     "central": 192.2,
     "min_n": 33,
     "floor": 118.2,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 410.0,
+    "total700_floor": 229.8
    },
    "IV": {
     "central": 294.8,
     "min_n": 26,
     "floor": 191.5,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 512.6,
+    "total700_floor": 303.1
    }
   }
  },
  {
   "model_key": "mistral-large-2512",
   "stage1_300": {
-   "central": null,
-   "floor": null
+   "central": 213.3,
+   "floor": 109.2
   },
   "groups": {
    "I (RK)": {
     "central": 355.2,
     "min_n": 39,
     "floor": 234.7,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 568.5,
+    "total700_floor": 343.9
    },
    "I (R\u0130)": {
     "central": 354.8,
     "min_n": 20,
     "floor": 234.4,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 568.1,
+    "total700_floor": 343.6
    },
    "II": {
     "central": 313.1,
     "min_n": 65,
     "floor": 204.6,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 526.4,
+    "total700_floor": 313.8
    },
    "III (DT)": {
     "central": 172.4,
     "min_n": 33,
     "floor": 104.1,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 385.7,
+    "total700_floor": 213.3
    },
    "IV": {
     "central": 278.6,
     "min_n": 26,
     "floor": 180.0,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 491.9,
+    "total700_floor": 289.2
    }
   }
  },
  {
   "model_key": "qwen3-235b",
   "stage1_300": {
-   "central": null,
-   "floor": null
+   "central": 191.5,
+   "floor": 98.4
   },
   "groups": {
    "I (RK)": {
     "central": 371.7,
     "min_n": 39,
     "floor": 247.0,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 563.2,
+    "total700_floor": 345.4
    },
    "I (R\u0130)": {
     "central": 383.6,
     "min_n": 20,
     "floor": 255.2,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 575.1,
+    "total700_floor": 353.6
    },
    "II": {
     "central": 298.0,
     "min_n": 65,
     "floor": 194.6,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 489.5,
+    "total700_floor": 293.0
    },
    "III (DT)": {
     "central": 148.5,
     "min_n": 33,
     "floor": 89.1,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 340.0,
+    "total700_floor": 187.5
    },
    "IV": {
     "central": 309.1,
     "min_n": 26,
     "floor": 202.8,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 500.6,
+    "total700_floor": 301.2
    }
   }
  },
  {
   "model_key": "qwen3-max",
   "stage1_300": {
-   "central": null,
-   "floor": null
+   "central": 224.1,
+   "floor": 114.6
   },
   "groups": {
    "I (RK)": {
     "central": 379.5,
     "min_n": 39,
     "floor": 252.3,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 603.6,
+    "total700_floor": 366.9
    },
    "I (R\u0130)": {
     "central": 369.4,
     "min_n": 20,
     "floor": 245.3,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 593.5,
+    "total700_floor": 359.9
    },
    "II": {
     "central": 333.3,
     "min_n": 65,
     "floor": 219.4,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 557.4,
+    "total700_floor": 334.0
    },
    "III (DT)": {
     "central": 176.8,
     "min_n": 33,
     "floor": 109.6,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 400.9,
+    "total700_floor": 224.2
    },
    "IV": {
     "central": 337.3,
     "min_n": 26,
     "floor": 222.5,
-    "total700_central": null,
-    "total700_floor": null
+    "total700_central": 561.4,
+    "total700_floor": 337.1
    }
   }
  }
