@@ -45,14 +45,14 @@
   "price_out": 5.0
  },
  "gemini-3.1-pro": {
-  "provider": "google",
-  "model": "gemini-3.1-pro-preview",
+  "provider": "openrouter",
+  "model": "google/gemini-3.1-pro-preview",
   "max_tokens": 4096,
-  "thinking_level": "low",
+  "reasoning_effort": "low",
   "tier": "frontier_closed",
-  "price_in": 2.5,
-  "price_out": 15.0,
-  "price_estimated": true
+  "price_in": 2.0,
+  "price_out": 12.0,
+  "notes": "routed via OpenRouter after free-tier Gemini API quota exhaustion"
  },
  "gemini-3.5-flash": {
   "provider": "google",

@@ -176,8 +176,14 @@ def run_model(model_key: str, track: str, limit: int | None = None,
     out_path = RAW_DIR / f"{model_key}__{track}.jsonl"
     done = set()
     if out_path.exists():
-        done = {json.loads(line)["item_id"]
-                for line in out_path.read_text().splitlines()}
+        # keep successful records, drop errors so they get retried
+        good = [json.loads(line)
+                for line in out_path.read_text().splitlines()]
+        good = [r for r in good if "error" not in r]
+        with open(out_path, "w") as f:
+            for r in good:
+                f.write(json.dumps(r, ensure_ascii=False) + "\n")
+        done = {r["item_id"] for r in good}
     todo = [it for it in items if it["item_id"] not in done]
     print(f"{model_key} track {track}: {len(todo)} to run "
           f"({len(done)} cached, {len(items)} total)")

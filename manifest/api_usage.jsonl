@@ -206,3 +206,4 @@
 {"model": "google/gemma-4-31b-it", "context": "eval:gemma-4-31b:A", "input_tokens": 149099, "output_tokens": 194466, "cost_usd": 0.085955, "estimated": false}
 {"model": "google/gemma-4-31b-it", "context": "eval:gemma-4-31b:B", "input_tokens": 43811, "output_tokens": 39410, "cost_usd": 0.019051, "estimated": false}
 {"model": "meta-llama/llama-3.1-8b-instruct", "context": "eval:llama-3.1-8b:A", "input_tokens": 141094, "output_tokens": 102763, "cost_usd": 0.005905, "estimated": false}
+{"model": "meta-llama/llama-3.1-8b-instruct", "context": "eval:llama-3.1-8b:B", "input_tokens": 41758, "output_tokens": 31315, "cost_usd": 0.001775, "estimated": false}
