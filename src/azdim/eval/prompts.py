@@ -18,7 +18,15 @@ INSTR_RU = ("Реши задачу. Можешь кратко объяснить
             "Ответ: <буква>\n"
             "где <буква> — A, B, C, D или E.")
 
-INSTR_BY_LANG = {"az": INSTR_AZ, "ru": INSTR_RU}
+# Track F: foreign-language exam sections (EN/DE/FR items); meta-instruction
+# in English, the items themselves stay in their language
+INSTR_EN = ("Solve the task. You may explain briefly, but the LAST line of "
+            "your answer must have exactly this format:\n"
+            "Answer: <letter>\n"
+            "where <letter> is A, B, C, D or E.")
+
+INSTR_BY_LANG = {"az": INSTR_AZ, "ru": INSTR_RU,
+                 "en": INSTR_EN, "de": INSTR_EN, "fr": INSTR_EN}
 
 
 def format_mcq(item: dict) -> str:

@@ -201,3 +201,8 @@
 {"model": "qwen/qwen3-235b-a22b-2507", "context": "eval:qwen3-235b:B", "input_tokens": 44191, "output_tokens": 110810, "cost_usd": 0.015058, "estimated": false}
 {"model": "meta-llama/llama-4-maverick", "context": "eval:llama-4-maverick:A", "input_tokens": 121608, "output_tokens": 193625, "cost_usd": 0.134416, "estimated": false}
 {"model": "meta-llama/llama-4-maverick", "context": "eval:llama-4-maverick:B", "input_tokens": 34202, "output_tokens": 62534, "cost_usd": 0.042651, "estimated": false}
+{"model": "mistralai/mistral-large-2512", "context": "eval:mistral-large-2512:A", "input_tokens": 122843, "output_tokens": 191942, "cost_usd": 0.349334, "estimated": false}
+{"model": "mistralai/mistral-large-2512", "context": "eval:mistral-large-2512:B", "input_tokens": 38522, "output_tokens": 41581, "cost_usd": 0.081632, "estimated": false}
+{"model": "google/gemma-4-31b-it", "context": "eval:gemma-4-31b:A", "input_tokens": 149099, "output_tokens": 194466, "cost_usd": 0.085955, "estimated": false}
+{"model": "google/gemma-4-31b-it", "context": "eval:gemma-4-31b:B", "input_tokens": 43811, "output_tokens": 39410, "cost_usd": 0.019051, "estimated": false}
+{"model": "meta-llama/llama-3.1-8b-instruct", "context": "eval:llama-3.1-8b:A", "input_tokens": 141094, "output_tokens": 102763, "cost_usd": 0.005905, "estimated": false}

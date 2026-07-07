@@ -1,0 +1,538 @@
+[
+ {
+  "model_key": "claude-haiku-4-5",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 356.6,
+    "min_n": 39,
+    "floor": 235.7,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 347.7,
+    "min_n": 20,
+    "floor": 229.3,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 278.6,
+    "min_n": 65,
+    "floor": 180.0,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 169.9,
+    "min_n": 33,
+    "floor": 102.3,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 270.2,
+    "min_n": 26,
+    "floor": 174.0,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "claude-opus-4-8",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 391.4,
+    "min_n": 18,
+    "floor": 260.5,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": null,
+   "II": {
+    "central": 354.8,
+    "min_n": 30,
+    "floor": 234.4,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 283.3,
+    "min_n": 15,
+    "floor": 183.3,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 395.0,
+    "min_n": 12,
+    "floor": 263.1,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "deepseek-v4-pro",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 387.3,
+    "min_n": 39,
+    "floor": 257.9,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 390.3,
+    "min_n": 20,
+    "floor": 259.9,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 350.8,
+    "min_n": 65,
+    "floor": 232.5,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 245.1,
+    "min_n": 33,
+    "floor": 159.4,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 363.9,
+    "min_n": 26,
+    "floor": 241.2,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "gemini-3.1-pro",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": null,
+   "I (R\u0130)": null,
+   "II": {
+    "central": 395.1,
+    "min_n": 17,
+    "floor": 263.2,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": null,
+   "IV": null
+  }
+ },
+ {
+  "model_key": "gemini-3.5-flash",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 395.3,
+    "min_n": 39,
+    "floor": 263.3,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 394.2,
+    "min_n": 20,
+    "floor": 262.5,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 393.2,
+    "min_n": 65,
+    "floor": 261.8,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 356.3,
+    "min_n": 33,
+    "floor": 235.5,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 386.3,
+    "min_n": 26,
+    "floor": 256.9,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "gemma-4-31b",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 372.5,
+    "min_n": 39,
+    "floor": 247.1,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 374.9,
+    "min_n": 20,
+    "floor": 248.7,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 329.2,
+    "min_n": 65,
+    "floor": 216.2,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 221.2,
+    "min_n": 33,
+    "floor": 139.2,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 322.9,
+    "min_n": 26,
+    "floor": 211.6,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "gpt-5.4-mini",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 367.1,
+    "min_n": 39,
+    "floor": 243.2,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 362.5,
+    "min_n": 20,
+    "floor": 239.9,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 305.4,
+    "min_n": 65,
+    "floor": 199.1,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 156.0,
+    "min_n": 33,
+    "floor": 92.4,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 312.2,
+    "min_n": 26,
+    "floor": 203.9,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "gpt-5.5",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 393.3,
+    "min_n": 18,
+    "floor": 261.9,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": null,
+   "II": {
+    "central": 382.5,
+    "min_n": 30,
+    "floor": 254.2,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 295.0,
+    "min_n": 15,
+    "floor": 191.7,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 360.8,
+    "min_n": 12,
+    "floor": 238.7,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "llama-3.1-8b",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 57.5,
+    "min_n": 39,
+    "floor": 24.5,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 45.9,
+    "min_n": 20,
+    "floor": 16.5,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 54.9,
+    "min_n": 65,
+    "floor": 21.8,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 40.0,
+    "min_n": 33,
+    "floor": 13.5,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 50.7,
+    "min_n": 26,
+    "floor": 18.0,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "llama-4-maverick",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 342.0,
+    "min_n": 39,
+    "floor": 225.2,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 328.8,
+    "min_n": 20,
+    "floor": 215.8,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 305.0,
+    "min_n": 65,
+    "floor": 198.8,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 192.2,
+    "min_n": 33,
+    "floor": 118.2,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 294.8,
+    "min_n": 26,
+    "floor": 191.5,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "mistral-large-2512",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 355.2,
+    "min_n": 39,
+    "floor": 234.7,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 354.8,
+    "min_n": 20,
+    "floor": 234.4,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 313.1,
+    "min_n": 65,
+    "floor": 204.6,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 172.4,
+    "min_n": 33,
+    "floor": 104.1,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 278.6,
+    "min_n": 26,
+    "floor": 180.0,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "qwen3-235b",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 371.7,
+    "min_n": 39,
+    "floor": 247.0,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 383.6,
+    "min_n": 20,
+    "floor": 255.2,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 298.0,
+    "min_n": 65,
+    "floor": 194.6,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 148.5,
+    "min_n": 33,
+    "floor": 89.1,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 309.1,
+    "min_n": 26,
+    "floor": 202.8,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ },
+ {
+  "model_key": "qwen3-max",
+  "stage1_300": {
+   "central": null,
+   "floor": null
+  },
+  "groups": {
+   "I (RK)": {
+    "central": 379.5,
+    "min_n": 39,
+    "floor": 252.3,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "I (R\u0130)": {
+    "central": 369.4,
+    "min_n": 20,
+    "floor": 245.3,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "II": {
+    "central": 333.3,
+    "min_n": 65,
+    "floor": 219.4,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "III (DT)": {
+    "central": 176.8,
+    "min_n": 33,
+    "floor": 109.6,
+    "total700_central": null,
+    "total700_floor": null
+   },
+   "IV": {
+    "central": 337.3,
+    "min_n": 26,
+    "floor": 222.5,
+    "total700_central": null,
+    "total700_floor": null
+   }
+  }
+ }
+]

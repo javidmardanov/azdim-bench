@@ -31,16 +31,19 @@ RAW_DIR = ROOT / "results" / "raw"
 WORKERS = 8
 
 
+TRACK_LANGS = {"A": ("az",), "B": ("ru",), "F": ("en", "de", "fr")}
+
+
 def eval_items(track: str) -> list[dict]:
     """Clean pool: eligible MCQs that are high-confidence and unflagged.
     Flagged items wait for human verification before entering the pool."""
     items = [json.loads(line) for line in ITEMS_FILE.read_text().splitlines()]
-    lang = {"A": "az", "B": "ru"}[track]
+    langs = TRACK_LANGS[track]
     return [it for it in items
             if it["question_type"] == "mcq"
             and it.get("gold_answer_label") in tuple("ABCDE")
             and not it.get("requires_image")
-            and it.get("language") == lang
+            and it.get("language") in langs
             and it.get("extraction_confidence") == "high"
             and not it.get("notes")]
 
@@ -262,9 +265,14 @@ if __name__ == "__main__":
             i = args.index("--limit")
             limit = int(args[i + 1])
             args = args[:i] + args[i + 2:]
+        tracks = ("A", "B")
+        if "--tracks" in args:
+            i = args.index("--tracks")
+            tracks = tuple(args[i + 1])
+            args = args[:i] + args[i + 2:]
         keys = list(specs) if "--all" in args else args[1:]
         for key in keys:
-            for track in ("A", "B"):
+            for track in tracks:
                 run_model(key, track, limit, core)
     else:
         sys.exit("usage: runner discover | runner run <model_key>|--all")
