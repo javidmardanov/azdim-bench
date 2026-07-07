@@ -193,3 +193,11 @@
 {"model": "claude-opus-4-8", "context": "eval:claude-opus-4-8:B", "input_tokens": 22939, "output_tokens": 11753, "cost_usd": 0.40852, "estimated": false}
 {"model": "deepseek/deepseek-v4-pro", "context": "eval:deepseek-v4-pro:A", "input_tokens": 1996, "output_tokens": 20065, "cost_usd": 0.018315, "estimated": false}
 {"model": "deepseek/deepseek-v4-pro", "context": "eval:deepseek-v4-pro:B", "input_tokens": 914, "output_tokens": 5150, "cost_usd": 0.004874, "estimated": false}
+{"model": "deepseek/deepseek-v4-pro", "context": "eval:deepseek-v4-pro:A", "input_tokens": 137083, "output_tokens": 999120, "cost_usd": 0.92818, "estimated": false}
+{"model": "deepseek/deepseek-v4-pro", "context": "eval:deepseek-v4-pro:B", "input_tokens": 38283, "output_tokens": 195607, "cost_usd": 0.18664, "estimated": false}
+{"model": "qwen/qwen3-max", "context": "eval:qwen3-max:A", "input_tokens": 143622, "output_tokens": 342871, "cost_usd": 1.449222, "estimated": false}
+{"model": "qwen/qwen3-max", "context": "eval:qwen3-max:B", "input_tokens": 40540, "output_tokens": 85674, "cost_usd": 0.36575, "estimated": false}
+{"model": "qwen/qwen3-235b-a22b-2507", "context": "eval:qwen3-235b:A", "input_tokens": 141563, "output_tokens": 428784, "cost_usd": 0.055619, "estimated": false}
+{"model": "qwen/qwen3-235b-a22b-2507", "context": "eval:qwen3-235b:B", "input_tokens": 44191, "output_tokens": 110810, "cost_usd": 0.015058, "estimated": false}
+{"model": "meta-llama/llama-4-maverick", "context": "eval:llama-4-maverick:A", "input_tokens": 121608, "output_tokens": 193625, "cost_usd": 0.134416, "estimated": false}
+{"model": "meta-llama/llama-4-maverick", "context": "eval:llama-4-maverick:B", "input_tokens": 34202, "output_tokens": 62534, "cost_usd": 0.042651, "estimated": false}

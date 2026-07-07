@@ -46,6 +46,125 @@
     }
   },
   {
+    "model_key": "claude-opus-4-8",
+    "track": "A",
+    "n": 250,
+    "accuracy": 0.876,
+    "ci95": [
+      0.832,
+      0.916
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.7568,
+      "biology": 1.0,
+      "chemistry": 0.9714,
+      "english": 1.0,
+      "geography": 0.8611,
+      "history": 0.8667,
+      "informatics": 1.0,
+      "literature": 0.5333,
+      "mathematics": 0.9107,
+      "physics": 1.0
+    },
+    "acc_by_year": {
+      "2025": 0.8767,
+      "2026": 0.875
+    }
+  },
+  {
+    "model_key": "claude-opus-4-8",
+    "track": "B",
+    "n": 100,
+    "accuracy": 0.94,
+    "ci95": [
+      0.89,
+      0.98
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "literature": 0.9167,
+      "russian_language": 0.9432
+    },
+    "acc_by_year": {
+      "2025": 0.9057,
+      "2026": 0.9787
+    }
+  },
+  {
+    "model_key": "deepseek-v4-pro",
+    "track": "A",
+    "n": 540,
+    "accuracy": 0.8074,
+    "ci95": [
+      0.7741,
+      0.8407
+    ],
+    "invalid_rate": 0.0926,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.575,
+      "biology": 0.8846,
+      "chemistry": 0.92,
+      "english": 0.75,
+      "geography": 0.8442,
+      "history": 0.7846,
+      "informatics": 0.95,
+      "literature": 0.3939,
+      "mathematics": 0.9008,
+      "physics": 0.9744
+    },
+    "acc_by_year": {
+      "2025": 0.8048,
+      "2026": 0.8116
+    }
+  },
+  {
+    "model_key": "deepseek-v4-pro",
+    "track": "B",
+    "n": 223,
+    "accuracy": 0.8565,
+    "ci95": [
+      0.8117,
+      0.8969
+    ],
+    "invalid_rate": 0.0493,
+    "acc_by_subject": {
+      "literature": 0.8846,
+      "russian_language": 0.8528
+    },
+    "acc_by_year": {
+      "2025": 0.8843,
+      "2026": 0.8235
+    }
+  },
+  {
+    "model_key": "gemini-3.1-pro",
+    "track": "A",
+    "n": 139,
+    "accuracy": 0.9424,
+    "ci95": [
+      0.8993,
+      0.9784
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "azerbaijani_language": 1.0,
+      "biology": 1.0,
+      "chemistry": 0.9,
+      "english": 1.0,
+      "geography": 1.0,
+      "history": 0.9583,
+      "informatics": 1.0,
+      "literature": 0.7778,
+      "mathematics": 0.9,
+      "physics": 1.0
+    },
+    "acc_by_year": {
+      "2025": 0.9483,
+      "2026": 0.913
+    }
+  },
+  {
     "model_key": "gemini-3.5-flash",
     "track": "A",
     "n": 540,
@@ -135,6 +254,167 @@
     "acc_by_year": {
       "2025": 0.7273,
       "2026": 0.7745
+    }
+  },
+  {
+    "model_key": "gpt-5.5",
+    "track": "A",
+    "n": 250,
+    "accuracy": 0.88,
+    "ci95": [
+      0.84,
+      0.92
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.6757,
+      "biology": 0.8333,
+      "chemistry": 0.9429,
+      "english": 1.0,
+      "geography": 0.9444,
+      "history": 0.9333,
+      "informatics": 0.8889,
+      "literature": 0.5333,
+      "mathematics": 0.9643,
+      "physics": 1.0
+    },
+    "acc_by_year": {
+      "2025": 0.8904,
+      "2026": 0.8654
+    }
+  },
+  {
+    "model_key": "gpt-5.5",
+    "track": "B",
+    "n": 100,
+    "accuracy": 0.91,
+    "ci95": [
+      0.85,
+      0.96
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "literature": 0.9167,
+      "russian_language": 0.9091
+    },
+    "acc_by_year": {
+      "2025": 0.8679,
+      "2026": 0.9574
+    }
+  },
+  {
+    "model_key": "llama-4-maverick",
+    "track": "A",
+    "n": 179,
+    "accuracy": 0.7207,
+    "ci95": [
+      0.6592,
+      0.7877
+    ],
+    "invalid_rate": 0.0,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.5455,
+      "english": 0.75,
+      "geography": 0.8333,
+      "history": 0.68,
+      "literature": 0.6,
+      "mathematics": 0.863
+    },
+    "acc_by_year": {
+      "2025": 0.7009,
+      "2026": 0.7581
+    }
+  },
+  {
+    "model_key": "qwen3-235b",
+    "track": "A",
+    "n": 540,
+    "accuracy": 0.6907,
+    "ci95": [
+      0.6537,
+      0.7296
+    ],
+    "invalid_rate": 0.0574,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.275,
+      "biology": 0.6538,
+      "chemistry": 0.84,
+      "english": 0.75,
+      "geography": 0.6623,
+      "history": 0.6308,
+      "informatics": 0.95,
+      "literature": 0.3333,
+      "mathematics": 0.9008,
+      "physics": 0.9487
+    },
+    "acc_by_year": {
+      "2025": 0.6817,
+      "2026": 0.7053
+    }
+  },
+  {
+    "model_key": "qwen3-235b",
+    "track": "B",
+    "n": 223,
+    "accuracy": 0.7534,
+    "ci95": [
+      0.6951,
+      0.8072
+    ],
+    "invalid_rate": 0.0852,
+    "acc_by_subject": {
+      "literature": 0.8077,
+      "russian_language": 0.7462
+    },
+    "acc_by_year": {
+      "2025": 0.7521,
+      "2026": 0.7549
+    }
+  },
+  {
+    "model_key": "qwen3-max",
+    "track": "A",
+    "n": 540,
+    "accuracy": 0.7648,
+    "ci95": [
+      0.7315,
+      0.8
+    ],
+    "invalid_rate": 0.0537,
+    "acc_by_subject": {
+      "azerbaijani_language": 0.4625,
+      "biology": 0.7692,
+      "chemistry": 0.8933,
+      "english": 0.75,
+      "geography": 0.8571,
+      "history": 0.6308,
+      "informatics": 0.8,
+      "literature": 0.3939,
+      "mathematics": 0.9339,
+      "physics": 0.9487
+    },
+    "acc_by_year": {
+      "2025": 0.7598,
+      "2026": 0.7729
+    }
+  },
+  {
+    "model_key": "qwen3-max",
+    "track": "B",
+    "n": 208,
+    "accuracy": 0.8173,
+    "ci95": [
+      0.7644,
+      0.8654
+    ],
+    "invalid_rate": 0.0288,
+    "acc_by_subject": {
+      "literature": 0.8462,
+      "russian_language": 0.8132
+    },
+    "acc_by_year": {
+      "2025": 0.8,
+      "2026": 0.8387
     }
   }
 ]
