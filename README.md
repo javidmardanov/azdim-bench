@@ -1,5 +1,25 @@
 # AzDIM-Bench
 
+> ## ⚠️ WORK IN PROGRESS — v0 preview
+>
+> **This is an early preview, not a finished benchmark. Do not cite it or treat its
+> numbers as final.**
+>
+> Known limitations in this build:
+> - **Incomplete dataset.** ~20–35% of closed questions in the university-entrance
+>   exams are not yet extracted (verified against DİM's own answer keys). Coverage
+>   for these exams is a work in progress.
+> - **Partially verified answers.** Gold answers are cross-checked against DİM's
+>   separate answer keys for ~682 entrance-exam items (~96% agreement); a large pool
+>   (school-leaving exams + one entrance sitting whose key failed to parse) is **not
+>   yet independently verified**.
+> - **Provisional results.** The leaderboard was computed on the above data. Rankings
+>   are indicative and **will change** once coverage and verification are complete.
+> - **No human verification pass yet.** The `verify_app` review of flagged items has
+>   not been completed.
+>
+> Tracking issues and progress: see [`docs/eval_design.md`](docs/eval_design.md).
+
 A public benchmark of Azerbaijani state examination questions (DİM — Dövlət İmtahan Mərkəzi)
 for evaluating large language models.
 

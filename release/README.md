@@ -12,6 +12,13 @@ pretty_name: AzDIM-Bench
 
 # AzDIM-Bench (v0, exported 2026-07-07)
 
+> **⚠️ WORK IN PROGRESS — v0 preview. Not final; do not cite yet.**
+> This dataset is **incomplete** (~20–35% of university-entrance closed questions
+> not yet extracted) and only **partially verified** (gold answers cross-checked
+> against DİM's answer keys for ~682 items at ~96% agreement; a large pool not yet
+> verified). Item counts, gold answers, and any derived leaderboard are
+> **provisional and will change**.
+
 Benchmark of Azerbaijani state exam questions (DİM school-leaving and
 university entrance exams, 2025-2026) for evaluating LLMs.
 
