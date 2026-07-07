@@ -341,6 +341,102 @@ footer .sig{margin-top:34px;font-family:var(--mono);font-size:11px;letter-spacin
     <p class="lede rv">Native-language prompts, visible reasoning, hidden reasoning minimized
       everywhere, answers parsed from a fixed final-line format. Same items, same rules, every model.</p>
     <div class="pipe rv" id="pipeline"></div>
+
+    <div class="chart rv" id="scorecanvas">
+      <h3>The 700-point machine</h3>
+      <div class="sub">HOW AZERBAIJAN ASSEMBLES A UNIVERSITY-ADMISSION SCORE · OFFICIAL DİM FORMULA</div>
+      <svg viewBox="0 0 1000 470" role="img" aria-label="Diagram of the two-stage DIM scoring system">
+        <defs>
+          <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0,0 L8,4 L0,8 z" fill="var(--carmine)"/>
+          </marker>
+        </defs>
+        <style>
+          .nd{fill:var(--paper);stroke:var(--ink);stroke-width:1.4;rx:6}
+          .nd2{fill:var(--paper-deep);stroke:var(--hairline);stroke-width:1.2}
+          .ndsum{fill:var(--ink)}
+          .ndfin{fill:var(--carmine)}
+          .lbl{font-family:var(--mono);font-size:12.5px;font-weight:600;fill:var(--ink)}
+          .lbl2{font-family:var(--mono);font-size:10px;fill:var(--ink-soft)}
+          .lblw{font-family:var(--mono);font-size:13px;font-weight:600;fill:var(--paper)}
+          .lblw2{font-family:var(--mono);font-size:9.5px;fill:var(--paper);opacity:.7}
+          .lane{font-family:var(--mono);font-size:10px;letter-spacing:.18em;fill:var(--carmine);font-weight:600}
+          .wire{fill:none;stroke:var(--ink);stroke-width:1.2;opacity:.5}
+          .wire.hot{stroke:var(--carmine);stroke-width:1.6;opacity:1;marker-end:url(#arr)}
+          .fnote{font-family:var(--mono);font-size:10px;fill:var(--ink-soft);font-style:normal}
+        </style>
+
+        <text class="lane" x="20" y="34">STAGE 1 · BURAXILIŞ (SCHOOL-LEAVING) · NO PENALTY</text>
+        <rect class="nd" x="20" y="50" width="200" height="64" rx="6"/>
+        <text class="lbl" x="36" y="77">Buraxılış imtahanı</text>
+        <text class="lbl2" x="36" y="96">85 tasks · 3 hours · 11th grade</text>
+
+        <rect class="nd nd2" x="290" y="44" width="190" height="40" rx="6"/>
+        <text class="lbl" x="304" y="61">Az (rus) dili</text>
+        <text class="lbl2" x="304" y="76">30 tasks → max 100</text>
+        <rect class="nd nd2" x="290" y="92" width="190" height="40" rx="6"/>
+        <text class="lbl" x="304" y="109">Xarici dil</text>
+        <text class="lbl2" x="304" y="124">30 tasks → max 100</text>
+        <rect class="nd nd2" x="290" y="140" width="190" height="40" rx="6"/>
+        <text class="lbl" x="304" y="157">Riyaziyyat</text>
+        <text class="lbl2" x="304" y="172">25 tasks → max 100</text>
+
+        <path class="wire" d="M220,82 h35 v-18 h35"/>
+        <path class="wire" d="M220,82 h35 v30 h35"/>
+        <path class="wire" d="M220,82 h35 v78 h35"/>
+
+        <rect class="nd ndsum" x="560" y="86" width="130" height="52" rx="6"/>
+        <text class="lblw" x="576" y="109">Σ = 300</text>
+        <text class="lblw2" x="576" y="126">stage-1 total</text>
+        <path class="wire hot" d="M480,64 h40 v48 h32"/>
+        <path class="wire" d="M480,112 h72"/>
+        <path class="wire" d="M480,160 h40 v-48 h32"/>
+
+        <text class="lane" x="20" y="248">STAGE 2 · QƏBUL, GROUPS I–IV · WRONG CLOSED ANSWER = −¼ POINT</text>
+        <rect class="nd" x="20" y="264" width="200" height="64" rx="6"/>
+        <text class="lbl" x="36" y="291">II mərhələ imtahanı</text>
+        <text class="lbl2" x="36" y="310">90 tasks · 3×(22 qapalı + 8 açıq)</text>
+
+        <rect class="nd nd2" x="290" y="258" width="190" height="40" rx="6"/>
+        <text class="lbl" x="304" y="275">Subject 1 · ×1.5</text>
+        <text class="lbl2" x="304" y="290">nisbi bal → max 150</text>
+        <rect class="nd nd2" x="290" y="306" width="190" height="40" rx="6"/>
+        <text class="lbl" x="304" y="323">Subject 2 · ×1.5</text>
+        <text class="lbl2" x="304" y="338">nisbi bal → max 150</text>
+        <rect class="nd nd2" x="290" y="354" width="190" height="40" rx="6"/>
+        <text class="lbl" x="304" y="371">Subject 3 · ×1.0</text>
+        <text class="lbl2" x="304" y="386">nisbi bal → max 100</text>
+
+        <path class="wire" d="M220,296 h35 v-18 h35"/>
+        <path class="wire" d="M220,296 h35 v30 h35"/>
+        <path class="wire" d="M220,296 h35 v78 h35"/>
+
+        <rect class="nd ndsum" x="560" y="300" width="130" height="52" rx="6"/>
+        <text class="lblw" x="576" y="323">Σ = 400</text>
+        <text class="lblw2" x="576" y="340">stage-2 total</text>
+        <path class="wire hot" d="M480,278 h40 v48 h32"/>
+        <path class="wire" d="M480,326 h72"/>
+        <path class="wire" d="M480,374 h40 v-48 h32"/>
+
+        <text class="fnote" x="290" y="420">closed: NBq = (D − ¼·Y) · 100/33, floor 0</text>
+        <text class="fnote" x="290" y="436">open: NBa = (Dkod + 2·Dyazılı) · 100/33 · no penalty</text>
+
+        <rect class="nd ndfin" x="790" y="176" width="190" height="110" rx="8"/>
+        <text class="lblw" x="812" y="216" style="font-size:26px">700</text>
+        <text class="lblw2" x="812" y="238" style="font-size:11px;opacity:.9">müsabiqə balı</text>
+        <text class="lblw2" x="812" y="256" style="font-size:9.5px">the score universities</text>
+        <text class="lblw2" x="812" y="270" style="font-size:9.5px">compete over</text>
+        <path class="wire hot" d="M690,112 h46 v98 h44"/>
+        <path class="wire hot" d="M690,326 h46 v-74 h44"/>
+
+        <text class="lbl2" x="790" y="306">group triads:</text>
+        <text class="lbl2" x="790" y="322">I riy·fiz·kim(inf)</text>
+        <text class="lbl2" x="790" y="338">II riy·coğ·tar</text>
+        <text class="lbl2" x="790" y="354">III dil·tar·ədə(coğ)</text>
+        <text class="lbl2" x="790" y="370">IV bio·kim·fiz</text>
+      </svg>
+      <p class="lbfoot">Source: DİM, "Balların hesablanma qaydası, I–IV ixtisas qrupları üzrə" · our items cover both stages; written tasks are marker-scored and simulated under stated assumptions</p>
+    </div>
   </div>
 </section>
 

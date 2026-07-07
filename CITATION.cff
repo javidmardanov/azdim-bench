@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use AzDIM-Bench, please cite it as below."
+title: "AzDIM-Bench: A Contamination-Aware Benchmark from Azerbaijan's National Examinations for Evaluating LLMs"
+authors:
+  - family-names: Mardanov
+    given-names: Javid
+year: 2026
+repository-code: "https://github.com/TODO/azdim-bench"
+license: MIT
+keywords:
+  - LLM evaluation
+  - Azerbaijani
+  - low-resource languages
+  - national examinations
+  - benchmark

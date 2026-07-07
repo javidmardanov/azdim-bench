@@ -1,0 +1,81 @@
+% AzDIM-Bench — paper skeleton (arXiv preprint style)
+% Build: pdflatex main && bibtex main && pdflatex main && pdflatex main
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,graphicx,amsmath,url,xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[numbers]{natbib}
+
+\title{AzDIM-Bench: A Contamination-Aware Benchmark from\\
+Azerbaijan's National Examinations for Evaluating LLMs}
+\author{Javid Mardanov\\
+\small with AI-assisted dataset construction and evaluation tooling}
+\date{2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% ~180 words. Numbers from results/metrics_v0.json and results/dim_scores_v0.json.
+Azerbaijani, spoken by roughly thirty million people, is nearly absent from
+LLM evaluation. We introduce AzDIM-Bench, a benchmark of 2{,}249 items
+built from the official published archives of Azerbaijan's State Examination
+Center (D\.IM): 11th-grade school-leaving examinations and two-stage
+university-entrance examinations (specialty groups I--IV) from 2025--2026,
+spanning 14 subjects and six languages (Azerbaijani and Russian sectors plus
+foreign-language sections). Items are transcribed from official explanation
+PDFs by a schema-constrained vision model, cross-checked deterministically
+against D\.IM's separately published answer-key grids, and human-verified.
+We evaluate 14 frontier and open-weight models under a reason-then-answer
+protocol, report accuracy with the official 700-point admission-score
+simulation (including stage-2 negative marking), and exploit the exams'
+public calendar for a natural post-training-cutoff split.
+% Key findings sentence: language gap AZ<RU, literature hardest, small-model
+% negative-marking collapse, 12.5->100 format effect.
+\end{abstract}
+
+\section{Introduction}
+% Motivation: low-resource eval gap; DIM's unusual publication practice as a
+% measurement instrument; contributions list (dataset, protocol, QC method,
+% score simulation, findings).
+
+\section{Background: the Azerbaijani examination system}
+% From docs/research/exam_system_research.md; include the two-stage figure
+% (export site scorecanvas SVG to PDF for \includegraphics).
+
+\section{Related work}
+% From docs/research/related_work.md (agent survey).
+
+\section{Dataset construction}
+\subsection{Sources and provenance}      % manifest, SHA-256, izah vs etalon
+\subsection{Vision-based extraction}     % text-layer corruption evidence; 3-page window; structured outputs
+\subsection{Canonicalization}            % fragments, variant dedup, subjects
+\subsection{Quality control}             % deterministic etalon cross-check; concordant-position agreement; human verification protocol
+\subsection{The extractor-circularity caveat}  % mitigations
+
+\section{Evaluation protocol}
+% Tracks A/B/F; reason-then-answer rationale with the 12.5%->100% experiment;
+% hidden-reasoning minimization; parsing; invalid handling; core-set design.
+
+\section{Results}
+% Leaderboard table (results/metrics_v0.json); language-gap dumbbell;
+% 2025-vs-2026 split; subject breakdown; invalid rates.
+
+\section{D\.IM score simulation}
+% Official formula (cite DIM PDF); central vs floor assumptions;
+% 700-point table per group; negative-marking collapse of small models.
+
+\section{Contamination analysis}
+% 2025 vs 2026 deltas per model; discussion of what it can and cannot show.
+
+\section{Limitations}
+% written/multimodal items excluded from main track; extraction residual error
+% bounds from QC; single-run at fixed condition; Grade-9 question text
+% unavailable publicly.
+
+\section{Release}
+% HF dataset, code, site, license position, DIM attribution.
+
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+\end{document}

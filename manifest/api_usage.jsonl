@@ -207,3 +207,15 @@
 {"model": "google/gemma-4-31b-it", "context": "eval:gemma-4-31b:B", "input_tokens": 43811, "output_tokens": 39410, "cost_usd": 0.019051, "estimated": false}
 {"model": "meta-llama/llama-3.1-8b-instruct", "context": "eval:llama-3.1-8b:A", "input_tokens": 141094, "output_tokens": 102763, "cost_usd": 0.005905, "estimated": false}
 {"model": "meta-llama/llama-3.1-8b-instruct", "context": "eval:llama-3.1-8b:B", "input_tokens": 41758, "output_tokens": 31315, "cost_usd": 0.001775, "estimated": false}
+{"model": "google/gemini-3.1-pro-preview", "context": "eval:gemini-3.1-pro:A", "input_tokens": 26048, "output_tokens": 75122, "cost_usd": 0.95356, "estimated": false}
+{"model": "google/gemini-3.1-pro-preview", "context": "eval:gemini-3.1-pro:B", "input_tokens": 15966, "output_tokens": 42568, "cost_usd": 0.542748, "estimated": false}
+{"model": "claude-sonnet-5", "context": "eval:claude-sonnet-5:A", "input_tokens": 77034, "output_tokens": 57973, "cost_usd": 0.733798, "estimated": false}
+{"model": "claude-sonnet-5", "context": "eval:claude-sonnet-5:B", "input_tokens": 22939, "output_tokens": 9997, "cost_usd": 0.145848, "estimated": false}
+{"model": "gpt-5.5", "context": "eval:gpt-5.5:F", "input_tokens": 22905, "output_tokens": 6096, "cost_usd": 0.143346, "estimated": true}
+{"model": "gpt-5.4-mini", "context": "eval:gpt-5.4-mini:F", "input_tokens": 22905, "output_tokens": 6170, "cost_usd": 0.028906, "estimated": true}
+{"model": "claude-opus-4-8", "context": "eval:claude-opus-4-8:F", "input_tokens": 35987, "output_tokens": 10646, "cost_usd": 0.446085, "estimated": false}
+{"model": "claude-sonnet-5", "context": "eval:claude-sonnet-5:F", "input_tokens": 35987, "output_tokens": 9629, "cost_usd": 0.168264, "estimated": false}
+{"model": "claude-haiku-4-5", "context": "eval:claude-haiku-4-5:F", "input_tokens": 28447, "output_tokens": 39135, "cost_usd": 0.224122, "estimated": false}
+{"model": "google/gemini-3.1-pro-preview", "context": "eval:gemini-3.1-pro:F", "input_tokens": 23271, "output_tokens": 49887, "cost_usd": 0.645186, "estimated": false}
+{"model": "gemini-3.5-flash", "context": "eval:gemini-3.5-flash:F", "input_tokens": 23447, "output_tokens": 13670, "cost_usd": 0.041209, "estimated": true}
+{"model": "deepseek/deepseek-v4-pro", "context": "eval:deepseek-v4-pro:F", "input_tokens": 23986, "output_tokens": 79802, "cost_usd": 0.079742, "estimated": false}
