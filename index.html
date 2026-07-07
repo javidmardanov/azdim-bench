@@ -531,7 +531,10 @@ python run_azdim.py --model llama3.2 --base-url http://localhost:11434/v1</pre>
   </div>
 </footer>
 
-<script src="data.js"></script>
+<script>
+/* cache-proof data load: numbers must never be stale */
+document.write('<script src="data.js?v=' + Date.now() + '"><\/script>');
+</script>
 <script>
 const D = window.AZDIM;
 const fmt = x => (100*x).toFixed(1);
