@@ -16,11 +16,28 @@ from pathlib import Path
 
 from flask import Flask, jsonify, request, send_from_directory
 
+from azdim.boxes import item_box
+
 ROOT = Path(__file__).resolve().parents[2]
 ITEMS_FILE = ROOT / "data" / "items" / "items_v0.jsonl"
 PAGES_DIR = ROOT / "data" / "pages"
+RAW_PDFS = ROOT / "data" / "raw_pdfs"
 VERIFIED_DIR = ROOT / "data" / "verified"
 DECISIONS = VERIFIED_DIR / "decisions.jsonl"
+
+
+def page_boxes(items: list[dict], source_id: str, page: int,
+               current_id: str) -> list[dict]:
+    """Fractional overlay boxes for every item on a page; mark the current one."""
+    pdf = str(RAW_PDFS / f"{source_id}.pdf")
+    out = []
+    for it in items:
+        if it["source_id"] != source_id or it["source_page"] != page:
+            continue
+        box = item_box(pdf, page, it.get("question_text") or "")
+        if box:
+            out.append({"box": box, "current": it["item_id"] == current_id})
+    return out
 
 app = Flask(__name__)
 
@@ -59,15 +76,21 @@ PAGE = """<!doctype html><html><head><meta charset="utf-8">
 <title>AzDIM verify</title><style>
 body{font-family:system-ui;margin:0;display:flex;height:100vh}
 #left{width:55%;overflow:auto;background:#333}
-#left img{width:100%}
+#imgwrap{position:relative;width:100%;font-size:0}
+#imgwrap img{width:100%;display:block}
+.qbox{position:absolute;border:2px solid rgba(179,27,52,.55);
+  border-radius:3px;pointer-events:none;box-sizing:border-box}
+.qbox.cur{border:3px solid #b31b34;background:rgba(179,27,52,.10);
+  box-shadow:0 0 0 9999px rgba(0,0,0,.28)}
 #right{width:45%;padding:14px;overflow:auto;box-sizing:border-box}
 textarea{width:100%;height:52vh;font:12px/1.4 monospace}
 button{font-size:15px;padding:8px 18px;margin-right:8px;cursor:pointer}
 #approve{background:#c8f7c5}#reject{background:#f7c5c5}
 .meta{color:#555;font-size:13px;margin:6px 0}
 #progress{font-weight:600}
+#boxhint{color:#888;font-size:12px;margin-left:6px}
 </style></head><body>
-<div id="left"><img id="pageimg"></div>
+<div id="left"><div id="imgwrap"><img id="pageimg"><div id="boxlayer"></div></div></div>
 <div id="right">
   <div id="progress"></div>
   <div class="meta" id="meta"></div>
@@ -78,20 +101,41 @@ button{font-size:15px;padding:8px 18px;margin-right:8px;cursor:pointer}
   <input id="note" placeholder="note (optional)" size="30">
 </div>
 <script>
-let item=null;
+let item=null, boxesOn=true;
+function drawBoxes(boxes){
+  const layer=document.getElementById('boxlayer');
+  layer.innerHTML='';
+  if(!boxesOn)return;
+  let curEl=null;
+  for(const b of boxes){
+    const [x,y,w,h]=b.box;
+    const el=document.createElement('div');
+    el.className='qbox'+(b.current?' cur':'');
+    el.style.left=(x*100)+'%';el.style.top=(y*100)+'%';
+    el.style.width=(w*100)+'%';el.style.height=(h*100)+'%';
+    layer.appendChild(el);
+    if(b.current)curEl=el;
+  }
+  if(curEl)setTimeout(()=>curEl.scrollIntoView({block:'center',behavior:'smooth'}),60);
+}
 async function next(){
   const r=await fetch('/api/next');
   const d=await r.json();
-  if(!d.item){document.getElementById('meta').innerText='All done!';return}
+  if(!d.item){document.getElementById('meta').innerText='All done!';
+    document.getElementById('boxlayer').innerHTML='';return}
   item=d.item;
   document.getElementById('progress').innerText=
     `${d.n_done}/${d.n_total} reviewed — ${d.n_flagged_left} flagged left`;
-  document.getElementById('meta').innerText=
+  const located=(d.boxes||[]).some(b=>b.current);
+  document.getElementById('meta').innerHTML=
     `${item.item_id} — conf=${item.extraction_confidence}`+
-    ` — ${item.subject} — ${item.notes||''}`;
+    ` — ${item.subject} — ${item.notes||''}`+
+    `<span id="boxhint">${located?'▢ located on page (b to toggle)':'▢ not auto-located — scan page (b to toggle)'}</span>`;
   document.getElementById('editor').value=JSON.stringify(item,null,2);
-  document.getElementById('pageimg').src=
-    `/pages/${item.source_id}/page-${String(item.source_page).padStart(2,'0')}.png`;
+  const img=document.getElementById('pageimg');
+  window._lastBoxes=d.boxes||[];
+  img.onload=()=>drawBoxes(d.boxes||[]);
+  img.src=`/pages/${item.source_id}/page-${String(item.source_page).padStart(2,'0')}.png`;
   document.getElementById('note').value='';
 }
 async function decide(action){
@@ -110,6 +154,7 @@ document.addEventListener('keydown',e=>{
   if(e.key==='a')decide('approve');
   if(e.key==='r')decide('reject');
   if(e.key==='s')skip();
+  if(e.key==='b'){boxesOn=!boxesOn;drawBoxes(window._lastBoxes||[]);}
 });
 next();
 </script></body></html>"""
@@ -132,8 +177,14 @@ def api_next():
     todo = [it for it in items if it["item_id"] not in decisions]
     todo.sort(key=lambda it: (not is_flagged(it), it["source_id"],
                               it["source_page"]))
+    cur = todo[0] if todo else None
+    boxes = []
+    if cur is not None:
+        boxes = page_boxes(items, cur["source_id"], cur["source_page"],
+                           cur["item_id"])
     return jsonify({
-        "item": todo[0] if todo else None,
+        "item": cur,
+        "boxes": boxes,
         "n_done": len(decisions),
         "n_total": len(items),
         "n_flagged_left": sum(is_flagged(it) for it in todo),

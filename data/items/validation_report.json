@@ -1,0 +1,2683 @@
+{
+ "per_source": {
+  "mixed_2026-04-19_izah": {
+   "expected": 175,
+   "captured": 193,
+   "matched": 137,
+   "missing": [
+    {
+     "page": 6,
+     "variant_a_number": 26
+    },
+    {
+     "page": 7,
+     "variant_a_number": 35
+    },
+    {
+     "page": 9,
+     "variant_a_number": 38
+    },
+    {
+     "page": 9,
+     "variant_a_number": 39
+    },
+    {
+     "page": 15,
+     "variant_a_number": 55
+    },
+    {
+     "page": 16,
+     "variant_a_number": 56
+    },
+    {
+     "page": 17,
+     "variant_a_number": 59
+    },
+    {
+     "page": 17,
+     "variant_a_number": 60
+    },
+    {
+     "page": 18,
+     "variant_a_number": 65
+    },
+    {
+     "page": 18,
+     "variant_a_number": 66
+    },
+    {
+     "page": 18,
+     "variant_a_number": 67
+    },
+    {
+     "page": 19,
+     "variant_a_number": 74
+    },
+    {
+     "page": 19,
+     "variant_a_number": 75
+    },
+    {
+     "page": 19,
+     "variant_a_number": 76
+    },
+    {
+     "page": 21,
+     "variant_a_number": 81
+    },
+    {
+     "page": 22,
+     "variant_a_number": 83
+    },
+    {
+     "page": 22,
+     "variant_a_number": 84
+    },
+    {
+     "page": 32,
+     "variant_a_number": 17
+    },
+    {
+     "page": 32,
+     "variant_a_number": 18
+    },
+    {
+     "page": 32,
+     "variant_a_number": 19
+    },
+    {
+     "page": 34,
+     "variant_a_number": 29
+    },
+    {
+     "page": 34,
+     "variant_a_number": 30
+    },
+    {
+     "page": 35,
+     "variant_a_number": 3
+    },
+    {
+     "page": 35,
+     "variant_a_number": 4
+    },
+    {
+     "page": 36,
+     "variant_a_number": 12
+    },
+    {
+     "page": 38,
+     "variant_a_number": 17
+    },
+    {
+     "page": 38,
+     "variant_a_number": 18
+    },
+    {
+     "page": 39,
+     "variant_a_number": 22
+    },
+    {
+     "page": 40,
+     "variant_a_number": 25
+    },
+    {
+     "page": 40,
+     "variant_a_number": 26
+    },
+    {
+     "page": 41,
+     "variant_a_number": 30
+    },
+    {
+     "page": 42,
+     "variant_a_number": 3
+    },
+    {
+     "page": 43,
+     "variant_a_number": 8
+    },
+    {
+     "page": 44,
+     "variant_a_number": 14
+    },
+    {
+     "page": 45,
+     "variant_a_number": 18
+    },
+    {
+     "page": 47,
+     "variant_a_number": 27
+    },
+    {
+     "page": 47,
+     "variant_a_number": 28
+    },
+    {
+     "page": 47,
+     "variant_a_number": 29
+    }
+   ],
+   "extra_numbered": 35,
+   "unnumbered": 21
+  },
+  "sl11_2025-03-02_izah": {
+   "expected": 175,
+   "captured": 200,
+   "matched": 170,
+   "missing": [
+    {
+     "page": 6,
+     "variant_a_number": 26
+    },
+    {
+     "page": 6,
+     "variant_a_number": 27
+    },
+    {
+     "page": 9,
+     "variant_a_number": 39
+    },
+    {
+     "page": 12,
+     "variant_a_number": 51
+    },
+    {
+     "page": 38,
+     "variant_a_number": 1
+    }
+   ],
+   "extra_numbered": 27,
+   "unnumbered": 3
+  },
+  "sl11_2025-03-09_izah": {
+   "expected": 174,
+   "captured": 192,
+   "matched": 159,
+   "missing": [
+    {
+     "page": 3,
+     "variant_a_number": 11
+    },
+    {
+     "page": 3,
+     "variant_a_number": 12
+    },
+    {
+     "page": 3,
+     "variant_a_number": 14
+    },
+    {
+     "page": 5,
+     "variant_a_number": 23
+    },
+    {
+     "page": 8,
+     "variant_a_number": 36
+    },
+    {
+     "page": 9,
+     "variant_a_number": 39
+    },
+    {
+     "page": 12,
+     "variant_a_number": 49
+    },
+    {
+     "page": 12,
+     "variant_a_number": 50
+    },
+    {
+     "page": 13,
+     "variant_a_number": 52
+    },
+    {
+     "page": 15,
+     "variant_a_number": 59
+    },
+    {
+     "page": 17,
+     "variant_a_number": 68
+    },
+    {
+     "page": 17,
+     "variant_a_number": 69
+    },
+    {
+     "page": 29,
+     "variant_a_number": 4
+    },
+    {
+     "page": 36,
+     "variant_a_number": 14
+    },
+    {
+     "page": 36,
+     "variant_a_number": 15
+    }
+   ],
+   "extra_numbered": 28,
+   "unnumbered": 5
+  },
+  "sl11_2026-03-09_izah": {
+   "expected": 175,
+   "captured": 177,
+   "matched": 154,
+   "missing": [
+    {
+     "page": 1,
+     "variant_a_number": 2
+    },
+    {
+     "page": 2,
+     "variant_a_number": 4
+    },
+    {
+     "page": 2,
+     "variant_a_number": 5
+    },
+    {
+     "page": 2,
+     "variant_a_number": 6
+    },
+    {
+     "page": 6,
+     "variant_a_number": 25
+    },
+    {
+     "page": 6,
+     "variant_a_number": 26
+    },
+    {
+     "page": 8,
+     "variant_a_number": 35
+    },
+    {
+     "page": 11,
+     "variant_a_number": 45
+    },
+    {
+     "page": 11,
+     "variant_a_number": 46
+    },
+    {
+     "page": 12,
+     "variant_a_number": 49
+    },
+    {
+     "page": 12,
+     "variant_a_number": 50
+    },
+    {
+     "page": 15,
+     "variant_a_number": 59
+    },
+    {
+     "page": 15,
+     "variant_a_number": 60
+    },
+    {
+     "page": 30,
+     "variant_a_number": 25
+    },
+    {
+     "page": 31,
+     "variant_a_number": 30
+    },
+    {
+     "page": 32,
+     "variant_a_number": 4
+    },
+    {
+     "page": 32,
+     "variant_a_number": 5
+    },
+    {
+     "page": 32,
+     "variant_a_number": 6
+    },
+    {
+     "page": 39,
+     "variant_a_number": 2
+    },
+    {
+     "page": 41,
+     "variant_a_number": 10
+    },
+    {
+     "page": 45,
+     "variant_a_number": 24
+    }
+   ],
+   "extra_numbered": 21,
+   "unnumbered": 2
+  },
+  "sl11_2026-03-15_izah": {
+   "expected": 175,
+   "captured": 195,
+   "matched": 163,
+   "missing": [
+    {
+     "page": 2,
+     "variant_a_number": 4
+    },
+    {
+     "page": 2,
+     "variant_a_number": 5
+    },
+    {
+     "page": 2,
+     "variant_a_number": 6
+    },
+    {
+     "page": 5,
+     "variant_a_number": 21
+    },
+    {
+     "page": 5,
+     "variant_a_number": 22
+    },
+    {
+     "page": 5,
+     "variant_a_number": 23
+    },
+    {
+     "page": 9,
+     "variant_a_number": 37
+    },
+    {
+     "page": 9,
+     "variant_a_number": 38
+    },
+    {
+     "page": 9,
+     "variant_a_number": 39
+    },
+    {
+     "page": 14,
+     "variant_a_number": 55
+    },
+    {
+     "page": 38,
+     "variant_a_number": 1
+    },
+    {
+     "page": 38,
+     "variant_a_number": 2
+    }
+   ],
+   "extra_numbered": 30,
+   "unnumbered": 2
+  },
+  "ue2_2025-05-25_g2_izah": {
+   "expected": 90,
+   "captured": 86,
+   "matched": 86,
+   "missing": [
+    {
+     "page": 10,
+     "variant_a_number": 35
+    },
+    {
+     "page": 11,
+     "variant_a_number": 41
+    },
+    {
+     "page": 13,
+     "variant_a_number": 48
+    },
+    {
+     "page": 14,
+     "variant_a_number": 53
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 0
+  },
+  "ue2_2025-05-25_g3_izah": {
+   "expected": 120,
+   "captured": 155,
+   "matched": 103,
+   "missing": [
+    {
+     "page": 4,
+     "variant_a_number": 13
+    },
+    {
+     "page": 7,
+     "variant_a_number": 26
+    },
+    {
+     "page": 8,
+     "variant_a_number": 29
+    },
+    {
+     "page": 8,
+     "variant_a_number": 30
+    },
+    {
+     "page": 10,
+     "variant_a_number": 38
+    },
+    {
+     "page": 10,
+     "variant_a_number": 39
+    },
+    {
+     "page": 11,
+     "variant_a_number": 46
+    },
+    {
+     "page": 12,
+     "variant_a_number": 47
+    },
+    {
+     "page": 12,
+     "variant_a_number": 48
+    },
+    {
+     "page": 15,
+     "variant_a_number": 59
+    },
+    {
+     "page": 15,
+     "variant_a_number": 60
+    },
+    {
+     "page": 15,
+     "variant_a_number": 63
+    },
+    {
+     "page": 15,
+     "variant_a_number": 64
+    },
+    {
+     "page": 16,
+     "variant_a_number": 66
+    },
+    {
+     "page": 17,
+     "variant_a_number": 68
+    },
+    {
+     "page": 25,
+     "variant_a_number": 66
+    },
+    {
+     "page": 32,
+     "variant_a_number": 90
+    }
+   ],
+   "extra_numbered": 51,
+   "unnumbered": 1
+  },
+  "ue2_2025-06-01_g1_izah": {
+   "expected": 120,
+   "captured": 106,
+   "matched": 94,
+   "missing": [
+    {
+     "page": 4,
+     "variant_a_number": 16
+    },
+    {
+     "page": 4,
+     "variant_a_number": 17
+    },
+    {
+     "page": 4,
+     "variant_a_number": 19
+    },
+    {
+     "page": 5,
+     "variant_a_number": 23
+    },
+    {
+     "page": 7,
+     "variant_a_number": 29
+    },
+    {
+     "page": 10,
+     "variant_a_number": 40
+    },
+    {
+     "page": 10,
+     "variant_a_number": 42
+    },
+    {
+     "page": 11,
+     "variant_a_number": 43
+    },
+    {
+     "page": 12,
+     "variant_a_number": 48
+    },
+    {
+     "page": 13,
+     "variant_a_number": 52
+    },
+    {
+     "page": 13,
+     "variant_a_number": 55
+    },
+    {
+     "page": 14,
+     "variant_a_number": 56
+    },
+    {
+     "page": 15,
+     "variant_a_number": 60
+    },
+    {
+     "page": 15,
+     "variant_a_number": 61
+    },
+    {
+     "page": 15,
+     "variant_a_number": 62
+    },
+    {
+     "page": 19,
+     "variant_a_number": 75
+    },
+    {
+     "page": 20,
+     "variant_a_number": 78
+    },
+    {
+     "page": 20,
+     "variant_a_number": 79
+    },
+    {
+     "page": 21,
+     "variant_a_number": 82
+    },
+    {
+     "page": 26,
+     "variant_a_number": 70
+    },
+    {
+     "page": 26,
+     "variant_a_number": 72
+    },
+    {
+     "page": 26,
+     "variant_a_number": 73
+    },
+    {
+     "page": 27,
+     "variant_a_number": 76
+    },
+    {
+     "page": 27,
+     "variant_a_number": 77
+    },
+    {
+     "page": 27,
+     "variant_a_number": 78
+    },
+    {
+     "page": 28,
+     "variant_a_number": 84
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 12
+  },
+  "ue2_2025-06-01_g3geo_izah": {
+   "expected": 30,
+   "captured": 26,
+   "matched": 26,
+   "missing": [
+    {
+     "page": 3,
+     "variant_a_number": 12
+    },
+    {
+     "page": 5,
+     "variant_a_number": 16
+    },
+    {
+     "page": 5,
+     "variant_a_number": 17
+    },
+    {
+     "page": 7,
+     "variant_a_number": 23
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 0
+  },
+  "ue2_2025-06-01_g4_izah": {
+   "expected": 90,
+   "captured": 84,
+   "matched": 73,
+   "missing": [
+    {
+     "page": 1,
+     "variant_a_number": 4
+    },
+    {
+     "page": 2,
+     "variant_a_number": 8
+    },
+    {
+     "page": 4,
+     "variant_a_number": 16
+    },
+    {
+     "page": 4,
+     "variant_a_number": 17
+    },
+    {
+     "page": 5,
+     "variant_a_number": 19
+    },
+    {
+     "page": 6,
+     "variant_a_number": 23
+    },
+    {
+     "page": 7,
+     "variant_a_number": 28
+    },
+    {
+     "page": 8,
+     "variant_a_number": 31
+    },
+    {
+     "page": 8,
+     "variant_a_number": 32
+    },
+    {
+     "page": 10,
+     "variant_a_number": 41
+    },
+    {
+     "page": 12,
+     "variant_a_number": 49
+    },
+    {
+     "page": 16,
+     "variant_a_number": 63
+    },
+    {
+     "page": 17,
+     "variant_a_number": 67
+    },
+    {
+     "page": 17,
+     "variant_a_number": 69
+    },
+    {
+     "page": 18,
+     "variant_a_number": 73
+    },
+    {
+     "page": 20,
+     "variant_a_number": 79
+    },
+    {
+     "page": 20,
+     "variant_a_number": 80
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 11
+  },
+  "ue2_2025-07-06_g2_izah": {
+   "expected": 90,
+   "captured": 80,
+   "matched": 72,
+   "missing": [
+    {
+     "page": 3,
+     "variant_a_number": 8
+    },
+    {
+     "page": 4,
+     "variant_a_number": 12
+    },
+    {
+     "page": 4,
+     "variant_a_number": 13
+    },
+    {
+     "page": 5,
+     "variant_a_number": 16
+    },
+    {
+     "page": 5,
+     "variant_a_number": 17
+    },
+    {
+     "page": 6,
+     "variant_a_number": 23
+    },
+    {
+     "page": 7,
+     "variant_a_number": 25
+    },
+    {
+     "page": 7,
+     "variant_a_number": 26
+    },
+    {
+     "page": 11,
+     "variant_a_number": 37
+    },
+    {
+     "page": 17,
+     "variant_a_number": 65
+    },
+    {
+     "page": 19,
+     "variant_a_number": 69
+    },
+    {
+     "page": 19,
+     "variant_a_number": 70
+    },
+    {
+     "page": 19,
+     "variant_a_number": 71
+    },
+    {
+     "page": 19,
+     "variant_a_number": 73
+    },
+    {
+     "page": 21,
+     "variant_a_number": 78
+    },
+    {
+     "page": 21,
+     "variant_a_number": 80
+    },
+    {
+     "page": 22,
+     "variant_a_number": 84
+    },
+    {
+     "page": 23,
+     "variant_a_number": 88
+    }
+   ],
+   "extra_numbered": 1,
+   "unnumbered": 7
+  },
+  "ue2_2025-07-06_g3_izah": {
+   "expected": 90,
+   "captured": 126,
+   "matched": 64,
+   "missing": [
+    {
+     "page": 2,
+     "variant_a_number": 5
+    },
+    {
+     "page": 3,
+     "variant_a_number": 8
+    },
+    {
+     "page": 4,
+     "variant_a_number": 11
+    },
+    {
+     "page": 5,
+     "variant_a_number": 15
+    },
+    {
+     "page": 6,
+     "variant_a_number": 18
+    },
+    {
+     "page": 6,
+     "variant_a_number": 20
+    },
+    {
+     "page": 7,
+     "variant_a_number": 22
+    },
+    {
+     "page": 7,
+     "variant_a_number": 23
+    },
+    {
+     "page": 7,
+     "variant_a_number": 24
+    },
+    {
+     "page": 8,
+     "variant_a_number": 27
+    },
+    {
+     "page": 10,
+     "variant_a_number": 35
+    },
+    {
+     "page": 11,
+     "variant_a_number": 37
+    },
+    {
+     "page": 11,
+     "variant_a_number": 40
+    },
+    {
+     "page": 13,
+     "variant_a_number": 46
+    },
+    {
+     "page": 13,
+     "variant_a_number": 48
+    },
+    {
+     "page": 15,
+     "variant_a_number": 54
+    },
+    {
+     "page": 16,
+     "variant_a_number": 59
+    },
+    {
+     "page": 17,
+     "variant_a_number": 63
+    },
+    {
+     "page": 18,
+     "variant_a_number": 68
+    },
+    {
+     "page": 18,
+     "variant_a_number": 69
+    },
+    {
+     "page": 19,
+     "variant_a_number": 70
+    },
+    {
+     "page": 19,
+     "variant_a_number": 72
+    },
+    {
+     "page": 20,
+     "variant_a_number": 65
+    },
+    {
+     "page": 23,
+     "variant_a_number": 86
+    },
+    {
+     "page": 24,
+     "variant_a_number": 89
+    },
+    {
+     "page": 24,
+     "variant_a_number": 90
+    }
+   ],
+   "extra_numbered": 52,
+   "unnumbered": 10
+  },
+  "ue2_2025-07-13_g1_izah": {
+   "expected": 120,
+   "captured": 106,
+   "matched": 95,
+   "missing": [
+    {
+     "page": 2,
+     "variant_a_number": 8
+    },
+    {
+     "page": 3,
+     "variant_a_number": 13
+    },
+    {
+     "page": 3,
+     "variant_a_number": 16
+    },
+    {
+     "page": 4,
+     "variant_a_number": 21
+    },
+    {
+     "page": 8,
+     "variant_a_number": 34
+    },
+    {
+     "page": 8,
+     "variant_a_number": 35
+    },
+    {
+     "page": 10,
+     "variant_a_number": 44
+    },
+    {
+     "page": 11,
+     "variant_a_number": 47
+    },
+    {
+     "page": 12,
+     "variant_a_number": 49
+    },
+    {
+     "page": 12,
+     "variant_a_number": 50
+    },
+    {
+     "page": 12,
+     "variant_a_number": 52
+    },
+    {
+     "page": 13,
+     "variant_a_number": 55
+    },
+    {
+     "page": 14,
+     "variant_a_number": 58
+    },
+    {
+     "page": 16,
+     "variant_a_number": 65
+    },
+    {
+     "page": 17,
+     "variant_a_number": 70
+    },
+    {
+     "page": 19,
+     "variant_a_number": 67
+    },
+    {
+     "page": 19,
+     "variant_a_number": 78
+    },
+    {
+     "page": 20,
+     "variant_a_number": 81
+    },
+    {
+     "page": 20,
+     "variant_a_number": 83
+    },
+    {
+     "page": 21,
+     "variant_a_number": 85
+    },
+    {
+     "page": 23,
+     "variant_a_number": 66
+    },
+    {
+     "page": 27,
+     "variant_a_number": 81
+    },
+    {
+     "page": 27,
+     "variant_a_number": 85
+    },
+    {
+     "page": 28,
+     "variant_a_number": 88
+    },
+    {
+     "page": 28,
+     "variant_a_number": 89
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 11
+  },
+  "ue2_2025-07-13_g3geo_izah": {
+   "expected": 30,
+   "captured": 25,
+   "matched": 25,
+   "missing": [
+    {
+     "page": 1,
+     "variant_a_number": 4
+    },
+    {
+     "page": 6,
+     "variant_a_number": 23
+    },
+    {
+     "page": 7,
+     "variant_a_number": 25
+    },
+    {
+     "page": 7,
+     "variant_a_number": 26
+    },
+    {
+     "page": 8,
+     "variant_a_number": 29
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 0
+  },
+  "ue2_2025-07-13_g4_izah": {
+   "expected": 90,
+   "captured": 78,
+   "matched": 74,
+   "missing": [
+    {
+     "page": 2,
+     "variant_a_number": 6
+    },
+    {
+     "page": 4,
+     "variant_a_number": 14
+    },
+    {
+     "page": 6,
+     "variant_a_number": 25
+    },
+    {
+     "page": 7,
+     "variant_a_number": 29
+    },
+    {
+     "page": 9,
+     "variant_a_number": 38
+    },
+    {
+     "page": 10,
+     "variant_a_number": 41
+    },
+    {
+     "page": 11,
+     "variant_a_number": 46
+    },
+    {
+     "page": 11,
+     "variant_a_number": 47
+    },
+    {
+     "page": 12,
+     "variant_a_number": 52
+    },
+    {
+     "page": 14,
+     "variant_a_number": 59
+    },
+    {
+     "page": 14,
+     "variant_a_number": 60
+    },
+    {
+     "page": 15,
+     "variant_a_number": 65
+    },
+    {
+     "page": 16,
+     "variant_a_number": 69
+    },
+    {
+     "page": 18,
+     "variant_a_number": 77
+    },
+    {
+     "page": 18,
+     "variant_a_number": 79
+    },
+    {
+     "page": 20,
+     "variant_a_number": 86
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 4
+  },
+  "ue2_2026-05-24_g2_izah": {
+   "expected": 90,
+   "captured": 77,
+   "matched": 72,
+   "missing": [
+    {
+     "page": 3,
+     "variant_a_number": 11
+    },
+    {
+     "page": 4,
+     "variant_a_number": 14
+    },
+    {
+     "page": 4,
+     "variant_a_number": 15
+    },
+    {
+     "page": 5,
+     "variant_a_number": 19
+    },
+    {
+     "page": 5,
+     "variant_a_number": 20
+    },
+    {
+     "page": 5,
+     "variant_a_number": 23
+    },
+    {
+     "page": 7,
+     "variant_a_number": 28
+    },
+    {
+     "page": 9,
+     "variant_a_number": 35
+    },
+    {
+     "page": 9,
+     "variant_a_number": 38
+    },
+    {
+     "page": 15,
+     "variant_a_number": 56
+    },
+    {
+     "page": 18,
+     "variant_a_number": 65
+    },
+    {
+     "page": 18,
+     "variant_a_number": 66
+    },
+    {
+     "page": 19,
+     "variant_a_number": 69
+    },
+    {
+     "page": 20,
+     "variant_a_number": 75
+    },
+    {
+     "page": 21,
+     "variant_a_number": 77
+    },
+    {
+     "page": 21,
+     "variant_a_number": 80
+    },
+    {
+     "page": 21,
+     "variant_a_number": 81
+    },
+    {
+     "page": 22,
+     "variant_a_number": 83
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 5
+  },
+  "ue2_2026-05-24_g3_izah": {
+   "expected": 120,
+   "captured": 139,
+   "matched": 89,
+   "missing": [
+    {
+     "page": 2,
+     "variant_a_number": 8
+    },
+    {
+     "page": 5,
+     "variant_a_number": 16
+    },
+    {
+     "page": 8,
+     "variant_a_number": 27
+    },
+    {
+     "page": 9,
+     "variant_a_number": 30
+    },
+    {
+     "page": 9,
+     "variant_a_number": 33
+    },
+    {
+     "page": 10,
+     "variant_a_number": 34
+    },
+    {
+     "page": 11,
+     "variant_a_number": 37
+    },
+    {
+     "page": 11,
+     "variant_a_number": 39
+    },
+    {
+     "page": 12,
+     "variant_a_number": 41
+    },
+    {
+     "page": 12,
+     "variant_a_number": 42
+    },
+    {
+     "page": 12,
+     "variant_a_number": 43
+    },
+    {
+     "page": 13,
+     "variant_a_number": 47
+    },
+    {
+     "page": 16,
+     "variant_a_number": 59
+    },
+    {
+     "page": 16,
+     "variant_a_number": 60
+    },
+    {
+     "page": 16,
+     "variant_a_number": 62
+    },
+    {
+     "page": 17,
+     "variant_a_number": 63
+    },
+    {
+     "page": 17,
+     "variant_a_number": 64
+    },
+    {
+     "page": 18,
+     "variant_a_number": 66
+    },
+    {
+     "page": 18,
+     "variant_a_number": 67
+    },
+    {
+     "page": 19,
+     "variant_a_number": 69
+    },
+    {
+     "page": 19,
+     "variant_a_number": 72
+    },
+    {
+     "page": 19,
+     "variant_a_number": 73
+    },
+    {
+     "page": 23,
+     "variant_a_number": 85
+    },
+    {
+     "page": 25,
+     "variant_a_number": 65
+    },
+    {
+     "page": 27,
+     "variant_a_number": 69
+    },
+    {
+     "page": 27,
+     "variant_a_number": 70
+    },
+    {
+     "page": 28,
+     "variant_a_number": 72
+    },
+    {
+     "page": 29,
+     "variant_a_number": 75
+    },
+    {
+     "page": 29,
+     "variant_a_number": 76
+    },
+    {
+     "page": 32,
+     "variant_a_number": 87
+    },
+    {
+     "page": 32,
+     "variant_a_number": 88
+    }
+   ],
+   "extra_numbered": 44,
+   "unnumbered": 6
+  },
+  "ue2_2026-06-07_g1_izah": {
+   "expected": 120,
+   "captured": 96,
+   "matched": 89,
+   "missing": [
+    {
+     "page": 1,
+     "variant_a_number": 3
+    },
+    {
+     "page": 3,
+     "variant_a_number": 8
+    },
+    {
+     "page": 4,
+     "variant_a_number": 12
+    },
+    {
+     "page": 4,
+     "variant_a_number": 13
+    },
+    {
+     "page": 5,
+     "variant_a_number": 16
+    },
+    {
+     "page": 5,
+     "variant_a_number": 17
+    },
+    {
+     "page": 5,
+     "variant_a_number": 18
+    },
+    {
+     "page": 8,
+     "variant_a_number": 32
+    },
+    {
+     "page": 10,
+     "variant_a_number": 37
+    },
+    {
+     "page": 10,
+     "variant_a_number": 38
+    },
+    {
+     "page": 11,
+     "variant_a_number": 41
+    },
+    {
+     "page": 12,
+     "variant_a_number": 44
+    },
+    {
+     "page": 12,
+     "variant_a_number": 45
+    },
+    {
+     "page": 12,
+     "variant_a_number": 46
+    },
+    {
+     "page": 13,
+     "variant_a_number": 49
+    },
+    {
+     "page": 14,
+     "variant_a_number": 54
+    },
+    {
+     "page": 15,
+     "variant_a_number": 58
+    },
+    {
+     "page": 15,
+     "variant_a_number": 59
+    },
+    {
+     "page": 17,
+     "variant_a_number": 64
+    },
+    {
+     "page": 17,
+     "variant_a_number": 65
+    },
+    {
+     "page": 17,
+     "variant_a_number": 67
+    },
+    {
+     "page": 18,
+     "variant_a_number": 68
+    },
+    {
+     "page": 21,
+     "variant_a_number": 82
+    },
+    {
+     "page": 25,
+     "variant_a_number": 64
+    },
+    {
+     "page": 25,
+     "variant_a_number": 65
+    },
+    {
+     "page": 25,
+     "variant_a_number": 66
+    },
+    {
+     "page": 25,
+     "variant_a_number": 70
+    },
+    {
+     "page": 27,
+     "variant_a_number": 76
+    },
+    {
+     "page": 28,
+     "variant_a_number": 82
+    },
+    {
+     "page": 28,
+     "variant_a_number": 83
+    },
+    {
+     "page": 28,
+     "variant_a_number": 86
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 7
+  },
+  "ue2_2026-06-07_g3geo_izah": {
+   "expected": 30,
+   "captured": 25,
+   "matched": 24,
+   "missing": [
+    {
+     "page": 2,
+     "variant_a_number": 8
+    },
+    {
+     "page": 4,
+     "variant_a_number": 12
+    },
+    {
+     "page": 4,
+     "variant_a_number": 13
+    },
+    {
+     "page": 5,
+     "variant_a_number": 18
+    },
+    {
+     "page": 5,
+     "variant_a_number": 19
+    },
+    {
+     "page": 7,
+     "variant_a_number": 27
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 1
+  },
+  "ue2_2026-06-07_g4_izah": {
+   "expected": 90,
+   "captured": 83,
+   "matched": 76,
+   "missing": [
+    {
+     "page": 3,
+     "variant_a_number": 9
+    },
+    {
+     "page": 3,
+     "variant_a_number": 10
+    },
+    {
+     "page": 8,
+     "variant_a_number": 28
+    },
+    {
+     "page": 8,
+     "variant_a_number": 32
+    },
+    {
+     "page": 11,
+     "variant_a_number": 41
+    },
+    {
+     "page": 11,
+     "variant_a_number": 42
+    },
+    {
+     "page": 14,
+     "variant_a_number": 55
+    },
+    {
+     "page": 15,
+     "variant_a_number": 58
+    },
+    {
+     "page": 16,
+     "variant_a_number": 61
+    },
+    {
+     "page": 17,
+     "variant_a_number": 66
+    },
+    {
+     "page": 19,
+     "variant_a_number": 72
+    },
+    {
+     "page": 20,
+     "variant_a_number": 79
+    },
+    {
+     "page": 21,
+     "variant_a_number": 80
+    },
+    {
+     "page": 21,
+     "variant_a_number": 83
+    }
+   ],
+   "extra_numbered": 0,
+   "unnumbered": 7
+  }
+ },
+ "gold": {
+  "label_text_mismatch": [
+   {
+    "item_id": "azdim_mixed_2026-04-19_izah_p007_04",
+    "label": "C",
+    "similarity": 0.0,
+    "choice_text": "de...ktiv, is...irahət",
+    "gold_text": "detektiv, istirahət"
+   },
+   {
+    "item_id": "azdim_mixed_2026-04-19_izah_p031_03",
+    "label": "D",
+    "similarity": 0.83,
+    "choice_text": "m’appelle, t’appelles, s’appelle",
+    "gold_text": "m’appelle, t’appelles, m’appelle"
+   },
+   {
+    "item_id": "azdim_mixed_2026-04-19_izah_p048_01",
+    "label": "A",
+    "similarity": 0.12,
+    "choice_text": "في شوشا عدد قليل من المؤسسات الثقافية",
+    "gold_text": "لعبت مدينة شوشا دورا هاما في حياة جمهوريتنا الاقتصادية"
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-02_izah_p003_03",
+    "label": "D",
+    "similarity": 0.67,
+    "choice_text": "–, the, –",
+    "gold_text": "–, the, the"
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-02_izah_p004_06",
+    "label": "C",
+    "similarity": 0.0,
+    "choice_text": "1, 3",
+    "gold_text": "So did my mother, Mrs. Dales did, too."
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-02_izah_p008_01",
+    "label": "B",
+    "similarity": 0.0,
+    "choice_text": "çam...dan, fil...rmoniya",
+    "gold_text": "çamadan, filarmoniya"
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-02_izah_p008_02",
+    "label": "D",
+    "similarity": 0.67,
+    "choice_text": "$1, 3, 4$",
+    "gold_text": "$3, 4, 5$"
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-02_izah_p014_01",
+    "label": "C",
+    "similarity": 0.67,
+    "choice_text": "$2, 3, 5$",
+    "gold_text": "$2, 3, 6$"
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-02_izah_p022_02",
+    "label": "A",
+    "similarity": 0.0,
+    "choice_text": "ме...кий",
+    "gold_text": "меткий"
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-02_izah_p022_05",
+    "label": "E",
+    "similarity": 0.5,
+    "choice_text": "8-8",
+    "gold_text": "8–12"
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-02_izah_p025_01",
+    "label": "C",
+    "similarity": 0.0,
+    "choice_text": "2",
+    "gold_text": "№ 4 (Вначале люди общались только при помощи жестов и звуков)."
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-02_izah_p026_02",
+    "label": "A",
+    "similarity": 0.4,
+    "choice_text": "жест, древний",
+    "gold_text": "Данным характеристикам в тексте соответствуют слова жест, древний"
+   },
+   {
+    "item_id": "azdim_sl11_2025-03-09_izah_p014_01",
+    "label": "C",
+    "similarity": 0.67,
+    "choice_text": "$1,3,5$",
+    "gold_text": "$2,3,5$"
+   },
+   {
+    "item_id": "azdim_sl11_2026-03-09_izah_p008_01",
+    "label": "C",
+    "similarity": 0.57,
+    "choice_text": "1, 2, 3, 5",
+    "gold_text": "2,3,6"
+   },
+   {
+    "item_id": "azdim_sl11_2026-03-09_izah_p013_04",
+    "label": "E",
+    "similarity": 0.67,
+    "choice_text": "1, 3, 5",
+    "gold_text": "1, 4, 5"
+   },
+   {
+    "item_id": "azdim_sl11_2026-03-09_izah_p015_01",
+    "label": "C",
+    "similarity": 0.0,
+    "choice_text": "$2\\cos28°\\cos10°$",
+    "gold_text": "2cos28°cos10°"
+   },
+   {
+    "item_id": "azdim_sl11_2026-03-09_izah_p015_02",
+    "label": "A",
+    "similarity": 0.8,
+    "choice_text": "6,4 sm",
+    "gold_text": "6,4"
+   },
+   {
+    "item_id": "azdim_sl11_2026-03-09_izah_p015_03",
+    "label": "E",
+    "similarity": 0.5,
+    "choice_text": "15 $sm^2$",
+    "gold_text": "15"
+   },
+   {
+    "item_id": "azdim_sl11_2026-03-15_izah_p002_03",
+    "label": "E",
+    "similarity": 0.0,
+    "choice_text": "2, 3",
+    "gold_text": "some, them / all, them"
+   },
+   {
+    "item_id": "azdim_sl11_2026-03-15_izah_p019_01",
+    "label": "A",
+    "similarity": 0.67,
+    "choice_text": "30",
+    "gold_text": "30 san"
+   },
+   {
+    "item_id": "azdim_sl11_2026-03-15_izah_p026_03",
+    "label": "E",
+    "similarity": 0.67,
+    "choice_text": "3, 4, 5; 1, 2, 6",
+    "gold_text": "2, 3, 4; 1, 5, 6"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g2_izah_p002_03",
+    "label": "C",
+    "similarity": 0.67,
+    "choice_text": "5 m",
+    "gold_text": "5"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g2_izah_p009_01",
+    "label": "A",
+    "similarity": 0.71,
+    "choice_text": "1 – d; 2 – b; 3 – a; e",
+    "gold_text": "1 – a; 2 – b; 3 – c; e"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g2_izah_p017_02",
+    "label": "D",
+    "similarity": 0.62,
+    "choice_text": "1 – b, c; 2 – a; 3 – a, c",
+    "gold_text": "1 – a, b; 2 – b, c; 3 – a"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g2_izah_p018_02",
+    "label": "D",
+    "similarity": 0.83,
+    "choice_text": "1 – d; 2 – b; 3 – a",
+    "gold_text": "1 – d; 2 – b; 3 – c"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g2_izah_p020_01",
+    "label": "E",
+    "similarity": 0.8,
+    "choice_text": "Sərhədlərin toxunulmazlığının təminat altına alınması",
+    "gold_text": "Sərhədlərin toxunulmazlığının təminat altına alınmasını"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g2_izah_p020_03",
+    "label": "A",
+    "similarity": 0.8,
+    "choice_text": "1, 2",
+    "gold_text": "1 və 2"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g2_izah_p020_04",
+    "label": "B",
+    "similarity": 0.8,
+    "choice_text": "2, 5",
+    "gold_text": "2 və 5"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g3_izah_p011_01",
+    "label": "D",
+    "similarity": 0.5,
+    "choice_text": "3, 4",
+    "gold_text": "1, 4"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g3_izah_p015_01",
+    "label": "A",
+    "similarity": 0.73,
+    "choice_text": "1 – b, d; 2 – c, e",
+    "gold_text": "1 – a, d; 2 – c"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g3_izah_p024_02",
+    "label": "A",
+    "similarity": 0.71,
+    "choice_text": "1 – d; 2 – b; 3 – a, e",
+    "gold_text": "1 – a; 2 – b; 3 – c; e"
+   },
+   {
+    "item_id": "azdim_ue2_2025-05-25_g3_izah_p026_02",
+    "label": "E",
+    "similarity": 0.75,
+    "choice_text": "1 – b, d; 2 – a, c; 3 – e",
+    "gold_text": "1 – b, d; 2 – a, e; 3 – c"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p008_02",
+    "label": "C",
+    "similarity": 0.57,
+    "choice_text": "$1,8 \\dfrac{m}{san^2}$",
+    "gold_text": "1,8"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p010_02",
+    "label": "D",
+    "similarity": 0.67,
+    "choice_text": "dəyişməz / azalar",
+    "gold_text": "T-dəyişməz, R-azalar"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p011_02",
+    "label": "C",
+    "similarity": 0.0,
+    "choice_text": "↓",
+    "gold_text": "aşağı (↓)"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p011_04",
+    "label": "C",
+    "similarity": 0.57,
+    "choice_text": "qazın daxili enerjisi azalır",
+    "gold_text": "daxili enerji azalır"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p012_01",
+    "label": "A",
+    "similarity": 0.0,
+    "choice_text": "sürətin",
+    "gold_text": "Sürət"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p012_03",
+    "label": "A",
+    "similarity": 0.0,
+    "choice_text": "$\\rho_1<\\rho_2<\\rho_3$",
+    "gold_text": "ρ1<ρ2<ρ3"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p015_01",
+    "label": "A",
+    "similarity": 0.08,
+    "choice_text": "Table image: Fənn/Müəllim headers underlined/italic; row1 Riyaziyyat bold, Təran",
+    "gold_text": "Table matching the described formatting"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p025_04",
+    "label": "C",
+    "similarity": 0.8,
+    "choice_text": "I: normal   II: turş",
+    "gold_text": "I: normal duz  II: turş duz"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p026_01",
+    "label": "D",
+    "similarity": 0.0,
+    "choice_text": "$O_2$",
+    "gold_text": "O2"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p026_05",
+    "label": "B",
+    "similarity": 0.0,
+    "choice_text": "$C_3H_8$",
+    "gold_text": "C3H8"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g1_izah_p027_01",
+    "label": "A",
+    "similarity": 0.8,
+    "choice_text": "N₂: 4, H₂: 1",
+    "gold_text": "[N₂]tarazlıq = 4, [H₂]tarazlıq = 1"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g3geo_izah_p006_02",
+    "label": "A",
+    "similarity": 0.71,
+    "choice_text": "1 – a; 2 – d; 3 – b, e",
+    "gold_text": "1 – a; 2 – b; 3 – d, e"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g4_izah_p006_01",
+    "label": "D",
+    "similarity": 0.0,
+    "choice_text": "graph: bars A,Q,S,T equal lower, P,F equal higher",
+    "gold_text": "D"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g4_izah_p009_04",
+    "label": "D",
+    "similarity": 0.5,
+    "choice_text": "1, 3",
+    "gold_text": "1, 4"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g4_izah_p010_05",
+    "label": "C",
+    "similarity": 0.8,
+    "choice_text": "143 / 650",
+    "gold_text": "143 və 650"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g4_izah_p011_01",
+    "label": "C",
+    "similarity": 0.8,
+    "choice_text": "143      650",
+    "gold_text": "143 və 650"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g4_izah_p016_04",
+    "label": "A",
+    "similarity": 0.0,
+    "choice_text": "sürətin",
+    "gold_text": "Sürət"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g4_izah_p016_05",
+    "label": "E",
+    "similarity": 0.67,
+    "choice_text": "dəyişməz / azalar",
+    "gold_text": "T-dəyişməz, R-azalar"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g4_izah_p017_03",
+    "label": "B",
+    "similarity": 0.55,
+    "choice_text": "4, 3, 1,2",
+    "gold_text": "I: 3, II: 4, III: 1, 2"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g4_izah_p019_02",
+    "label": "A",
+    "similarity": 0.57,
+    "choice_text": "qazın daxili enerjisi azalır",
+    "gold_text": "daxili enerji azalır"
+   },
+   {
+    "item_id": "azdim_ue2_2025-06-01_g4_izah_p019_03",
+    "label": "E",
+    "similarity": 0.57,
+    "choice_text": "$1,8 \\dfrac{m}{san^2}$",
+    "gold_text": "1,8"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g2_izah_p001_02",
+    "label": "C",
+    "similarity": 0.67,
+    "choice_text": "9 sm",
+    "gold_text": "9"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g2_izah_p001_03",
+    "label": "B",
+    "similarity": 0.67,
+    "choice_text": "$\\dfrac{64\\pi}{3}$ sm$^3$",
+    "gold_text": "$\\dfrac{64\\pi}{3}$"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g2_izah_p005_03",
+    "label": "A",
+    "similarity": 0.67,
+    "choice_text": "7 sm",
+    "gold_text": "7"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g2_izah_p006_02",
+    "label": "C",
+    "similarity": 0.0,
+    "choice_text": "22 sm",
+    "gold_text": "22sm"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g2_izah_p009_01",
+    "label": "D",
+    "similarity": 0.8,
+    "choice_text": "I – 1, 3; II – 6; III – 2; IV – 4, 5",
+    "gold_text": "I – 3; II – 6; III – 2, 4; IV – 1, 5"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g2_izah_p010_01",
+    "label": "E",
+    "similarity": 0.5,
+    "choice_text": "1, 3",
+    "gold_text": "3, 4"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g2_izah_p011_03",
+    "label": "D",
+    "similarity": 0.67,
+    "choice_text": "$2, 3, 6$",
+    "gold_text": "$2, 4, 6$"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g2_izah_p013_01",
+    "label": "A",
+    "similarity": 0.67,
+    "choice_text": "1 – b; 2 – c, e; 3 – a",
+    "gold_text": "1 – a; 2 – c, e; 3 – b, d"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g2_izah_p020_03",
+    "label": "C",
+    "similarity": 0.5,
+    "choice_text": "3, 5",
+    "gold_text": "4, 5"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g3_izah_p007_02",
+    "label": "B",
+    "similarity": 0.67,
+    "choice_text": "2, 3, 5",
+    "gold_text": "2,5,6"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-06_g3_izah_p034_03",
+    "label": "E",
+    "similarity": 0.0,
+    "choice_text": "1, 2, 5",
+    "gold_text": "свободы, дружбы, войны"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g1_izah_p003_04",
+    "label": "E",
+    "similarity": 0.67,
+    "choice_text": "$\\sqrt{15}$ sm",
+    "gold_text": "$\\sqrt{15}$"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g1_izah_p004_05",
+    "label": "B",
+    "similarity": 0.67,
+    "choice_text": "20°",
+    "gold_text": "$20^0$"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g1_izah_p008_01",
+    "label": "D",
+    "similarity": 0.27,
+    "choice_text": "qrafik (ortada solda, artan, sürətlənən)",
+    "gold_text": "qrafik D (artan, kvadratik şəkilli əyri, aşağıdan yuxarı sürətlənərək artan)"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g1_izah_p009_03",
+    "label": "D",
+    "similarity": 0.0,
+    "choice_text": "graph D",
+    "gold_text": "U-p qrafiki, U sabit qalır (üfüqi xətt)"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g1_izah_p016_02",
+    "label": "D",
+    "similarity": 0.36,
+    "choice_text": "Yaş column, empty then 28",
+    "gold_text": "Yaş sütunu (boş üstdə, 28 aşağıda)"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p005_05",
+    "label": "C",
+    "similarity": 0.67,
+    "choice_text": "50 m",
+    "gold_text": "50"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p006_01",
+    "label": "C",
+    "similarity": 0.67,
+    "choice_text": "A – V; B – II; C – VI",
+    "gold_text": "A – V; B – I; C – IV"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p006_03",
+    "label": "E",
+    "similarity": 0.67,
+    "choice_text": "1, 3, 5",
+    "gold_text": "1, 4, 5"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g4_izah_p008_06",
+    "label": "D",
+    "similarity": 0.67,
+    "choice_text": "2, 3, 5",
+    "gold_text": "2,4,5"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g4_izah_p008_07",
+    "label": "C",
+    "similarity": 0.44,
+    "choice_text": "2, 3",
+    "gold_text": "polyar kovalent -2, qeyri-polyar kovalent -3."
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g4_izah_p010_04",
+    "label": "E",
+    "similarity": 0.67,
+    "choice_text": "Temperatur: artırmaq; Təzyiq: azaltmaq",
+    "gold_text": "artırmaq, azaltmaq"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g4_izah_p016_02",
+    "label": "A",
+    "similarity": 0.44,
+    "choice_text": "qrafik A (artan əyri, aşağıdan yuxarı qalxan)",
+    "gold_text": "qrafik A"
+   },
+   {
+    "item_id": "azdim_ue2_2025-07-13_g4_izah_p019_02",
+    "label": "D",
+    "similarity": 0.0,
+    "choice_text": "qrafik D",
+    "gold_text": "graph with $\\varepsilon_i = 6$ V constant"
+   },
+   {
+    "item_id": "azdim_ue2_2026-05-24_g2_izah_p004_04",
+    "label": "D",
+    "similarity": 0.0,
+    "choice_text": "3",
+    "gold_text": "4"
+   },
+   {
+    "item_id": "azdim_ue2_2026-05-24_g2_izah_p005_02",
+    "label": "A",
+    "similarity": 0.0,
+    "choice_text": "I, IV və V",
+    "gold_text": "96°, 116°, 100°"
+   },
+   {
+    "item_id": "azdim_ue2_2026-05-24_g2_izah_p008_01",
+    "label": "D",
+    "similarity": 0.67,
+    "choice_text": "2, 3, 5",
+    "gold_text": "1, 3, 5"
+   },
+   {
+    "item_id": "azdim_ue2_2026-05-24_g3_izah_p002_01",
+    "label": "E",
+    "similarity": 0.67,
+    "choice_text": "2, 3, 5",
+    "gold_text": "2, 3, 6"
+   },
+   {
+    "item_id": "azdim_ue2_2026-05-24_g3_izah_p026_02",
+    "label": "B",
+    "similarity": 0.8,
+    "choice_text": "1 – a, d; 2 – b; 3 – c",
+    "gold_text": "1 – a, d; 2 – b, c; 3 – e"
+   },
+   {
+    "item_id": "azdim_ue2_2026-05-24_g3_izah_p037_01",
+    "label": "C",
+    "similarity": 0.71,
+    "choice_text": "1 – b, d; 2 – a, c, e",
+    "gold_text": "1 – a, d; 2 – b, c, e"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g1_izah_p008_02",
+    "label": "C",
+    "similarity": 0.0,
+    "choice_text": "$F_1=F_2$",
+    "gold_text": "F1=F2"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g1_izah_p009_01",
+    "label": "B",
+    "similarity": 0.8,
+    "choice_text": "I, III",
+    "gold_text": "I və III"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g1_izah_p009_03",
+    "label": "D",
+    "similarity": 0.5,
+    "choice_text": "artar / dəyişməz",
+    "gold_text": "Lampa 1-artar, Lampa 2-dəyişməz"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g1_izah_p012_01",
+    "label": "A",
+    "similarity": 0.25,
+    "choice_text": "(qrafik: E_k düz xətlə artır, 0-dan başlayır, S oxu ilə)",
+    "gold_text": "düz xətlə artan qrafik"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g1_izah_p021_01",
+    "label": "C",
+    "similarity": 0.67,
+    "choice_text": "1 – a, e; 2 – c, d",
+    "gold_text": "1 – c, e; 2 – a, d"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g1_izah_p027_01",
+    "label": "D",
+    "similarity": 0.67,
+    "choice_text": "X-metafosfat, Y-ortofosfat, Z-pirofosfat",
+    "gold_text": "metafosfat ortofosfat pirofosfat"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g1_izah_p027_04",
+    "label": "E",
+    "similarity": 0.67,
+    "choice_text": "34",
+    "gold_text": "34 q"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g4_izah_p004_02",
+    "label": "A",
+    "similarity": 0.8,
+    "choice_text": "3,6 / 2,4 / 1,5",
+    "gold_text": "I- 3, 6; II-2, 4; III-1, 5"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g4_izah_p006_01",
+    "label": "A",
+    "similarity": 0.75,
+    "choice_text": "1 – a, d; 2 – b; 3 – c, e",
+    "gold_text": "1 – a, e; 2 – b, d; 3 – c"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g4_izah_p012_02",
+    "label": "B",
+    "similarity": 0.67,
+    "choice_text": "Cu, C, S",
+    "gold_text": "X-Cu, Y-C, Z-S"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g4_izah_p013_02",
+    "label": "E",
+    "similarity": 0.0,
+    "choice_text": "$A_3>A_1>A_2$",
+    "gold_text": "A3>A1>A2"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g4_izah_p013_03",
+    "label": "B",
+    "similarity": 0.33,
+    "choice_text": "A$_r$(X)<A$_r$(Y) olarsa, r$_1$<r$_2$",
+    "gold_text": "Ar(X)<Ar(Y) olarsa, r1<r2"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g4_izah_p016_02",
+    "label": "D",
+    "similarity": 0.8,
+    "choice_text": "I, III",
+    "gold_text": "I və III"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g4_izah_p016_03",
+    "label": "D",
+    "similarity": 0.46,
+    "choice_text": "3,5 | 2,4 | 1",
+    "gold_text": "I-2,4; II-3,5; III-1"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g4_izah_p018_03",
+    "label": "D",
+    "similarity": 0.5,
+    "choice_text": "artar / dəyişməz",
+    "gold_text": "Lampa 1-artar, Lampa 2-dəyişməz"
+   },
+   {
+    "item_id": "azdim_ue2_2026-06-07_g4_izah_p020_02",
+    "label": "E",
+    "similarity": 0.29,
+    "choice_text": "M-də 20 kPa, N-də 10 kPa",
+    "gold_text": "$P_M = 20kPa$, $P_N = 10kPa$"
+   }
+  ],
+  "no_gold_label": [
+   "azdim_mixed_2026-04-19_izah_p005_04",
+   "azdim_mixed_2026-04-19_izah_p010_01",
+   "azdim_mixed_2026-04-19_izah_p011_04",
+   "azdim_mixed_2026-04-19_izah_p030_07",
+   "azdim_mixed_2026-04-19_izah_p031_07",
+   "azdim_mixed_2026-04-19_izah_p038_03",
+   "azdim_mixed_2026-04-19_izah_p047_02",
+   "azdim_mixed_2026-04-19_izah_p048_08",
+   "azdim_mixed_2026-04-19_izah_p049_01",
+   "azdim_mixed_2026-04-19_izah_p049_04",
+   "azdim_mixed_2026-04-19_izah_p049_05",
+   "azdim_mixed_2026-04-19_izah_p050_01",
+   "azdim_mixed_2026-04-19_izah_p050_04",
+   "azdim_sl11_2025-03-02_izah_p007_04",
+   "azdim_sl11_2025-03-02_izah_p016_05",
+   "azdim_sl11_2025-03-02_izah_p025_03",
+   "azdim_sl11_2025-03-02_izah_p040_05",
+   "azdim_sl11_2025-03-02_izah_p045_03",
+   "azdim_sl11_2025-03-09_izah_p007_05",
+   "azdim_sl11_2025-03-09_izah_p017_03",
+   "azdim_sl11_2025-03-09_izah_p022_02",
+   "azdim_sl11_2026-03-09_izah_p005_05",
+   "azdim_sl11_2026-03-09_izah_p007_01",
+   "azdim_sl11_2026-03-09_izah_p015_05",
+   "azdim_sl11_2026-03-09_izah_p019_04",
+   "azdim_sl11_2026-03-15_izah_p012_04",
+   "azdim_ue2_2025-05-25_g2_izah_p014_01",
+   "azdim_ue2_2025-05-25_g3_izah_p001_01",
+   "azdim_ue2_2025-05-25_g3_izah_p001_03",
+   "azdim_ue2_2025-05-25_g3_izah_p025_02",
+   "azdim_ue2_2025-05-25_g3_izah_p026_04",
+   "azdim_ue2_2025-05-25_g3_izah_p029_04",
+   "azdim_ue2_2025-05-25_g3_izah_p039_05",
+   "azdim_ue2_2025-05-25_g3_izah_p044_05",
+   "azdim_ue2_2025-06-01_g1_izah_p008_03",
+   "azdim_ue2_2025-06-01_g1_izah_p019_01",
+   "azdim_ue2_2025-06-01_g4_izah_p004_02",
+   "azdim_ue2_2025-06-01_g4_izah_p019_04",
+   "azdim_ue2_2025-06-01_g4_izah_p021_01",
+   "azdim_ue2_2025-07-06_g2_izah_p004_03",
+   "azdim_ue2_2025-07-06_g2_izah_p020_05",
+   "azdim_ue2_2025-07-06_g3_izah_p026_04",
+   "azdim_ue2_2025-07-13_g1_izah_p015_01",
+   "azdim_ue2_2025-07-13_g1_izah_p015_04",
+   "azdim_ue2_2025-07-13_g1_izah_p016_03",
+   "azdim_ue2_2025-07-13_g1_izah_p018_02",
+   "azdim_ue2_2025-07-13_g1_izah_p018_03",
+   "azdim_ue2_2025-07-13_g1_izah_p019_03",
+   "azdim_ue2_2025-07-13_g4_izah_p005_01",
+   "azdim_ue2_2025-07-13_g4_izah_p015_01",
+   "azdim_ue2_2025-07-13_g4_izah_p019_01",
+   "azdim_ue2_2026-05-24_g2_izah_p010_02",
+   "azdim_ue2_2026-05-24_g3_izah_p029_02",
+   "azdim_ue2_2026-05-24_g3_izah_p030_05",
+   "azdim_ue2_2026-05-24_g3_izah_p034_06",
+   "azdim_ue2_2026-05-24_g3_izah_p044_01",
+   "azdim_ue2_2026-06-07_g1_izah_p002_03",
+   "azdim_ue2_2026-06-07_g1_izah_p004_03",
+   "azdim_ue2_2026-06-07_g1_izah_p011_03",
+   "azdim_ue2_2026-06-07_g1_izah_p024_05",
+   "azdim_ue2_2026-06-07_g3geo_izah_p004_03",
+   "azdim_ue2_2026-06-07_g4_izah_p010_05"
+  ]
+ },
+ "etalon_flags": 29,
+ "fidelity": {
+  "mixed_2026-04-19_izah": {
+   "located": 158,
+   "n_unlocated": 35,
+   "unlocated": [
+    "azdim_mixed_2026-04-19_izah_p002_01",
+    "azdim_mixed_2026-04-19_izah_p007_04",
+    "azdim_mixed_2026-04-19_izah_p018_02",
+    "azdim_mixed_2026-04-19_izah_p030_01",
+    "azdim_mixed_2026-04-19_izah_p033_01",
+    "azdim_mixed_2026-04-19_izah_p033_02",
+    "azdim_mixed_2026-04-19_izah_p040_01",
+    "azdim_mixed_2026-04-19_izah_p045_06",
+    "azdim_mixed_2026-04-19_izah_p047_02",
+    "azdim_mixed_2026-04-19_izah_p048_01",
+    "azdim_mixed_2026-04-19_izah_p048_02",
+    "azdim_mixed_2026-04-19_izah_p048_03",
+    "azdim_mixed_2026-04-19_izah_p048_04",
+    "azdim_mixed_2026-04-19_izah_p048_05",
+    "azdim_mixed_2026-04-19_izah_p048_06",
+    "azdim_mixed_2026-04-19_izah_p048_07",
+    "azdim_mixed_2026-04-19_izah_p048_08",
+    "azdim_mixed_2026-04-19_izah_p049_01",
+    "azdim_mixed_2026-04-19_izah_p049_03",
+    "azdim_mixed_2026-04-19_izah_p049_04",
+    "azdim_mixed_2026-04-19_izah_p049_05",
+    "azdim_mixed_2026-04-19_izah_p050_01",
+    "azdim_mixed_2026-04-19_izah_p050_02",
+    "azdim_mixed_2026-04-19_izah_p050_03",
+    "azdim_mixed_2026-04-19_izah_p050_04",
+    "azdim_mixed_2026-04-19_izah_p050_05",
+    "azdim_mixed_2026-04-19_izah_p050_06",
+    "azdim_mixed_2026-04-19_izah_p051_01",
+    "azdim_mixed_2026-04-19_izah_p051_02",
+    "azdim_mixed_2026-04-19_izah_p051_03",
+    "azdim_mixed_2026-04-19_izah_p051_04",
+    "azdim_mixed_2026-04-19_izah_p051_05",
+    "azdim_mixed_2026-04-19_izah_p052_01",
+    "azdim_mixed_2026-04-19_izah_p052_02",
+    "azdim_mixed_2026-04-19_izah_p052_03"
+   ]
+  },
+  "sl11_2025-03-02_izah": {
+   "located": 189,
+   "n_unlocated": 11,
+   "unlocated": [
+    "azdim_sl11_2025-03-02_izah_p002_01",
+    "azdim_sl11_2025-03-02_izah_p009_03",
+    "azdim_sl11_2025-03-02_izah_p009_04",
+    "azdim_sl11_2025-03-02_izah_p015_02",
+    "azdim_sl11_2025-03-02_izah_p017_05",
+    "azdim_sl11_2025-03-02_izah_p018_02",
+    "azdim_sl11_2025-03-02_izah_p019_05",
+    "azdim_sl11_2025-03-02_izah_p026_04",
+    "azdim_sl11_2025-03-02_izah_p027_01",
+    "azdim_sl11_2025-03-02_izah_p028_07",
+    "azdim_sl11_2025-03-02_izah_p032_05"
+   ]
+  },
+  "sl11_2025-03-09_izah": {
+   "located": 175,
+   "n_unlocated": 17,
+   "unlocated": [
+    "azdim_sl11_2025-03-09_izah_p014_03",
+    "azdim_sl11_2025-03-09_izah_p015_04",
+    "azdim_sl11_2025-03-09_izah_p018_02",
+    "azdim_sl11_2025-03-09_izah_p018_03",
+    "azdim_sl11_2025-03-09_izah_p019_02",
+    "azdim_sl11_2025-03-09_izah_p023_01",
+    "azdim_sl11_2025-03-09_izah_p030_04",
+    "azdim_sl11_2025-03-09_izah_p031_05",
+    "azdim_sl11_2025-03-09_izah_p032_02",
+    "azdim_sl11_2025-03-09_izah_p032_03",
+    "azdim_sl11_2025-03-09_izah_p032_04",
+    "azdim_sl11_2025-03-09_izah_p034_03",
+    "azdim_sl11_2025-03-09_izah_p039_03",
+    "azdim_sl11_2025-03-09_izah_p039_04",
+    "azdim_sl11_2025-03-09_izah_p039_05",
+    "azdim_sl11_2025-03-09_izah_p039_06",
+    "azdim_sl11_2025-03-09_izah_p039_07"
+   ]
+  },
+  "sl11_2026-03-09_izah": {
+   "located": 162,
+   "n_unlocated": 15,
+   "unlocated": [
+    "azdim_sl11_2026-03-09_izah_p006_01",
+    "azdim_sl11_2026-03-09_izah_p008_01",
+    "azdim_sl11_2026-03-09_izah_p010_04",
+    "azdim_sl11_2026-03-09_izah_p014_01",
+    "azdim_sl11_2026-03-09_izah_p015_02",
+    "azdim_sl11_2026-03-09_izah_p017_07",
+    "azdim_sl11_2026-03-09_izah_p019_03",
+    "azdim_sl11_2026-03-09_izah_p020_03",
+    "azdim_sl11_2026-03-09_izah_p022_01",
+    "azdim_sl11_2026-03-09_izah_p026_03",
+    "azdim_sl11_2026-03-09_izah_p026_04",
+    "azdim_sl11_2026-03-09_izah_p036_01",
+    "azdim_sl11_2026-03-09_izah_p037_01",
+    "azdim_sl11_2026-03-09_izah_p045_02",
+    "azdim_sl11_2026-03-09_izah_p046_02"
+   ]
+  },
+  "sl11_2026-03-15_izah": {
+   "located": 187,
+   "n_unlocated": 8,
+   "unlocated": [
+    "azdim_sl11_2026-03-15_izah_p013_02",
+    "azdim_sl11_2026-03-15_izah_p015_03",
+    "azdim_sl11_2026-03-15_izah_p022_02",
+    "azdim_sl11_2026-03-15_izah_p033_02",
+    "azdim_sl11_2026-03-15_izah_p038_02",
+    "azdim_sl11_2026-03-15_izah_p038_03",
+    "azdim_sl11_2026-03-15_izah_p038_04",
+    "azdim_sl11_2026-03-15_izah_p042_04"
+   ]
+  },
+  "ue2_2025-05-25_g2_izah": {
+   "located": 77,
+   "n_unlocated": 9,
+   "unlocated": [
+    "azdim_ue2_2025-05-25_g2_izah_p001_01",
+    "azdim_ue2_2025-05-25_g2_izah_p006_01",
+    "azdim_ue2_2025-05-25_g2_izah_p006_04",
+    "azdim_ue2_2025-05-25_g2_izah_p006_05",
+    "azdim_ue2_2025-05-25_g2_izah_p007_01",
+    "azdim_ue2_2025-05-25_g2_izah_p014_01",
+    "azdim_ue2_2025-05-25_g2_izah_p015_02",
+    "azdim_ue2_2025-05-25_g2_izah_p018_02",
+    "azdim_ue2_2025-05-25_g2_izah_p020_05"
+   ]
+  },
+  "ue2_2025-05-25_g3_izah": {
+   "located": 149,
+   "n_unlocated": 6,
+   "unlocated": [
+    "azdim_ue2_2025-05-25_g3_izah_p011_02",
+    "azdim_ue2_2025-05-25_g3_izah_p013_03",
+    "azdim_ue2_2025-05-25_g3_izah_p029_04",
+    "azdim_ue2_2025-05-25_g3_izah_p030_04",
+    "azdim_ue2_2025-05-25_g3_izah_p037_04",
+    "azdim_ue2_2025-05-25_g3_izah_p044_03"
+   ]
+  },
+  "ue2_2025-06-01_g1_izah": {
+   "located": 93,
+   "n_unlocated": 13,
+   "unlocated": [
+    "azdim_ue2_2025-06-01_g1_izah_p001_01",
+    "azdim_ue2_2025-06-01_g1_izah_p001_04",
+    "azdim_ue2_2025-06-01_g1_izah_p002_03",
+    "azdim_ue2_2025-06-01_g1_izah_p004_03",
+    "azdim_ue2_2025-06-01_g1_izah_p005_01",
+    "azdim_ue2_2025-06-01_g1_izah_p006_02",
+    "azdim_ue2_2025-06-01_g1_izah_p015_01",
+    "azdim_ue2_2025-06-01_g1_izah_p015_02",
+    "azdim_ue2_2025-06-01_g1_izah_p015_03",
+    "azdim_ue2_2025-06-01_g1_izah_p025_04",
+    "azdim_ue2_2025-06-01_g1_izah_p026_02",
+    "azdim_ue2_2025-06-01_g1_izah_p027_01",
+    "azdim_ue2_2025-06-01_g1_izah_p027_03"
+   ]
+  },
+  "ue2_2025-06-01_g3geo_izah": {
+   "located": 26,
+   "n_unlocated": 0,
+   "unlocated": []
+  },
+  "ue2_2025-06-01_g4_izah": {
+   "located": 67,
+   "n_unlocated": 17,
+   "unlocated": [
+    "azdim_ue2_2025-06-01_g4_izah_p005_03",
+    "azdim_ue2_2025-06-01_g4_izah_p007_02",
+    "azdim_ue2_2025-06-01_g4_izah_p007_03",
+    "azdim_ue2_2025-06-01_g4_izah_p009_01",
+    "azdim_ue2_2025-06-01_g4_izah_p009_06",
+    "azdim_ue2_2025-06-01_g4_izah_p010_01",
+    "azdim_ue2_2025-06-01_g4_izah_p010_03",
+    "azdim_ue2_2025-06-01_g4_izah_p010_05",
+    "azdim_ue2_2025-06-01_g4_izah_p011_01",
+    "azdim_ue2_2025-06-01_g4_izah_p011_03",
+    "azdim_ue2_2025-06-01_g4_izah_p012_04",
+    "azdim_ue2_2025-06-01_g4_izah_p013_01",
+    "azdim_ue2_2025-06-01_g4_izah_p014_01",
+    "azdim_ue2_2025-06-01_g4_izah_p014_03",
+    "azdim_ue2_2025-06-01_g4_izah_p014_04",
+    "azdim_ue2_2025-06-01_g4_izah_p018_01",
+    "azdim_ue2_2025-06-01_g4_izah_p021_03"
+   ]
+  },
+  "ue2_2025-07-06_g2_izah": {
+   "located": 69,
+   "n_unlocated": 11,
+   "unlocated": [
+    "azdim_ue2_2025-07-06_g2_izah_p001_02",
+    "azdim_ue2_2025-07-06_g2_izah_p003_01",
+    "azdim_ue2_2025-07-06_g2_izah_p005_03",
+    "azdim_ue2_2025-07-06_g2_izah_p006_01",
+    "azdim_ue2_2025-07-06_g2_izah_p007_01",
+    "azdim_ue2_2025-07-06_g2_izah_p009_01",
+    "azdim_ue2_2025-07-06_g2_izah_p010_03",
+    "azdim_ue2_2025-07-06_g2_izah_p012_01",
+    "azdim_ue2_2025-07-06_g2_izah_p012_03",
+    "azdim_ue2_2025-07-06_g2_izah_p019_02",
+    "azdim_ue2_2025-07-06_g2_izah_p022_01"
+   ]
+  },
+  "ue2_2025-07-06_g3_izah": {
+   "located": 120,
+   "n_unlocated": 6,
+   "unlocated": [
+    "azdim_ue2_2025-07-06_g3_izah_p005_03",
+    "azdim_ue2_2025-07-06_g3_izah_p005_04",
+    "azdim_ue2_2025-07-06_g3_izah_p008_01",
+    "azdim_ue2_2025-07-06_g3_izah_p014_02",
+    "azdim_ue2_2025-07-06_g3_izah_p030_04",
+    "azdim_ue2_2025-07-06_g3_izah_p036_01"
+   ]
+  },
+  "ue2_2025-07-13_g1_izah": {
+   "located": 91,
+   "n_unlocated": 15,
+   "unlocated": [
+    "azdim_ue2_2025-07-13_g1_izah_p002_04",
+    "azdim_ue2_2025-07-13_g1_izah_p003_01",
+    "azdim_ue2_2025-07-13_g1_izah_p004_06",
+    "azdim_ue2_2025-07-13_g1_izah_p005_01",
+    "azdim_ue2_2025-07-13_g1_izah_p006_01",
+    "azdim_ue2_2025-07-13_g1_izah_p006_02",
+    "azdim_ue2_2025-07-13_g1_izah_p017_03",
+    "azdim_ue2_2025-07-13_g1_izah_p017_04",
+    "azdim_ue2_2025-07-13_g1_izah_p023_04",
+    "azdim_ue2_2025-07-13_g1_izah_p024_02",
+    "azdim_ue2_2025-07-13_g1_izah_p025_02",
+    "azdim_ue2_2025-07-13_g1_izah_p025_03",
+    "azdim_ue2_2025-07-13_g1_izah_p026_04",
+    "azdim_ue2_2025-07-13_g1_izah_p027_04",
+    "azdim_ue2_2025-07-13_g1_izah_p028_01"
+   ]
+  },
+  "ue2_2025-07-13_g3geo_izah": {
+   "located": 25,
+   "n_unlocated": 0,
+   "unlocated": []
+  },
+  "ue2_2025-07-13_g4_izah": {
+   "located": 66,
+   "n_unlocated": 12,
+   "unlocated": [
+    "azdim_ue2_2025-07-13_g4_izah_p003_04",
+    "azdim_ue2_2025-07-13_g4_izah_p005_01",
+    "azdim_ue2_2025-07-13_g4_izah_p005_02",
+    "azdim_ue2_2025-07-13_g4_izah_p006_01",
+    "azdim_ue2_2025-07-13_g4_izah_p008_06",
+    "azdim_ue2_2025-07-13_g4_izah_p008_07",
+    "azdim_ue2_2025-07-13_g4_izah_p009_02",
+    "azdim_ue2_2025-07-13_g4_izah_p010_01",
+    "azdim_ue2_2025-07-13_g4_izah_p010_03",
+    "azdim_ue2_2025-07-13_g4_izah_p011_02",
+    "azdim_ue2_2025-07-13_g4_izah_p012_02",
+    "azdim_ue2_2025-07-13_g4_izah_p013_03"
+   ]
+  },
+  "ue2_2026-05-24_g2_izah": {
+   "located": 70,
+   "n_unlocated": 7,
+   "unlocated": [
+    "azdim_ue2_2026-05-24_g2_izah_p006_03",
+    "azdim_ue2_2026-05-24_g2_izah_p009_02",
+    "azdim_ue2_2026-05-24_g2_izah_p011_02",
+    "azdim_ue2_2026-05-24_g2_izah_p015_01",
+    "azdim_ue2_2026-05-24_g2_izah_p015_02",
+    "azdim_ue2_2026-05-24_g2_izah_p018_01",
+    "azdim_ue2_2026-05-24_g2_izah_p019_03"
+   ]
+  },
+  "ue2_2026-05-24_g3_izah": {
+   "located": 130,
+   "n_unlocated": 9,
+   "unlocated": [
+    "azdim_ue2_2026-05-24_g3_izah_p001_02",
+    "azdim_ue2_2026-05-24_g3_izah_p008_01",
+    "azdim_ue2_2026-05-24_g3_izah_p008_02",
+    "azdim_ue2_2026-05-24_g3_izah_p019_02",
+    "azdim_ue2_2026-05-24_g3_izah_p020_02",
+    "azdim_ue2_2026-05-24_g3_izah_p026_03",
+    "azdim_ue2_2026-05-24_g3_izah_p030_03",
+    "azdim_ue2_2026-05-24_g3_izah_p034_02",
+    "azdim_ue2_2026-05-24_g3_izah_p035_03"
+   ]
+  },
+  "ue2_2026-06-07_g1_izah": {
+   "located": 84,
+   "n_unlocated": 12,
+   "unlocated": [
+    "azdim_ue2_2026-06-07_g1_izah_p001_01",
+    "azdim_ue2_2026-06-07_g1_izah_p003_02",
+    "azdim_ue2_2026-06-07_g1_izah_p005_01",
+    "azdim_ue2_2026-06-07_g1_izah_p005_02",
+    "azdim_ue2_2026-06-07_g1_izah_p006_04",
+    "azdim_ue2_2026-06-07_g1_izah_p013_05",
+    "azdim_ue2_2026-06-07_g1_izah_p019_01",
+    "azdim_ue2_2026-06-07_g1_izah_p023_02",
+    "azdim_ue2_2026-06-07_g1_izah_p025_02",
+    "azdim_ue2_2026-06-07_g1_izah_p027_03",
+    "azdim_ue2_2026-06-07_g1_izah_p028_02",
+    "azdim_ue2_2026-06-07_g1_izah_p028_03"
+   ]
+  },
+  "ue2_2026-06-07_g3geo_izah": {
+   "located": 23,
+   "n_unlocated": 2,
+   "unlocated": [
+    "azdim_ue2_2026-06-07_g3geo_izah_p001_02",
+    "azdim_ue2_2026-06-07_g3geo_izah_p003_02"
+   ]
+  },
+  "ue2_2026-06-07_g4_izah": {
+   "located": 67,
+   "n_unlocated": 16,
+   "unlocated": [
+    "azdim_ue2_2026-06-07_g4_izah_p001_01",
+    "azdim_ue2_2026-06-07_g4_izah_p001_02",
+    "azdim_ue2_2026-06-07_g4_izah_p002_01",
+    "azdim_ue2_2026-06-07_g4_izah_p005_04",
+    "azdim_ue2_2026-06-07_g4_izah_p006_01",
+    "azdim_ue2_2026-06-07_g4_izah_p006_05",
+    "azdim_ue2_2026-06-07_g4_izah_p007_03",
+    "azdim_ue2_2026-06-07_g4_izah_p009_02",
+    "azdim_ue2_2026-06-07_g4_izah_p011_01",
+    "azdim_ue2_2026-06-07_g4_izah_p012_04",
+    "azdim_ue2_2026-06-07_g4_izah_p013_01",
+    "azdim_ue2_2026-06-07_g4_izah_p013_02",
+    "azdim_ue2_2026-06-07_g4_izah_p013_03",
+    "azdim_ue2_2026-06-07_g4_izah_p013_04",
+    "azdim_ue2_2026-06-07_g4_izah_p014_02",
+    "azdim_ue2_2026-06-07_g4_izah_p018_04"
+   ]
+  }
+ }
+}
