@@ -198,6 +198,12 @@
   "method": "text_match"
  },
  {
+  "item_id": "azdim_ue2_2025-06-01_g4_izah_p009_07",
+  "from": null,
+  "to": "B",
+  "method": "etalon"
+ },
+ {
   "item_id": "azdim_ue2_2025-06-01_g4_izah_p019_04",
   "from": null,
   "to": "E",
@@ -360,10 +366,22 @@
   "method": "text_match+etalon"
  },
  {
+  "item_id": "azdim_ue2_2026-05-24_g3_izah_p016_07",
+  "from": null,
+  "to": "C",
+  "method": "etalon"
+ },
+ {
   "item_id": "azdim_ue2_2026-05-24_g3_izah_p026_02",
   "from": "B",
   "to": "C",
   "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-05-24_g3_izah_p027_03",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
  },
  {
   "item_id": "azdim_ue2_2026-05-24_g3_izah_p029_02",
@@ -393,6 +411,12 @@
   "item_id": "azdim_ue2_2026-06-07_g1_izah_p011_04",
   "from": null,
   "to": "A",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g1_izah_p017_03",
+  "from": null,
+  "to": "C",
   "method": "etalon"
  },
  {
