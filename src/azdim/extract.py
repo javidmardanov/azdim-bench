@@ -211,11 +211,25 @@ def total_spend() -> float:
 
 
 def build_request(source_meta: dict, by_number: dict[int, Path],
-                  n: int) -> dict:
-    """Message params for extracting items that start on page n."""
+                  n: int, expected: list[int] | None = None) -> dict:
+    """Message params for extracting items that start on page n.
+
+    `expected` — variant-A task numbers whose metadata lines the PDF text
+    layer places on the target page (from azdim.validate); listing them
+    explicitly prevents the silent item-skips seen in the first pass.
+    """
     window = [m for m in (n - 1, n, n + 1) if m in by_number]
     content: list[dict] = [image_block(by_number[m]) for m in window]
     position = ["first", "second", "third"][window.index(n)]
+    hint = ""
+    if expected:
+        nums = ", ".join(str(x) for x in sorted(expected))
+        hint = (
+            f" The target page is known to contain the items whose "
+            f'metadata reads "A variantı N saylı test tapşırığı" for '
+            f"N in [{nums}] — every one of these MUST be extracted; "
+            "do not skip any of them."
+        )
     content.append({
         "type": "text",
         "text": (
@@ -224,6 +238,7 @@ def build_request(source_meta: dict, by_number: dict[int, Path],
             f"The images are pages {', '.join(str(m) for m in window)}. "
             f"The TARGET page is page {n} (the {position} image). "
             "Extract all items whose question begins on the target page."
+            + hint
         ),
     })
     return {

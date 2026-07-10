@@ -178,5 +178,17 @@
     "n_items": 199,
     "failed_pages": [],
     "cost_usd": 1.0835
+  },
+  "@GAPS": {
+    "batch_ids": [
+      "msgbatch_01JPWx451kmwg7xnadTpsZCd",
+      "msgbatch_01DCHCjcy9TNpdBjThqnpEa9",
+      "msgbatch_014rhVYHwhorNRKCxZyfSpEY",
+      "msgbatch_01YbhacrqvbpWYb5UUzrQgyp",
+      "msgbatch_01PpCAqZRUKe9sVvXtheQusA"
+    ],
+    "n_pages": 259,
+    "submitted_at": "2026-07-10T20:28:18.129577+00:00",
+    "status": "submitted"
   }
 }

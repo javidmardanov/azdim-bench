@@ -78,6 +78,13 @@ def status() -> dict:
         if rec["status"] == "collected":
             counts["collected"] = counts.get("collected", 0) + 1
             continue
+        if sid == GAPS_KEY:
+            for bid in rec.get("batch_ids", []):
+                b = client.messages.batches.retrieve(bid)
+                print(f"{GAPS_KEY} {bid}: {b.processing_status} "
+                      f"(ok={b.request_counts.succeeded}"
+                      f" err={b.request_counts.errored})")
+            continue
         batch = client.messages.batches.retrieve(rec["batch_id"])
         rec["status"] = batch.processing_status
         counts[batch.processing_status] = counts.get(
@@ -96,7 +103,7 @@ def collect() -> None:
     state = load_state()
     price_in, price_out = PRICES.get(MODEL, (5.0, 25.0))
     for sid, rec in state.items():
-        if rec["status"] == "collected":
+        if rec["status"] == "collected" or sid == GAPS_KEY:
             continue
         batch = client.messages.batches.retrieve(rec["batch_id"])
         if batch.processing_status != "ended":
@@ -146,6 +153,133 @@ def collect() -> None:
               f"${cost:.2f}")
     total = sum(r.get("cost_usd", 0) for r in state.values())
     print(f"\nbatch extraction cost so far: ${total:.2f}")
+
+
+GAPS_KEY = "@GAPS"
+VALIDATION = ROOT / "data" / "items" / "validation_report.json"
+
+
+def submit_gaps() -> None:
+    """Submit ONLY the pages with validator-confirmed missing items, with
+    the expected variant-A numbers named in the prompt."""
+    load_env()
+    client = anthropic.Anthropic()
+    sources = {s["source_id"]: s
+               for s in json.loads(MANIFEST.read_text())["sources"]}
+    report = json.loads(VALIDATION.read_text())
+    state = load_state()
+    if state.get(GAPS_KEY, {}).get("status") not in (None, "collected"):
+        print(f"skip: gap batch already submitted "
+              f"({state[GAPS_KEY]['batch_id']})")
+        return
+    requests = []
+    for sid, comp in report["per_source"].items():
+        missing_by_page: dict[int, list[int]] = {}
+        for m in comp["missing"]:
+            missing_by_page.setdefault(m["page"], []).append(
+                m["variant_a_number"])
+        if not missing_by_page:
+            continue
+        pages = sorted((PAGES_DIR / sid).glob("page-*.png"), key=page_number)
+        if not pages:
+            render(sid)
+            pages = sorted((PAGES_DIR / sid).glob("page-*.png"),
+                           key=page_number)
+        by_number = {page_number(p): p for p in pages}
+        for n, nums in sorted(missing_by_page.items()):
+            if n not in by_number:
+                continue
+            requests.append(
+                {"custom_id": f"{sid}--{n:03d}",
+                 "params": build_request(sources[sid], by_number, n,
+                                         expected=nums)})
+    if not requests:
+        print("no gap pages to submit")
+        return
+    # 3 page images per request -> chunk to stay under the 256MB batch cap
+    chunk_size = 60
+    batch_ids = []
+    for i in range(0, len(requests), chunk_size):
+        batch = client.messages.batches.create(
+            requests=requests[i:i + chunk_size])
+        batch_ids.append(batch.id)
+        print(f"  chunk {len(batch_ids)}: "
+              f"{len(requests[i:i + chunk_size])} pages -> {batch.id}")
+    state[GAPS_KEY] = {
+        "batch_ids": batch_ids,
+        "n_pages": len(requests),
+        "submitted_at": datetime.now(timezone.utc).isoformat(),
+        "status": "submitted",
+    }
+    save_state(state)
+    print(f"gap batch: {len(requests)} pages in {len(batch_ids)} chunks")
+
+
+def collect_gaps() -> None:
+    """Merge gap-batch results INTO the existing extracted files (append;
+    align dedups any double-captured items downstream)."""
+    load_env()
+    client = anthropic.Anthropic()
+    state = load_state()
+    rec = state.get(GAPS_KEY)
+    if not rec or rec["status"] == "collected":
+        print("no gap batch pending")
+        return
+    batch_ids = rec.get("batch_ids") or [rec["batch_id"]]
+    for bid in batch_ids:
+        batch = client.messages.batches.retrieve(bid)
+        if batch.processing_status != "ended":
+            print(f"gap chunk {bid} still {batch.processing_status}")
+            return
+    price_in, price_out = PRICES.get(MODEL, (5.0, 25.0))
+    new_by_sid: dict[str, list[dict]] = {}
+    failed: list[str] = []
+    cost = 0.0
+    results = (r for bid in batch_ids
+               for r in client.messages.batches.results(bid))
+    for result in results:
+        sid, page_s = result.custom_id.rsplit("--", 1)
+        if result.result.type != "succeeded":
+            failed.append(result.custom_id)
+            continue
+        msg = result.result.message
+        cost += (msg.usage.input_tokens * price_in / 1e6
+                 + msg.usage.output_tokens * price_out / 1e6
+                 ) * BATCH_DISCOUNT
+        text = next((b.text for b in msg.content if b.type == "text"), "")
+        try:
+            items = parse_items(text)
+        except (json.JSONDecodeError, KeyError):
+            failed.append(result.custom_id)
+            continue
+        for item in items:
+            item["source_id"] = sid
+            item["source_page"] = int(page_s)
+            item["extractor_model"] = MODEL
+            item["extraction_pass"] = "gap_fill"
+        new_by_sid.setdefault(sid, []).extend(items)
+    for sid, new_items in new_by_sid.items():
+        path = EXTRACTED_DIR / f"{sid}.jsonl"
+        existing = [json.loads(line)
+                    for line in path.read_text().splitlines()]
+        merged = sorted(existing + new_items,
+                        key=lambda it: it["source_page"])
+        with open(path, "w") as f:
+            for item in merged:
+                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+        print(f"{sid}: +{len(new_items)} gap items merged")
+    with open(USAGE_LOG, "a") as f:
+        f.write(json.dumps({
+            "model": MODEL, "context": "batch_extract:gaps",
+            "cost_usd": round(cost, 6), "batch": True,
+        }) + "\n")
+    rec["status"] = "collected"
+    rec["failed_pages"] = failed
+    rec["cost_usd"] = round(cost, 4)
+    save_state(state)
+    print(f"gap batch collected: "
+          f"{sum(len(v) for v in new_by_sid.values())} items, "
+          f"{len(failed)} failed pages, ${cost:.2f}")
 
 
 def retry_failed() -> None:
@@ -216,5 +350,10 @@ if __name__ == "__main__":
         collect()
     elif cmd == "retry":
         retry_failed()
+    elif cmd == "gaps":
+        submit_gaps()
+    elif cmd == "collect-gaps":
+        collect_gaps()
     else:
-        sys.exit("usage: batch_extract submit|status|collect|retry")
+        sys.exit("usage: batch_extract "
+                 "submit|status|collect|retry|gaps|collect-gaps")
