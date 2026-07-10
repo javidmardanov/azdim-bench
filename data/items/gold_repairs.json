@@ -48,6 +48,12 @@
   "method": "text_match"
  },
  {
+  "item_id": "azdim_sl11_2025-03-09_izah_p003_04",
+  "from": "B",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
   "item_id": "azdim_sl11_2025-03-09_izah_p007_05",
   "from": null,
   "to": "E",
@@ -57,7 +63,7 @@
   "item_id": "azdim_sl11_2025-03-09_izah_p014_01",
   "from": "C",
   "to": "E",
-  "method": "text_match+etalon"
+  "method": "text_match"
  },
  {
   "item_id": "azdim_sl11_2025-03-09_izah_p017_03",
@@ -72,7 +78,7 @@
   "method": "etalon"
  },
  {
-  "item_id": "azdim_sl11_2026-03-09_izah_p007_01",
+  "item_id": "azdim_sl11_2026-03-09_izah_p006_06",
   "from": null,
   "to": "E",
   "method": "etalon"
@@ -141,7 +147,7 @@
   "item_id": "azdim_ue2_2025-05-25_g3_izah_p011_01",
   "from": "D",
   "to": "E",
-  "method": "text_match+etalon"
+  "method": "text_match"
  },
  {
   "item_id": "azdim_ue2_2025-05-25_g3_izah_p015_01",
@@ -165,6 +171,12 @@
   "item_id": "azdim_ue2_2025-06-01_g1_izah_p008_03",
   "from": null,
   "to": "D",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-06-01_g1_izah_p019_01",
+  "from": null,
+  "to": "A",
   "method": "etalon"
  },
  {
@@ -270,6 +282,12 @@
   "method": "etalon"
  },
  {
+  "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p001_04",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
+ },
+ {
   "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p006_01",
   "from": "C",
   "to": "E",
@@ -278,6 +296,12 @@
  {
   "item_id": "azdim_ue2_2025-07-13_g4_izah_p008_06",
   "from": "D",
+  "to": "C",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g4_izah_p010_05",
+  "from": "B",
   "to": "C",
   "method": "text_match+etalon"
  },
@@ -312,6 +336,30 @@
   "method": "text_match+etalon"
  },
  {
+  "item_id": "azdim_ue2_2026-05-24_g3_izah_p002_05",
+  "from": "B",
+  "to": "A",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-05-24_g3_izah_p009_03",
+  "from": "B",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-05-24_g3_izah_p012_05",
+  "from": "E",
+  "to": "A",
+  "method": "text_match"
+ },
+ {
+  "item_id": "azdim_ue2_2026-05-24_g3_izah_p013_04",
+  "from": "A",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
   "item_id": "azdim_ue2_2026-05-24_g3_izah_p026_02",
   "from": "B",
   "to": "C",
@@ -342,10 +390,22 @@
   "method": "etalon"
  },
  {
+  "item_id": "azdim_ue2_2026-06-07_g1_izah_p011_04",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
+ },
+ {
   "item_id": "azdim_ue2_2026-06-07_g1_izah_p021_01",
   "from": "C",
   "to": "A",
   "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g1_izah_p021_04",
+  "from": null,
+  "to": "D",
+  "method": "etalon"
  },
  {
   "item_id": "azdim_ue2_2026-06-07_g1_izah_p024_05",
