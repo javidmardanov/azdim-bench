@@ -1,0 +1,374 @@
+[
+ {
+  "item_id": "azdim_mixed_2026-04-19_izah_p005_04",
+  "from": null,
+  "to": "B",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_mixed_2026-04-19_izah_p030_07",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_mixed_2026-04-19_izah_p038_03",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2025-03-02_izah_p007_04",
+  "from": null,
+  "to": "E",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2025-03-02_izah_p008_02",
+  "from": "D",
+  "to": "A",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2025-03-02_izah_p014_01",
+  "from": "C",
+  "to": "A",
+  "method": "text_match"
+ },
+ {
+  "item_id": "azdim_sl11_2025-03-02_izah_p016_05",
+  "from": null,
+  "to": "D",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2025-03-02_izah_p022_05",
+  "from": "E",
+  "to": "A",
+  "method": "text_match"
+ },
+ {
+  "item_id": "azdim_sl11_2025-03-09_izah_p007_05",
+  "from": null,
+  "to": "E",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2025-03-09_izah_p014_01",
+  "from": "C",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2025-03-09_izah_p017_03",
+  "from": null,
+  "to": "E",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2026-03-09_izah_p005_05",
+  "from": null,
+  "to": "C",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2026-03-09_izah_p007_01",
+  "from": null,
+  "to": "E",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2026-03-09_izah_p008_01",
+  "from": "C",
+  "to": "A",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2026-03-09_izah_p013_04",
+  "from": "E",
+  "to": "D",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2026-03-09_izah_p015_05",
+  "from": null,
+  "to": "C",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_sl11_2026-03-15_izah_p026_03",
+  "from": "E",
+  "to": "A",
+  "method": "text_match"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g2_izah_p009_01",
+  "from": "A",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g2_izah_p014_01",
+  "from": null,
+  "to": "B",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g2_izah_p017_02",
+  "from": "D",
+  "to": "C",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g2_izah_p018_02",
+  "from": "D",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g3_izah_p001_01",
+  "from": null,
+  "to": "B",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g3_izah_p001_03",
+  "from": null,
+  "to": "D",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g3_izah_p011_01",
+  "from": "D",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g3_izah_p015_01",
+  "from": "A",
+  "to": "D",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g3_izah_p024_02",
+  "from": "A",
+  "to": "E",
+  "method": "text_match"
+ },
+ {
+  "item_id": "azdim_ue2_2025-05-25_g3_izah_p026_02",
+  "from": "E",
+  "to": "A",
+  "method": "text_match"
+ },
+ {
+  "item_id": "azdim_ue2_2025-06-01_g1_izah_p008_03",
+  "from": null,
+  "to": "D",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-06-01_g3geo_izah_p006_02",
+  "from": "A",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-06-01_g4_izah_p004_02",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-06-01_g4_izah_p009_04",
+  "from": "D",
+  "to": "E",
+  "method": "text_match"
+ },
+ {
+  "item_id": "azdim_ue2_2025-06-01_g4_izah_p019_04",
+  "from": null,
+  "to": "E",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-06_g2_izah_p004_03",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-06_g2_izah_p009_01",
+  "from": "D",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-06_g2_izah_p010_01",
+  "from": "E",
+  "to": "C",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-06_g2_izah_p011_03",
+  "from": "D",
+  "to": "B",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-06_g2_izah_p013_01",
+  "from": "A",
+  "to": "D",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-06_g2_izah_p020_03",
+  "from": "C",
+  "to": "D",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-06_g2_izah_p020_05",
+  "from": null,
+  "to": "E",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g1_izah_p015_01",
+  "from": null,
+  "to": "B",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g1_izah_p015_04",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g1_izah_p016_03",
+  "from": null,
+  "to": "C",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g1_izah_p018_02",
+  "from": null,
+  "to": "C",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g1_izah_p018_03",
+  "from": null,
+  "to": "C",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g1_izah_p019_03",
+  "from": null,
+  "to": "E",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p006_01",
+  "from": "C",
+  "to": "E",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g4_izah_p008_06",
+  "from": "D",
+  "to": "C",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g4_izah_p015_01",
+  "from": null,
+  "to": "C",
+  "method": "text_match"
+ },
+ {
+  "item_id": "azdim_ue2_2025-07-13_g4_izah_p019_01",
+  "from": null,
+  "to": "C",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-05-24_g2_izah_p004_04",
+  "from": "D",
+  "to": "C",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-05-24_g2_izah_p008_01",
+  "from": "D",
+  "to": "C",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-05-24_g3_izah_p002_01",
+  "from": "E",
+  "to": "A",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-05-24_g3_izah_p026_02",
+  "from": "B",
+  "to": "C",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-05-24_g3_izah_p029_02",
+  "from": null,
+  "to": "B",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g1_izah_p002_03",
+  "from": null,
+  "to": "D",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g1_izah_p004_03",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g1_izah_p011_03",
+  "from": null,
+  "to": "A",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g1_izah_p021_01",
+  "from": "C",
+  "to": "A",
+  "method": "text_match+etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g1_izah_p024_05",
+  "from": null,
+  "to": "E",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g3geo_izah_p004_03",
+  "from": null,
+  "to": "D",
+  "method": "etalon"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g4_izah_p006_01",
+  "from": "A",
+  "to": "B",
+  "method": "text_match"
+ },
+ {
+  "item_id": "azdim_ue2_2026-06-07_g4_izah_p010_05",
+  "from": null,
+  "to": "D",
+  "method": "etalon"
+ }
+]

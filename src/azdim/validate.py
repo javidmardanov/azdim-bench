@@ -35,7 +35,7 @@ from collections import defaultdict
 from difflib import SequenceMatcher
 from pathlib import Path
 
-from azdim.boxes import _norm, item_box
+from azdim.boxes import _match, _norm, _page_words, item_box
 
 ROOT = Path(__file__).resolve().parents[2]
 ITEMS_FILE = ROOT / "data" / "items" / "items_v0.jsonl"
@@ -44,6 +44,7 @@ QC_FLAGS = ROOT / "data" / "items" / "qc_flags.json"
 REPORT = ROOT / "data" / "items" / "validation_report.json"
 TARGETS = ROOT / "data" / "items" / "reextract_targets.json"
 COVERAGE = ROOT / "data" / "items" / "coverage.html"
+CONFIRMED = ROOT / "data" / "items" / "confirmed_numbers.json"
 
 VARIANT_A_RE = re.compile(r"A\s+variant[ıi]\s+(\d+)\s+sayl[ıi]", re.IGNORECASE)
 PAGE_TOL = 3          # item start page vs metadata-line page tolerance
@@ -52,48 +53,109 @@ GOLD_SIM = 0.85       # similarity threshold for gold label<->text agreement
 
 # ---------------------------------------------------------------- inventory
 
-def pdf_inventory(source_id: str) -> list[tuple[int, int]]:
-    """All (page, variant_A_number) metadata lines in the izah text layer."""
-    pdf = RAW_PDFS / f"{source_id}.pdf"
-    text = subprocess.run(["pdftotext", str(pdf), "-"],
-                          capture_output=True, text=True).stdout
+def pdf_inventory(source_id: str) -> list[tuple[int, int, float, float]]:
+    """All "A variantı N saylı" metadata lines in the izah text layer,
+    WITH coordinates: (page, number, x, y)."""
+    pdf = str(RAW_PDFS / f"{source_id}.pdf")
+    n_pages = int(subprocess.run(
+        ["pdfinfo", pdf], capture_output=True, text=True)
+        .stdout.split("Pages:")[1].split()[0])
     out = []
-    for pageno, page_text in enumerate(text.split("\f"), start=1):
-        for m in VARIANT_A_RE.finditer(page_text):
-            out.append((pageno, int(m.group(1))))
+    for page in range(1, n_pages + 1):
+        words, pw, ph = _page_words(pdf, page)
+        for i in range(len(words) - 3):
+            if (words[i][0] == "a"
+                    and words[i + 1][0].startswith("variant")
+                    and words[i + 2][0].isdigit()
+                    and words[i + 3][0].startswith("sayl")):
+                out.append((page, int(words[i + 2][0]),
+                            words[i][1], words[i][2]))
     return out
 
 
 def check_completeness(items: list[dict], source_id: str) -> dict:
+    """Reconcile captured items against the PDF's own metadata lines.
+
+    Binding is GEOMETRIC and does not trust the LLM's variant_map: a
+    metadata line belongs to the item whose question stem sits nearest
+    ABOVE it in the same column (stems located via the text layer).
+    The LLM variant_map is only a fallback for items whose stem could
+    not be located (math-heavy), and any geometric/variant_map
+    disagreement is flagged.
+    """
+    pdf = str(RAW_PDFS / f"{source_id}.pdf")
     expected = pdf_inventory(source_id)
     captured = [it for it in items if it["source_id"] == source_id]
-    numbered = [(it["source_page"], (it.get("variant_map") or {}).get("A"), it)
-                for it in captured]
-    numbered = [(p, n, it) for p, n, it in numbered if isinstance(n, int)]
-    unnumbered = len(captured) - len(numbered)
 
-    used = [False] * len(numbered)
+    # locate each item's stem on its page (absolute coordinates)
+    anchors = []       # (page, x_center, y_top, item)
+    unlocated = []
+    for it in captured:
+        page = it["source_page"]
+        box = item_box(pdf, page, it.get("question_text") or "")
+        if box:
+            _, pw, ph = _page_words(pdf, page)
+            x, y, w, h = box
+            anchors.append((page, (x + w / 2) * pw, y * ph, it))
+        else:
+            unlocated.append(it)
+
+    def col(x: float, pw: float) -> int:
+        return 0 if x < pw * 0.5 else 1
+
+    # geometric binding: the metadata block is the item's HEADER, so a
+    # line belongs to the nearest located stem BELOW it in the same column
+    confirmed: dict[str, int] = {}
+    vm_conflicts: list[str] = []
+    bound_lines: set[int] = set()
+    best_bind: dict[str, tuple[float, int, int]] = {}  # iid -> (gap, li, num)
+    for li, (page, num, mx, my) in enumerate(expected):
+        _, pw, ph = _page_words(pdf, page)
+        cands = [(y, it) for (p, x, y, it) in anchors
+                 if p == page and col(x, pw) == col(mx, pw) and y >= my - 4]
+        if not cands:
+            continue
+        y_best, it = min(cands, key=lambda c: c[0])
+        iid = it["item_id"]
+        gap = y_best - my
+        if iid not in best_bind or gap < best_bind[iid][0]:
+            best_bind[iid] = (gap, li, num)
+    for iid, (gap, li, num) in best_bind.items():
+        confirmed[iid] = num
+        bound_lines.add(li)
+        it = next(a[3] for a in anchors if a[3]["item_id"] == iid)
+        vm_a = (it.get("variant_map") or {}).get("A")
+        if isinstance(vm_a, int) and vm_a != num:
+            vm_conflicts.append(iid)
+
+    # fallback for unbound lines: variant_map match among unlocated items
+    used = set()
     missing = []
-    for page, num in sorted(expected):
+    for li, (page, num, mx, my) in enumerate(expected):
+        if li in bound_lines:
+            continue
         best, best_d = None, None
-        for i, (ip, inum, _) in enumerate(numbered):
-            if used[i] or inum != num:
+        for it in unlocated:
+            if id(it) in used:
                 continue
-            d = abs(ip - page)
+            if (it.get("variant_map") or {}).get("A") != num:
+                continue
+            d = abs(it["source_page"] - page)
             if d <= PAGE_TOL and (best_d is None or d < best_d):
-                best, best_d = i, d
+                best, best_d = it, d
         if best is None:
             missing.append({"page": page, "variant_a_number": num})
         else:
-            used[best] = True
-    extra = sum(1 for u in used if not u)
+            used.add(id(best))
+            confirmed.setdefault(best["item_id"], num)
     return {
         "expected": len(expected),
         "captured": len(captured),
         "matched": len(expected) - len(missing),
         "missing": missing,
-        "extra_numbered": extra,      # captured but not tied to a metadata line
-        "unnumbered": unnumbered,     # captured without a variant-A number
+        "n_unlocated_stems": len(unlocated),
+        "vm_conflicts": vm_conflicts,   # variant_map disagrees with geometry
+        "confirmed": confirmed,
     }
 
 
@@ -216,6 +278,10 @@ def main() -> None:
     print(f"ETALON: {len(qc)} answer-key mismatch flags pending review")
 
     # -------- artifacts
+    all_confirmed = {}
+    for c in per_source.values():
+        all_confirmed.update(c.pop("confirmed"))
+    CONFIRMED.write_text(json.dumps(all_confirmed, indent=0, sort_keys=True))
     report = {"per_source": per_source, "gold": gold,
               "etalon_flags": len(qc),
               "fidelity": {s: {"located": f["located"],

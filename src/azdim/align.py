@@ -39,6 +39,13 @@ SUBJECT_MAP = {
     "fransız dili": "french", "французский язык": "french",
     "ereb dili": "arabic", "ərəb dili": "arabic",
     "fars dili": "persian",
+    "gürcü dili": "georgian",
+    # Higher-Level foreign-language exams are separate tests, not the
+    # regular ones (longest-match in subject_of keeps them distinct)
+    "ingilis dili (hl)": "english_hl",
+    "alman dili (hl)": "german_hl",
+    "fransız dili (hl)": "french_hl",
+    "rus dili (hl)": "russian_hl",
     "xarici dil": "foreign_language",
     # verbatim headers used inside foreign-language exam sections
     "english": "english", "deutsch": "german",
@@ -63,9 +70,10 @@ def subject_of(header: str | None) -> str | None:
     if not header or len(header) > 60:
         return None
     h = norm(header)
-    for key, slug in SUBJECT_MAP.items():
+    # longest key first, so "ingilis dili (hl)" beats "ingilis dili"
+    for key in sorted(SUBJECT_MAP, key=len, reverse=True):
         if key in h:
-            return slug
+            return SUBJECT_MAP[key]
     return None
 
 
