@@ -182,7 +182,9 @@ def api_next():
         todo = [it for it in todo if not is_flagged(it)]
         random.Random(42).shuffle(todo)
     else:
-        todo.sort(key=lambda it: (not is_flagged(it), it["source_id"],
+        hard = qc_flags()   # cross-check conflicts first, soft flags after
+        todo.sort(key=lambda it: (it["item_id"] not in hard,
+                                  not is_flagged(it), it["source_id"],
                                   it["source_page"]))
     cur = todo[0] if todo else None
     boxes = []
