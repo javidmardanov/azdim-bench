@@ -1,0 +1,1051 @@
+{
+ "stats": {
+  "bound": 1811,
+  "gold_agree": 1184,
+  "gold_diff": 49,
+  "text_agree": 1507,
+  "text_diff": 149,
+  "text_minor": 155
+ },
+ "diffs": [
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p007_04",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p014_02",
+   "field": "text",
+   "sim": 0.2
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p020_02",
+   "field": "text",
+   "sim": 0.05
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p030_01",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p030_06",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p039_01",
+   "field": "gold",
+   "ours": "A",
+   "reader2": "C"
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p039_01",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p044_01",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p045_02",
+   "field": "text",
+   "sim": 0.4
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p045_03",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p045_04",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p046_01",
+   "field": "text",
+   "sim": 0.39
+  },
+  {
+   "item_id": "azdim_mixed_2026-04-19_izah_p046_04",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p003_03",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p005_03",
+   "field": "text",
+   "sim": 0.33
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p005_04",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p007_04",
+   "field": "gold",
+   "ours": "E",
+   "reader2": "D"
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p013_01",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p015_01",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p015_02",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p027_01",
+   "field": "text",
+   "sim": 0.06
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p027_02",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p027_03",
+   "field": "text",
+   "sim": 0.39
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p028_07",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p031_01",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p031_04",
+   "field": "text",
+   "sim": 0.39
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p032_05",
+   "field": "text",
+   "sim": 0.06
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p037_01",
+   "field": "text",
+   "sim": 0.33
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p046_01",
+   "field": "text",
+   "sim": 0.39
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-02_izah_p046_02",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-09_izah_p002_05",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-09_izah_p013_02",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-09_izah_p014_03",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-09_izah_p015_01",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-09_izah_p033_06",
+   "field": "text",
+   "sim": 0.39
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-09_izah_p039_03",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_sl11_2025-03-09_izah_p044_03",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p003_01",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "C"
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p004_01",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p006_05",
+   "field": "gold",
+   "ours": "E",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p010_03",
+   "field": "text",
+   "sim": 0.47
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p013_04",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "E"
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p013_04",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p014_01",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p014_02",
+   "field": "text",
+   "sim": 0.47
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p019_04",
+   "field": "text",
+   "sim": 0.04
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p028_05",
+   "field": "gold",
+   "ours": "C",
+   "reader2": "D"
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p029_02",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p029_05",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p036_01",
+   "field": "text",
+   "sim": 0.12
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p036_02",
+   "field": "text",
+   "sim": 0.33
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-09_izah_p045_03",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p001_01",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p001_03",
+   "field": "text",
+   "sim": 0.33
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p003_03",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p012_04",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p029_01",
+   "field": "text",
+   "sim": 0.27
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p029_03",
+   "field": "text",
+   "sim": 0.38
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p029_04",
+   "field": "text",
+   "sim": 0.47
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p029_05",
+   "field": "text",
+   "sim": 0.42
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p029_06",
+   "field": "text",
+   "sim": 0.27
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p032_03",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p038_01",
+   "field": "text",
+   "sim": 0.33
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p040_05",
+   "field": "text",
+   "sim": 0.4
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p042_01",
+   "field": "text",
+   "sim": 0.21
+  },
+  {
+   "item_id": "azdim_sl11_2026-03-15_izah_p042_04",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g2_izah_p008_01",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g2_izah_p010_03",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "C"
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g2_izah_p014_01",
+   "field": "text",
+   "sim": 0.33
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g2_izah_p014_03",
+   "field": "gold",
+   "ours": "C",
+   "reader2": "E"
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g3_izah_p003_02",
+   "field": "text",
+   "sim": 0.39
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g3_izah_p008_04",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g3_izah_p010_02",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g3_izah_p011_05",
+   "field": "text",
+   "sim": 0.39
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g3_izah_p019_04",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g3_izah_p020_04",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g3_izah_p029_04",
+   "field": "text",
+   "sim": 0.32
+  },
+  {
+   "item_id": "azdim_ue2_2025-05-25_g3_izah_p030_04",
+   "field": "text",
+   "sim": 0.15
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g1_izah_p004_03",
+   "field": "gold",
+   "ours": "C",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g1_izah_p004_03",
+   "field": "text",
+   "sim": 0.14
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g1_izah_p008_03",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g1_izah_p016_01",
+   "field": "gold",
+   "ours": "A",
+   "reader2": "E"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g1_izah_p024_03",
+   "field": "text",
+   "sim": 0.38
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g1_izah_p024_05",
+   "field": "text",
+   "sim": 0.38
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g1_izah_p025_04",
+   "field": "text",
+   "sim": 0.4
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g3geo_izah_p005_02",
+   "field": "text",
+   "sim": 0.19
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g3geo_izah_p005_03",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "C"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p001_03",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p002_01",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p002_01",
+   "field": "text",
+   "sim": 0.17
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p003_02",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p003_04",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p003_05",
+   "field": "text",
+   "sim": 0.21
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p006_01",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "C"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p007_02",
+   "field": "text",
+   "sim": 0.14
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p007_04",
+   "field": "text",
+   "sim": 0.27
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p008_05",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p009_05",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p009_07",
+   "field": "text",
+   "sim": 0.05
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p009_08",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "E"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p009_08",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p011_02",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p011_05",
+   "field": "gold",
+   "ours": "A",
+   "reader2": "C"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p011_05",
+   "field": "text",
+   "sim": 0.04
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p017_03",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2025-06-01_g4_izah_p019_04",
+   "field": "gold",
+   "ours": "E",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g2_izah_p007_02",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g2_izah_p009_01",
+   "field": "text",
+   "sim": 0.32
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g2_izah_p010_03",
+   "field": "text",
+   "sim": 0.33
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g2_izah_p012_01",
+   "field": "text",
+   "sim": 0.15
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g2_izah_p012_02",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g2_izah_p012_03",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g2_izah_p022_04",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g3_izah_p008_01",
+   "field": "text",
+   "sim": 0.2
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g3_izah_p011_01",
+   "field": "gold",
+   "ours": "E",
+   "reader2": "D"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g3_izah_p014_02",
+   "field": "text",
+   "sim": 0.21
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-06_g3_izah_p014_03",
+   "field": "text",
+   "sim": 0.47
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p011_02",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "E"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p015_01",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "D"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p019_01",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p019_01",
+   "field": "text",
+   "sim": 0.04
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p019_02",
+   "field": "gold",
+   "ours": "A",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p019_02",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p019_03",
+   "field": "gold",
+   "ours": "E",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p019_03",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p023_04",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p024_02",
+   "field": "gold",
+   "ours": "A",
+   "reader2": "E"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p024_02",
+   "field": "text",
+   "sim": 0.04
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p025_02",
+   "field": "gold",
+   "ours": "A",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p025_02",
+   "field": "text",
+   "sim": 0.38
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p027_04",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g1_izah_p027_05",
+   "field": "text",
+   "sim": 0.34
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p005_01",
+   "field": "text",
+   "sim": 0.38
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p005_05",
+   "field": "gold",
+   "ours": "C",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p006_01",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p006_03",
+   "field": "text",
+   "sim": 0.38
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g3geo_izah_p006_04",
+   "field": "text",
+   "sim": 0.47
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g4_izah_p002_04",
+   "field": "text",
+   "sim": 0.42
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g4_izah_p005_01",
+   "field": "text",
+   "sim": 0.04
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g4_izah_p006_01",
+   "field": "text",
+   "sim": 0.27
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g4_izah_p008_01",
+   "field": "text",
+   "sim": 0.42
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g4_izah_p010_01",
+   "field": "text",
+   "sim": 0.04
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g4_izah_p010_04",
+   "field": "gold",
+   "ours": "E",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2025-07-13_g4_izah_p010_04",
+   "field": "text",
+   "sim": 0.05
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g2_izah_p005_04",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "E"
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g2_izah_p005_04",
+   "field": "text",
+   "sim": 0.45
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g2_izah_p008_02",
+   "field": "text",
+   "sim": 0.33
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g2_izah_p009_02",
+   "field": "text",
+   "sim": 0.21
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g2_izah_p011_02",
+   "field": "text",
+   "sim": 0.32
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g2_izah_p015_02",
+   "field": "text",
+   "sim": 0.04
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g2_izah_p018_01",
+   "field": "text",
+   "sim": 0.39
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p003_01",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p005_03",
+   "field": "gold",
+   "ours": "C",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p011_02",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p013_01",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p013_02",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p018_01",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p019_01",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p019_02",
+   "field": "gold",
+   "ours": "C",
+   "reader2": "D"
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p019_02",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p024_03",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p025_03",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p025_04",
+   "field": "text",
+   "sim": 0.38
+  },
+  {
+   "item_id": "azdim_ue2_2026-05-24_g3_izah_p028_02",
+   "field": "text",
+   "sim": 0.39
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g1_izah_p005_01",
+   "field": "text",
+   "sim": 0.07
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g1_izah_p013_05",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g1_izah_p019_03",
+   "field": "text",
+   "sim": 0.48
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g1_izah_p026_02",
+   "field": "text",
+   "sim": 0.32
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g1_izah_p026_03",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g3geo_izah_p002_05",
+   "field": "text",
+   "sim": 0.17
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g3geo_izah_p003_02",
+   "field": "text",
+   "sim": 0.24
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p001_01",
+   "field": "text",
+   "sim": 0.28
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p001_02",
+   "field": "text",
+   "sim": 0.2
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p002_01",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p002_01",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p003_01",
+   "field": "gold",
+   "ours": "C",
+   "reader2": "D"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p003_01",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p003_02",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p003_03",
+   "field": "gold",
+   "ours": "C",
+   "reader2": "A"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p003_03",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p007_02",
+   "field": "text",
+   "sim": 0.44
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p008_03",
+   "field": "text",
+   "sim": 0.24
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p009_04",
+   "field": "gold",
+   "ours": "E",
+   "reader2": "C"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p009_04",
+   "field": "text",
+   "sim": 0.08
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p010_02",
+   "field": "gold",
+   "ours": "E",
+   "reader2": "C"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p010_02",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p010_04",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "D"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p010_04",
+   "field": "text",
+   "sim": 0.05
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p010_05",
+   "field": "gold",
+   "ours": "D",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p010_05",
+   "field": "text",
+   "sim": 0.05
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p013_01",
+   "field": "gold",
+   "ours": "A",
+   "reader2": "E"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p013_01",
+   "field": "text",
+   "sim": 0.08
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p013_02",
+   "field": "gold",
+   "ours": "E",
+   "reader2": "B"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p013_02",
+   "field": "text",
+   "sim": 0.13
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p013_03",
+   "field": "gold",
+   "ours": "B",
+   "reader2": "C"
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p013_03",
+   "field": "text",
+   "sim": 0.0
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p013_04",
+   "field": "text",
+   "sim": 0.08
+  },
+  {
+   "item_id": "azdim_ue2_2026-06-07_g4_izah_p015_01",
+   "field": "text",
+   "sim": 0.0
+  }
+ ]
+}

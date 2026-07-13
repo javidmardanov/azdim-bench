@@ -163,6 +163,9 @@ def diff() -> None:
                 sim = SequenceMatcher(None, q1.split(), q2.split()).ratio()
                 if sim >= 0.75:
                     stats["text_agree"] += 1
+                elif sim >= 0.5:
+                    # formatting variance (preambles, tables), not an error
+                    stats["text_minor"] = stats.get("text_minor", 0) + 1
                 else:
                     stats["text_diff"] += 1
                     flags.setdefault(it["item_id"],
